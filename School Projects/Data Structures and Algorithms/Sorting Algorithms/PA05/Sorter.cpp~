@@ -1,0 +1,90 @@
+
+// Precompiler directives /////////////////////////////////////////////////////
+
+#ifndef SORTERCLASS_H
+#define SORTERCLASS_H
+
+// Header files ///////////////////////////////////////////////////////////////
+
+#include <iostream>
+#include <stdexcept>
+#include <cstdlib>
+#include "SorterClass.h"
+#include "SimpleVector.cpp"
+
+using namespace std;
+
+template <class DataType>
+SorterClass<DataType>:: SorterClass( int newCapacity )
+{
+
+}
+
+template <class DataType>
+SorterClass<DataType>:: SorterClass( int newCapacity, const DataType &fillValue )
+{
+
+}
+
+template <class DataType>
+SorterClass<DataType>:: SorterClass( const SorterClass<DataType> &copiedVector ) 
+{
+
+}
+
+template <class DataType>
+SorterClass<DataType>:: ~SorterClass()
+{
+
+}
+
+template <class DataType>
+void SorterClass<DataType>:: add( const DataType &addedItem )
+{
+
+}
+
+template <class DataType>
+bool SorterClass<DataType>:: remove( DataType &removedItem )
+{
+
+}
+
+template <class DataType>
+int SorterClass<DataType>:: findIndexFor( const DataType &searchItem )
+{
+
+}
+
+template <class DataType>
+void SorterClass<DataType>:: sort()
+{
+
+}
+
+template <class DataType>
+void SorterClass<DataType>:: copyFromTo( int indexTo, int indexFrom )
+{
+
+}
+
+void SorterClass<DataType>:: swapBetween( int oneIndex, int otherIndex )
+{
+
+}
+
+void SorterClass<DataType>:: insertAtIndex( int insertIndex, const DataType &itemToInsert )
+{
+
+}
+
+void SorterClass<DataType>:: removeAtIndex( int removalIndex, DataType &removedItem )
+{
+
+}
+
+
+// Terminating precompiler directives  ////////////////////////////////////////
+
+#endif		// #ifndef SORTERCLASS_H
+

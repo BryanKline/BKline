@@ -1,0 +1,23 @@
+Bryan Kline
+CS302 
+PA09 - Heaps Journal
+04/13/2016
+
+1. What worked well for this assignment?
+
+This assignment was a return to the previous format of creating and entire class to implement a data structure and then testing to see that it worked properly, as opposed to the previous two projects which were focused on one main task that used only one or two functions whose implementation was itself conceptually more difficult.  This project was nice in that it was a return to that and it was more of a list of items that weren't each in their own right too hard and so progress was steady.
+
+Another aspect of this project that worked well was that it was array based rather than a node based tree and it turned out to be handy to be able to directly refer to an item by an index with a little bit of calculation.  The showHPStructure method, for example, which was an entire project when a node based tree was trivial when array based. 
+
+2. What did not work well for this assignment?
+
+The biggest problem for me was the shiftDown method.  I initially got off on the wrong foot with this method by somehow getting it into my head that when the item being shifted down finally got to the bottom to had to be added instead of simply swapped and so I spent a lot of time figuring out calculations that would give me the direction it had to go, left or right, based not on which child was largest but which one led to the last item in the heap.  Once I saw that it was simply comparing the left and right child, looking for the largest and just swapping with it, which should have registered with me as conceptually I knew was a heap was to be doing at that point, I was able to get the method quite close to finished relatively quickly.  However, I still had some trouble with it and had to tinker with a few things to get it working properly.  Also, my copy constructor, overloaded assignment, and ultimately the copyHeapVector method, had some problems, which were trivial, but it took me a while to identify them as the problem when fitting rooms while testing. 
+
+3. What did you need help with on this assignment?
+
+There wasn't much I needed help with on this assigment.  Once again there wasn't much activity on the forum and so there wasn't anything I got from that and so it was fortunate that there wasn't anything I needed.  I would say that the biggest help I got was the formulas given in class to determine the index of a parent or child, not that I couldn't have figured that out but just having it right away was a bit of a time saver.
+
+4. What did you learn from this assignment?
+
+The major take away from this project was the structure of heaps, how they work, and the way in which they can be used to sort and then fit as happens in fitClassRooms.  It was certainly a better way to find the best fit for a room and class room as compared to the brute force recursive backtracking procedure.  I also felt like I got a little better at planning and designing the recursive functions on paper first and then getting them to where they worked or nearly worked immediately.  The shiftUp method for example, after planning it on paper, was right the first time and took no additional debugging or hacking.  Yet again, recursion turns out to be something one seems to get better and more comfortable with after some practice. 
+

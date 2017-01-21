@@ -1,0 +1,822 @@
+TestRun_1 Back To Top
+Inorder display
+Input Data
+
+1
+Cheeseman, Dylan;669655;F
+Ghera, Kwabena;933237;F
+Stine, Charles;239444;F
+Holmes, Andrea;414872;M
+Caceres, Jamie;457799;M
+Hollick, Javier;793101;F
+Kondo, Colin;831743;F
+Mulhall, Chase;983866;M
+Hudson, Cody;893230;M
+Jones, Nicholas;755686;F
+QUIT
+
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 1
+
+BC_1 In Order Traversal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 1
+
+BC_1 In Order Traversal: 
+Caceres, Jamie, 457799, Male
+Cheeseman, Dylan, 669655, Female
+Ghera, Kwabena, 933237, Female
+Hollick, Javier, 793101, Female
+Holmes, Andrea, 414872, Male
+Hudson, Cody, 893230, Male
+Jones, Nicholas, 755686, Female
+Kondo, Colin, 831743, Female
+Mulhall, Chase, 983866, Male
+Stine, Charles, 239444, Female
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 1
+ 
+ BC_1 In Order Traversal: 
++Caceres, Jamie, 457799, Male
++Cheeseman, Dylan, 669655, Female
++Ghera, Kwabena, 933237, Female
++Hollick, Javier, 793101, Female
++Holmes, Andrea, 414872, Male
++Hudson, Cody, 893230, Male
++Jones, Nicholas, 755686, Female
++Kondo, Colin, 831743, Female
++Mulhall, Chase, 983866, Male
++Stine, Charles, 239444, Female
++
+TestRun_2 Back To Top
+Object assignment operation
+Input Data
+2
+Wiegant, Brian;654986;F
+Muller, Carlise;733689;F
+Woo, Eric;356775;F
+Yarmey, Chad;535427;M
+Beeman, Jaylen;978174;F
+Cepeda, Alexander;681806;F
+Shaikh, Philip;979220;M
+Parr, Aaron;134062;F
+Villanueva, Pattaphol;318944;M
+Sandoval, Andrew;454662;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 2
+
+Test of tree assignment operation
+
+BC_1 In Order Traversal: 
+
+BC_2 In Order Traversal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 2
+
+Test of tree assignment operation
+
+BC_1 In Order Traversal: 
+Beeman, Jaylen, 978174, Female
+Cepeda, Alexander, 681806, Female
+Muller, Carlise, 733689, Female
+Parr, Aaron, 134062, Female
+Sandoval, Andrew, 454662, Male
+Shaikh, Philip, 979220, Male
+Villanueva, Pattaphol, 318944, Male
+Wiegant, Brian, 654986, Female
+Woo, Eric, 356775, Female
+Yarmey, Chad, 535427, Male
+
+
+BC_2 In Order Traversal: 
+Beeman, Jaylen, 978174, Female
+Cepeda, Alexander, 681806, Female
+Muller, Carlise, 733689, Female
+Parr, Aaron, 134062, Female
+Sandoval, Andrew, 454662, Male
+Shaikh, Philip, 979220, Male
+Villanueva, Pattaphol, 318944, Male
+Wiegant, Brian, 654986, Female
+Woo, Eric, 356775, Female
+Yarmey, Chad, 535427, Male
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 2
+ 
+ Test of tree assignment operation
+ 
+ BC_1 In Order Traversal: 
++Beeman, Jaylen, 978174, Female
++Cepeda, Alexander, 681806, Female
++Muller, Carlise, 733689, Female
++Parr, Aaron, 134062, Female
++Sandoval, Andrew, 454662, Male
++Shaikh, Philip, 979220, Male
++Villanueva, Pattaphol, 318944, Male
++Wiegant, Brian, 654986, Female
++Woo, Eric, 356775, Female
++Yarmey, Chad, 535427, Male
++
+ 
+ BC_2 In Order Traversal: 
++Beeman, Jaylen, 978174, Female
++Cepeda, Alexander, 681806, Female
++Muller, Carlise, 733689, Female
++Parr, Aaron, 134062, Female
++Sandoval, Andrew, 454662, Male
++Shaikh, Philip, 979220, Male
++Villanueva, Pattaphol, 318944, Male
++Wiegant, Brian, 654986, Female
++Woo, Eric, 356775, Female
++Yarmey, Chad, 535427, Male
++
+TestRun_3 Back To Top
+Post order traversal display
+Input Data
+3
+Manning, Michael;151683;M
+Ruiz, Crista;973640;F
+Ault, Kevin;542432;M
+Cardoza, Christian;613413;M
+Marquis, Camden;678621;F
+Kim, Joseph;801715;M
+McCrone, Travis;634821;M
+Ravenna, Michael;196018;M
+Banuelos, Robert;161311;M
+Knight, Richard;922457;M
+Baublys, Paolo;260672;M
+Johnson, Robert;603667;M
+Elliott, Cayler;135658;M
+Reyes, Connor;191261;F
+Penn, Frederick;819367;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 3
+
+BC_1 Post Order Traversal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 3
+
+BC_1 Post Order Traversal: 
+Baublys, Paolo, 260672, Male
+Banuelos, Robert, 161311, Male
+Elliott, Cayler, 135658, Male
+Johnson, Robert, 603667, Male
+Knight, Richard, 922457, Male
+Kim, Joseph, 801715, Male
+Cardoza, Christian, 613413, Male
+Ault, Kevin, 542432, Male
+Penn, Frederick, 819367, Male
+Reyes, Connor, 191261, Female
+Ravenna, Michael, 196018, Male
+McCrone, Travis, 634821, Male
+Marquis, Camden, 678621, Female
+Ruiz, Crista, 973640, Female
+Manning, Michael, 151683, Male
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 3
+ 
+ BC_1 Post Order Traversal: 
++Baublys, Paolo, 260672, Male
++Banuelos, Robert, 161311, Male
++Elliott, Cayler, 135658, Male
++Johnson, Robert, 603667, Male
++Knight, Richard, 922457, Male
++Kim, Joseph, 801715, Male
++Cardoza, Christian, 613413, Male
++Ault, Kevin, 542432, Male
++Penn, Frederick, 819367, Male
++Reyes, Connor, 191261, Female
++Ravenna, Michael, 196018, Male
++McCrone, Travis, 634821, Male
++Marquis, Camden, 678621, Female
++Ruiz, Crista, 973640, Female
++Manning, Michael, 151683, Male
++
+TestRun_4 Back To Top
+Pre-order traversal display
+Input Data
+4
+Deangelis, Sven;764050;F
+Shafer, Tristan ;693686;F
+Ruan, Francisco;587182;F
+Werner, Riley;444253;M
+Davis, Glen-Andrew;488133;F
+Thomas, Spencer;302398;M
+Nash, Tim;272835;F
+Hack, Jackson;641605;M
+Ortega, James;645168;F
+Catania, DeMarco;733002;M
+Johnson, Trevor;658753;F
+Sanchez, Kieley;904592;M
+Williams, Richard;866271;F
+Becker, Austin;716502;M
+Millar, Wen;127556;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 4
+
+BC_1 Pre Order Traversal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 4
+
+BC_1 Pre Order Traversal: 
+Deangelis, Sven, 764050, Female
+Davis, Glen-Andrew, 488133, Female
+Catania, DeMarco, 733002, Male
+Becker, Austin, 716502, Male
+Shafer, Tristan , 693686, Female
+Ruan, Francisco, 587182, Female
+Nash, Tim, 272835, Female
+Hack, Jackson, 641605, Male
+Johnson, Trevor, 658753, Female
+Millar, Wen, 127556, Male
+Ortega, James, 645168, Female
+Sanchez, Kieley, 904592, Male
+Werner, Riley, 444253, Male
+Thomas, Spencer, 302398, Male
+Williams, Richard, 866271, Female
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 4
+ 
+ BC_1 Pre Order Traversal: 
++Deangelis, Sven, 764050, Female
++Davis, Glen-Andrew, 488133, Female
++Catania, DeMarco, 733002, Male
++Becker, Austin, 716502, Male
++Shafer, Tristan , 693686, Female
++Ruan, Francisco, 587182, Female
++Nash, Tim, 272835, Female
++Hack, Jackson, 641605, Male
++Johnson, Trevor, 658753, Female
++Millar, Wen, 127556, Male
++Ortega, James, 645168, Female
++Sanchez, Kieley, 904592, Male
++Werner, Riley, 444253, Male
++Thomas, Spencer, 302398, Male
++Williams, Richard, 866271, Female
++
+TestRun_5 Back To Top
+Remove item action
+Input Data
+5
+Bolling, Mohammad;419808;F
+Amundson, David;323273;M
+Gamboa, Wanisha;362001;M
+Evangelista, Nicholas;982317;M
+Sibley, Ryan;827402;M
+Nishimura, Eric;729129;F
+Johnson, Brandon;576650;M
+Benavidez, Bradley;783372;M
+Hagans, Stefan;103521;M
+Poston, Matthew;653875;F
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 5
+
+Test of removal operation
+
+BC_1 Traversal before removal: 
+
+BC_1 Traversal after removal of Gamboa, Wanisha, 362001, Male
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 5
+
+Test of removal operation
+
+BC_1 Traversal before removal: 
+Amundson, David, 323273, Male
+Benavidez, Bradley, 783372, Male
+Bolling, Mohammad, 419808, Female
+Evangelista, Nicholas, 982317, Male
+Gamboa, Wanisha, 362001, Male
+Hagans, Stefan, 103521, Male
+Johnson, Brandon, 576650, Male
+Nishimura, Eric, 729129, Female
+Poston, Matthew, 653875, Female
+Sibley, Ryan, 827402, Male
+
+
+BC_1 Traversal after removal of Gamboa, Wanisha, 362001, Male
+Amundson, David, 323273, Male
+Benavidez, Bradley, 783372, Male
+Bolling, Mohammad, 419808, Female
+Evangelista, Nicholas, 982317, Male
+Hagans, Stefan, 103521, Male
+Johnson, Brandon, 576650, Male
+Nishimura, Eric, 729129, Female
+Poston, Matthew, 653875, Female
+Sibley, Ryan, 827402, Male
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 5
+ 
+ Test of removal operation
+ 
+ BC_1 Traversal before removal: 
++Amundson, David, 323273, Male
++Benavidez, Bradley, 783372, Male
++Bolling, Mohammad, 419808, Female
++Evangelista, Nicholas, 982317, Male
++Gamboa, Wanisha, 362001, Male
++Hagans, Stefan, 103521, Male
++Johnson, Brandon, 576650, Male
++Nishimura, Eric, 729129, Female
++Poston, Matthew, 653875, Female
++Sibley, Ryan, 827402, Male
++
+ 
+ BC_1 Traversal after removal of Gamboa, Wanisha, 362001, Male
++Amundson, David, 323273, Male
++Benavidez, Bradley, 783372, Male
++Bolling, Mohammad, 419808, Female
++Evangelista, Nicholas, 982317, Male
++Hagans, Stefan, 103521, Male
++Johnson, Brandon, 576650, Male
++Nishimura, Eric, 729129, Female
++Poston, Matthew, 653875, Female
++Sibley, Ryan, 827402, Male
++
+TestRun_6 Back To Top
+Data retrieval action
+Input Data
+6
+Nethercott, Michael;812517;F
+Higbie, Hunter;462902;M
+Sims, Houston;391402;F
+Mitchell Moreno;573711;F
+Serrano, Owen;119410;M
+Diaz-Juarez, Tyler;460126;M
+Gonzalez-Gascon, Jeaniel;309226;F
+Medrano-Pacheco, Rafael;285416;M
+Dartt, Rahul;410206;M
+Macneil, Katherine;193833;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 6
+
+Test of find operation
+
+BC_1 Traversal before search: 
+
+Retrieve Account Information: Diaz-Juarez, Tyler, 460126, Male
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 6
+
+Test of find operation
+
+BC_1 Traversal before search: 
+Dartt, Rahul, 410206, Male
+Diaz-Juarez, Tyler, 460126, Male
+Gonzalez-Gascon, Jeaniel, 309226, Female
+Higbie, Hunter, 462902, Male
+Macneil, Katherine, 193833, Male
+Medrano-Pacheco, Rafael, 285416, Male
+Mitchell Moreno, 573711, Female
+Nethercott, Michael, 812517, Female
+Serrano, Owen, 119410, Male
+Sims, Houston, 391402, Female
+
+
+Retrieve Account Information: Diaz-Juarez, Tyler, 460126, Male
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 6
+ 
+ Test of find operation
+ 
+ BC_1 Traversal before search: 
++Dartt, Rahul, 410206, Male
++Diaz-Juarez, Tyler, 460126, Male
++Gonzalez-Gascon, Jeaniel, 309226, Female
++Higbie, Hunter, 462902, Male
++Macneil, Katherine, 193833, Male
++Medrano-Pacheco, Rafael, 285416, Male
++Mitchell Moreno, 573711, Female
++Nethercott, Michael, 812517, Female
++Serrano, Owen, 119410, Male
++Sims, Houston, 391402, Female
++
+ 
+ Retrieve Account Information: Diaz-Juarez, Tyler, 460126, Male
+TestRun_7 Back To Top
+Clear tree action
+Input Data
+7
+Casolari, Lyle;554535;M
+Serate, Alexander;183761;F
+Goldberg, Zachary;557631;F
+Niday, Brian;898497;F
+Andrieu, Andrew;295673;M
+Ahmed, Alexandra;214029;F
+Hunt, Stephen;597706;M
+Volkmar, Mason;641651;M
+Goffinet, jahshua;722457;M
+Buck, Phoebe;729716;M
+Manohar, Felix;549333;F
+Walsh, Bailey;997437;F
+Beteta, Jacob;689594;F
+Wagner, Andres;246138;F
+Garza, Andrew;366939;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 7
+
+Test of tree clearing operation
+
+BC_1 Traversal before cleared: 
+
+BC_1 Traversal after removal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 7
+
+Test of tree clearing operation
+
+BC_1 Traversal before cleared: 
+Ahmed, Alexandra, 214029, Female
+Andrieu, Andrew, 295673, Male
+Beteta, Jacob, 689594, Female
+Buck, Phoebe, 729716, Male
+Casolari, Lyle, 554535, Male
+Garza, Andrew, 366939, Male
+Goffinet, jahshua, 722457, Male
+Goldberg, Zachary, 557631, Female
+Hunt, Stephen, 597706, Male
+Manohar, Felix, 549333, Female
+Niday, Brian, 898497, Female
+Serate, Alexander, 183761, Female
+Volkmar, Mason, 641651, Male
+Wagner, Andres, 246138, Female
+Walsh, Bailey, 997437, Female
+
+
+BC_1 Traversal after removal: 
+Tree is empty
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 7
+ 
+ Test of tree clearing operation
+ 
+ BC_1 Traversal before cleared: 
++Ahmed, Alexandra, 214029, Female
++Andrieu, Andrew, 295673, Male
++Beteta, Jacob, 689594, Female
++Buck, Phoebe, 729716, Male
++Casolari, Lyle, 554535, Male
++Garza, Andrew, 366939, Male
++Goffinet, jahshua, 722457, Male
++Goldberg, Zachary, 557631, Female
++Hunt, Stephen, 597706, Male
++Manohar, Felix, 549333, Female
++Niday, Brian, 898497, Female
++Serate, Alexander, 183761, Female
++Volkmar, Mason, 641651, Male
++Wagner, Andres, 246138, Female
++Walsh, Bailey, 997437, Female
++
+ 
+ BC_1 Traversal after removal: 
++Tree is empty
+TestRun_8 Back To Top
+Tree copy constructor action
+Input Data
+8
+Heck, Sabrina;970113;M
+Olson, Saulius;979287;F
+Williams, Austin;601716;M
+Shahid, Justin;921007;F
+Lee, Matthew;914423;F
+Campos, Sophia;868939;F
+Cook, Essie;957574;M
+Sprong, Travis;521736;F
+Jacinto, Eric;272105;F
+Lucas, Brandon;463643;F
+Hartland, Vincent;718764;F
+Dones, Alex;908016;F
+Poston, Allison;587888;M
+Andrews, James;731758;F
+Rada, Roniel;430116;F
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 8
+
+Test of tree object copy operation
+
+BC_1 In Order Traversal: 
+
+BC_3 In Order Traversal: 
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+
+Enter code number: 8
+
+Test of tree object copy operation
+
+BC_1 In Order Traversal: 
+Andrews, James, 731758, Female
+Campos, Sophia, 868939, Female
+Cook, Essie, 957574, Male
+Dones, Alex, 908016, Female
+Hartland, Vincent, 718764, Female
+Heck, Sabrina, 970113, Male
+Jacinto, Eric, 272105, Female
+Lee, Matthew, 914423, Female
+Lucas, Brandon, 463643, Female
+Olson, Saulius, 979287, Female
+Poston, Allison, 587888, Male
+Rada, Roniel, 430116, Female
+Shahid, Justin, 921007, Female
+Sprong, Travis, 521736, Female
+Williams, Austin, 601716, Male
+
+
+BC_3 In Order Traversal: 
+Andrews, James, 731758, Female
+Campos, Sophia, 868939, Female
+Cook, Essie, 957574, Male
+Dones, Alex, 908016, Female
+Hartland, Vincent, 718764, Female
+Heck, Sabrina, 970113, Male
+Jacinto, Eric, 272105, Female
+Lee, Matthew, 914423, Female
+Lucas, Brandon, 463643, Female
+Olson, Saulius, 979287, Female
+Poston, Allison, 587888, Male
+Rada, Roniel, 430116, Female
+Shahid, Justin, 921007, Female
+Sprong, Travis, 521736, Female
+Williams, Austin, 601716, Male
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ 
+ Enter code number: 8
+ 
+ Test of tree object copy operation
+ 
+ BC_1 In Order Traversal: 
++Andrews, James, 731758, Female
++Campos, Sophia, 868939, Female
++Cook, Essie, 957574, Male
++Dones, Alex, 908016, Female
++Hartland, Vincent, 718764, Female
++Heck, Sabrina, 970113, Male
++Jacinto, Eric, 272105, Female
++Lee, Matthew, 914423, Female
++Lucas, Brandon, 463643, Female
++Olson, Saulius, 979287, Female
++Poston, Allison, 587888, Male
++Rada, Roniel, 430116, Female
++Shahid, Justin, 921007, Female
++Sprong, Travis, 521736, Female
++Williams, Austin, 601716, Male
++
+ 
+ BC_3 In Order Traversal: 
++Andrews, James, 731758, Female
++Campos, Sophia, 868939, Female
++Cook, Essie, 957574, Male
++Dones, Alex, 908016, Female
++Hartland, Vincent, 718764, Female
++Heck, Sabrina, 970113, Male
++Jacinto, Eric, 272105, Female
++Lee, Matthew, 914423, Female
++Lucas, Brandon, 463643, Female
++Olson, Saulius, 979287, Female
++Poston, Allison, 587888, Male
++Rada, Roniel, 430116, Female
++Shahid, Justin, 921007, Female
++Sprong, Travis, 521736, Female
++Williams, Austin, 601716, Male
++

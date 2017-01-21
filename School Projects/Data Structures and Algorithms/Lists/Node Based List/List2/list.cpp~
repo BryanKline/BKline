@@ -1,0 +1,294 @@
+#include <iostream>
+#include <cstdlib>
+#include "listN.h"
+
+using namespace std;
+
+//List class default constructor that takes in a char which is ignores.
+List(int ignore)
+{
+	//Both head and cursor are set to NULL as a default.
+	head = NULL;
+	cursor = NULL;
+}	
+
+List(const List &list)
+{
+	if(list.empty() == true)	
+	{
+		head = NULL;
+		cursor = NULL;
+	}
+	else
+	{
+		Node* temp1;
+		Node* temp2;
+
+		temp1 = list.head;
+		temp2 = head;
+
+		while(temp1->next != NULL)
+		{
+			temp2 = new Node(temp1->data, NULL);			
+			if(temp1 == list.cursor)
+			{
+				cursor = temp2;
+			}
+			temp1 = temp1->next;
+			temp2 = temp2->next;
+		}	
+	}
+}
+
+~List()
+{
+	if(empty() == false)
+	{	
+		Node* temp;
+	
+		temp = head;
+
+		while(temp->next != NULL)
+		{
+			delete temp;
+			temp = temp->next;
+		}
+		
+		temp = NULL;
+		head = NULL;
+		cursor = NULL;
+	}
+}
+
+//List class member function that moves cursor to the beginning of the List and
+//returns a bool corresponding to whether or not it was successful. 
+bool gotoBeginning()
+{
+	//If the List is not empty then cursor is set to head and true is returned,
+	//otherwise false is returned.
+	if(empty() == false)
+	{
+		cursor = head;
+	
+		return true;	
+	}
+	
+	return false;
+}
+
+//List class member function that moves the cursor to the end of the List and
+//returns a bool corresponding to whether or not it was successful.
+bool gotoEnd()
+{
+	//If the List is not empty and cursor is not at the end already then an event
+	//controlled loop moves cursor until its next data member is NULL at which
+	//point it's at the end of the List and true is returned, otherwise false
+	//is returned.
+	if((empty() == false)&&(cursor->next != NULL))
+	{
+		while(cursor->next != NULL)
+		(
+			cursor = cursor->next;
+		)
+
+		return true;	
+	}
+	
+	return false;
+}
+
+//List class member function that moves the cursor to the next Node in the
+//List and returns a bool corresponding to whether or not it was successful.
+bool gotoNext()
+{
+	//If the List is not empty and cursor is not already at the end of the
+	//List then cursor is moved down the List one and true is returned,
+	//otherwise false is returned. 
+	if((empty() == false)&&(cursor->next != NULL))
+	{
+		cursor = cursor->next;
+
+		return true;
+	}
+	
+	return false;
+}
+
+//List class member function that moves the cursor back towards the beginning of
+//the list and returns a bool corresponding to whether or not it was successful. 
+bool gotoPrior()
+{
+	//If the List isn't empty and if there isn't only one Node in the List then
+	//a temporary Node pointer is set to head then with an event controlled loop
+	//moved through the List until just before cursor and then cursor is set
+	//equal to temp and true is returned, otherwise false is returned.
+	if((empty() == false)&&(head->next != NULL))
+	{
+		Node* temp;
+		
+		temp = head;
+
+		while(temp->next != cursor)
+		{
+			temp = temp->next;	
+		}
+
+		cursor = temp;
+		temp = NULL;
+
+		return true;
+	}
+	
+	return false;
+}
+
+//List class member function
+bool insert(char letter)
+{
+	if(full() == false)
+	{
+
+
+
+
+		return true;
+	}
+
+	return false;
+}
+
+//List class member function
+bool remove(char &letter)
+{
+	if(empty() == false)
+	{
+
+
+
+
+
+		return true;
+	}
+
+	return false;
+}
+
+//List class member function that returns a bool corresponding to whether or not the
+//List is empty.
+bool empty() const
+{
+	//If head and cursor are both NULL then the list is empty and true is returned,
+	//otherwise false is returned.
+	if((head == NULL)&&(cursor == NULL))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+//List class member function that returns a bool corresponding to whether or not the
+//List is full.
+bool full() const
+{
+	return false;
+}
+
+//List class member function
+bool clear()
+{
+	if(empty() == false)
+	{
+		Node* temp;
+	
+		temp = head;
+
+		while(temp->next != NULL)
+		{
+			delete temp;
+			temp = temp->next;
+		}
+
+		temp = NULL;
+		head = NULL;
+		cursor = NULL;
+
+		return true;
+	}
+
+	return false;
+}
+
+//List class member function
+List& operator = (const List &list)
+{
+	if(this != &list)
+	{
+		this->clear();
+		
+		if(list.empty() == true)	
+		{
+			head = NULL;
+			cursor = NULL;
+		}
+		else
+		{
+			Node* temp1;
+			Node* temp2;
+
+			temp1 = list.head;
+			temp2 = head;
+
+			while(temp1->next != NULL)
+			{
+				temp2 = new Node(temp1->data, NULL);			
+				if(temp1 == list.cursor)
+				{
+					cursor = temp2;
+				}
+				temp1 = temp1->next;
+				temp2 = temp2->next;
+			}	
+		}
+	}
+
+	return *this;
+}
+
+//Node class default constructor that takes in a char and a Node pointer.
+Node(char letter, Node* nodePtr)
+{
+	//The Node's data members are set to the values of the parameters	
+	//passed into the constructor.
+	data = letter;
+	next = nodePtr;
+}
+
+ostream& operator << (ostream &out, const List &list)
+{
+	if(list.empty() == false)
+	{
+		Node* temp;
+		temp = list.head;
+
+		while(temp->next != NULL)
+		{
+			if(temp == cursor)
+			{
+				cout << "[" << temp->data << "] ";
+			}
+			else
+			{	
+				cout << temp->data << " ";
+			}
+		}
+
+		temp = NULL;
+	}
+	else
+	{
+		cout << endl;
+	}
+
+	return out;
+}

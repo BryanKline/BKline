@@ -1,0 +1,2001 @@
+
+Program Output
+0 Tests Out Of 3 Passed
+Quick Links
+PA02_Tests
+TestRun_1
+TestRun_2
+TestRun_3
+PA02_Tests
+Runs vector-like program
+PA02
+TestRun_1 Back To Top
+Base test cases
+
+Input Data
+s 3 M
+s 1 O
+s 4 P
+s 2 X
+s 0 T
+r 10
+s 5 Q
+s 9 I
+s 8 N
+s 6 B
+s 7 U
+r 7
+c
+a
+r 5
+a
+c
+E
+Your Output 	Expected Output
+
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+
+Command: 1 - O
+ Value: O set.
+
+Command: 4 - P
+ Value: P set.
+
+Command: 2 - X
+ Value: X set.
+
+Command: 0 - T
+ Value: T set.
+
+Command: 10
+ Vector capacity reset to: 10
+
+Command: 5 - Q
+ Value: Q set.
+
+Command: 9 - I
+ Value: I set.
+
+Command: 8 - N
+ Value: N set.
+
+Command: 6 - B
+ Value: B set.
+
+Command: 7 - U
+ Value: U set.
+
+Command: 7
+ Vector capacity reset to: 7
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command: 5
+ Vector capacity reset to: 5
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command:  End program requested.
+
+	
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+
+Command: 1 - O
+ Value: O set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+
+Command: 4 - P
+ Value: P set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+
+Command: 2 - X
+ Value: X set.
+ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P]
+
+Command: 0 - T
+ Value: T set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+
+Command: 10
+ Vector capacity reset to: 10
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-]
+
+Command: 5 - Q
+ Value: Q set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[-] 7[-] 8[-] 9[-]
+
+Command: 9 - I
+ Value: I set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[-] 7[-] 8[-] 9[I]
+
+Command: 8 - N
+ Value: N set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[-] 7[-] 8[N] 9[I]
+
+Command: 6 - B
+ Value: B set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B] 7[-] 8[N] 9[I]
+
+Command: 7 - U
+ Value: U set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B] 7[U] 8[N] 9[I]
+
+Command: 7
+ Vector capacity reset to: 7
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+
+Command: 5
+ Vector capacity reset to: 5
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[Q] 6[B]
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P]
+
+Command:  End program requested.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P]
+
+Difference
+ 
+ Commands:
+ 
+   a     : Assign 'A' test list to 'B' test list
+   c     : Construct 'C' test list with test list 'A'
+   E     : End the test program
+   g x   : Get value from vector at index x
+   s x y : Set value in vector at index x to value y
+   r x   : Reset vector capacity to x
+   S     : Show this list of commands
+   t     : Conduct Vector size & capacity tests
+ 
+ Command: 3 - M
+  Value: M set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+ 
+ Command: 1 - O
+  Value: O set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+ 
+ Command: 4 - P
+  Value: P set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+ 
+ Command: 2 - X
+  Value: X set.
++ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P]
+ 
+ Command: 0 - T
+  Value: T set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
+ 
+ Command: 10
+  Vector capacity reset to: 10
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-]
+ 
+ Command: 5 - Q
+  Value: Q set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[-] 7[-] 8[-] 9[-]
+ 
+ Command: 9 - I
+  Value: I set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[-] 7[-] 8[-] 9[I]
+ 
+ Command: 8 - N
+  Value: N set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[-] 7[-] 8[N] 9[I]
+ 
+ Command: 6 - B
+  Value: B set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B] 7[-] 8[N] 9[I]
+ 
+ Command: 7 - U
+  Value: U set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B] 7[U] 8[N] 9[I]
+ 
+ Command: 7
+  Vector capacity reset to: 7
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
+ 
+ Command: 5
+  Vector capacity reset to: 5
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[Q] 6[B]
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P]
+ 
+ Command:  End program requested.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P]
+ 
+TestRun_2 Back To Top
+Larger data set tested
+Input Data
+s 3 M
+s 1 O
+s 4 P
+r 20
+s 2 X
+s 0 T
+s 19 Q
+s 10 I
+s 17 N
+s 5 B
+s 18 U
+s 6 Y
+s 16 Z
+s 7 B
+s 8 A
+s 9 E
+s 15 V
+c
+s 10 S
+s 12 F
+s 11 C
+a
+s 14 K
+s 4 R
+s 13 D
+g 6
+g 18
+g 9
+g 2
+g 15
+g 12
+r 7
+a
+c
+E
+Your Output 	Expected Output
+
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+
+Command: 1 - O
+ Value: O set.
+
+Command: 4 - P
+ Value: P set.
+
+Command: 20
+ Vector capacity reset to: 20
+
+Command: 2 - X
+ Value: X set.
+
+Command: 0 - T
+ Value: T set.
+
+Command: 19 - Q
+ Value: Q set.
+
+Command: 10 - I
+ Value: I set.
+
+Command: 17 - N
+ Value: N set.
+
+Command: 5 - B
+ Value: B set.
+
+Command: 18 - U
+ Value: U set.
+
+Command: 6 - Y
+ Value: Y set.
+
+Command: 16 - Z
+ Value: Z set.
+
+Command: 7 - B
+ Value: B set.
+
+Command: 8 - A
+ Value: A set.
+
+Command: 9 - E
+ Value: E set.
+
+Command: 15 - V
+ Value: V set.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command: 10 - S
+ Value: S set.
+
+Command: 12 - F
+ Value: F set.
+
+Command: 11 - C
+ Value: C set.
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command: 14 - K
+ Value: K set.
+
+Command: 4 - R
+ Value: R set.
+
+Command: 13 - D
+ Value: D set.
+
+Command: 6
+ Value: � acquired.
+
+Command: 18
+ Value: � acquired.
+
+Command: 9
+ Value: � acquired.
+
+Command: 2
+ Value: � acquired.
+
+Command: 15
+ Value: � acquired.
+
+Command: 12
+ Value: � acquired.
+
+Command: 7
+ Vector capacity reset to: 7
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command:  End program requested.
+
+	
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+
+Command: 1 - O
+ Value: O set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+
+Command: 4 - P
+ Value: P set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+
+Command: 20
+ Vector capacity reset to: 20
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 2 - X
+ Value: X set.
+ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 0 - T
+ Value: T set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 19 - Q
+ Value: Q set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+
+Command: 10 - I
+ Value: I set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+
+Command: 17 - N
+ Value: N set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+
+Command: 5 - B
+ Value: B set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+
+Command: 18 - U
+ Value: U set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[N] 18[U] 19[Q]
+
+Command: 6 - Y
+ Value: Y set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[N] 18[U] 19[Q]
+
+Command: 16 - Z
+ Value: Z set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 7 - B
+ Value: B set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 8 - A
+ Value: A set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 9 - E
+ Value: E set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 15 - V
+ Value: V set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 10 - S
+ Value: S set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 12 - F
+ Value: F set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[-] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 11 - C
+ Value: C set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 14 - K
+ Value: K set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 4 - R
+ Value: R set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 13 - D
+ Value: D set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 6
+ Value: Y acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 18
+ Value: U acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 9
+ Value: E acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 2
+ Value: X acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 15
+ Value: V acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 12
+ Value: F acquired.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[D] 14[K] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command: 7
+ Vector capacity reset to: 7
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[S] 11[C] 12[F] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+
+Command:  End program requested.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[R] 
+            : 5[B] 6[Y]
+
+Difference
+ 
+ Commands:
+ 
+   a     : Assign 'A' test list to 'B' test list
+   c     : Construct 'C' test list with test list 'A'
+   E     : End the test program
+   g x   : Get value from vector at index x
+   s x y : Set value in vector at index x to value y
+   r x   : Reset vector capacity to x
+   S     : Show this list of commands
+   t     : Conduct Vector size & capacity tests
+ 
+ Command: 3 - M
+  Value: M set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+ 
+ Command: 1 - O
+  Value: O set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+ 
+ Command: 4 - P
+  Value: P set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+ 
+ Command: 20
+  Vector capacity reset to: 20
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 2 - X
+  Value: X set.
++ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 0 - T
+  Value: T set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 19 - Q
+  Value: Q set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+ 
+ Command: 10 - I
+  Value: I set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+ 
+ Command: 17 - N
+  Value: N set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+ 
+ Command: 5 - B
+  Value: B set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+ 
+ Command: 18 - U
+  Value: U set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[N] 18[U] 19[Q]
+ 
+ Command: 6 - Y
+  Value: Y set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[N] 18[U] 19[Q]
+ 
+ Command: 16 - Z
+  Value: Z set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 7 - B
+  Value: B set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 8 - A
+  Value: A set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 9 - E
+  Value: E set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 15 - V
+  Value: V set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 10 - S
+  Value: S set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 12 - F
+  Value: F set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[-] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 11 - C
+  Value: C set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 14 - K
+  Value: K set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 4 - R
+  Value: R set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 13 - D
+  Value: D set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 6
+- Value: � acquired.
++ Value: Y acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 18
+- Value: � acquired.
++ Value: U acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 9
+- Value: � acquired.
++ Value: E acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 2
+- Value: � acquired.
++ Value: X acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 15
+- Value: � acquired.
++ Value: V acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 12
+- Value: � acquired.
++ Value: F acquired.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[D] 14[K] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command: 7
+  Vector capacity reset to: 7
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[S] 11[C] 12[F] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[B] 6[Y] 7[B] 8[A] 9[E] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[V] 16[Z] 17[N] 18[U] 19[Q]
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
+ 
+ Command:  End program requested.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID B: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
++ Vector ID C: 0[T] 1[O] 2[X] 3[M] 4[R] 
++            : 5[B] 6[Y]
+ 
+TestRun_3 Back To Top
+Incorporates setting vector size to zero, then resizing back up
+Input Data
+s 3 M
+s 1 O
+s 4 P
+r 20
+s 2 X
+s 0 T
+s 19 Q
+s 10 I
+s 17 N
+r 0
+c
+a
+r 8
+s 5 B
+s 7 U
+s 6 Y
+s 2 Z
+s 7 B
+s 3 A
+s 5 E
+s 2 V
+c
+r 13
+s 10 S
+s 12 F
+s 11 C
+a
+s 4 K
+s 12 R
+s 1 D
+g 6
+g 10
+g 9
+g 2
+g 5
+g 11
+r 7
+a
+c
+E
+Your Output 	Expected Output
+
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+
+Command: 1 - O
+ Value: O set.
+
+Command: 4 - P
+ Value: P set.
+
+Command: 20
+ Vector capacity reset to: 20
+
+Command: 2 - X
+ Value: X set.
+
+Command: 0 - T
+ Value: T set.
+
+Command: 19 - Q
+ Value: Q set.
+
+Command: 10 - I
+ Value: I set.
+
+Command: 17 - N
+ Value: N set.
+
+Command: 0
+ Vector capacity reset to: 0
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command: 8
+ Vector capacity reset to: 8
+
+Command: 5 - B
+ Value: B set.
+
+Command: 7 - U
+ Value: U set.
+
+Command: 6 - Y
+ Value: Y set.
+
+Command: 2 - Z
+ Value: Z set.
+
+Command: 7 - B
+ Value: B set.
+
+Command: 3 - A
+ Value: A set.
+
+Command: 5 - E
+ Value: E set.
+
+Command: 2 - V
+ Value: V set.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command: 13
+ Vector capacity reset to: 13
+
+Command: 10 - S
+ Value: S set.
+
+Command: 12 - F
+ Value: F set.
+
+Command: 11 - C
+ Value: C set.
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command: 4 - K
+ Value: K set.
+
+Command: 12 - R
+ Value: R set.
+
+Command: 1 - D
+ Value: D set.
+
+Command: 6
+ Value: � acquired.
+
+Command: 10
+ Value: � acquired.
+
+Command: 9
+ Value: � acquired.
+
+Command: 2
+ Value: � acquired.
+
+Command: 5
+ Value: � acquired.
+
+Command: 11
+ Value: � acquired.
+
+Command: 7
+ Vector capacity reset to: 7
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+
+Command:  End program requested.
+
+	
+Commands:
+
+  a     : Assign 'A' test list to 'B' test list
+  c     : Construct 'C' test list with test list 'A'
+  E     : End the test program
+  g x   : Get value from vector at index x
+  s x y : Set value in vector at index x to value y
+  r x   : Reset vector capacity to x
+  S     : Show this list of commands
+  t     : Conduct Vector size & capacity tests
+
+Command: 3 - M
+ Value: M set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+
+Command: 1 - O
+ Value: O set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+
+Command: 4 - P
+ Value: P set.
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+
+Command: 20
+ Vector capacity reset to: 20
+ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 2 - X
+ Value: X set.
+ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 0 - T
+ Value: T set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[-]
+
+Command: 19 - Q
+ Value: Q set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+
+Command: 10 - I
+ Value: I set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+
+Command: 17 - N
+ Value: N set.
+ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
+            : 5[-] 6[-] 7[-] 8[-] 9[-] 
+            : 10[I] 11[-] 12[-] 13[-] 14[-] 
+            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+
+Command: 0
+ Vector capacity reset to: 0
+ Vector ID A: Empty List.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: Empty List.
+ Vector ID C: Empty List.
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: Empty List.
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 8
+ Vector capacity reset to: 8
+ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
+            : 5[-] 6[-] 7[-]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 5 - B
+ Value: B set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
+            : 5[B] 6[-] 7[-]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 7 - U
+ Value: U set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
+            : 5[B] 6[-] 7[U]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 6 - Y
+ Value: Y set.
+ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
+            : 5[B] 6[Y] 7[U]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 2 - Z
+ Value: Z set.
+ Vector ID A: 0[-] 1[-] 2[Z] 3[-] 4[-] 
+            : 5[B] 6[Y] 7[U]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 7 - B
+ Value: B set.
+ Vector ID A: 0[-] 1[-] 2[Z] 3[-] 4[-] 
+            : 5[B] 6[Y] 7[B]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 3 - A
+ Value: A set.
+ Vector ID A: 0[-] 1[-] 2[Z] 3[A] 4[-] 
+            : 5[B] 6[Y] 7[B]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 5 - E
+ Value: E set.
+ Vector ID A: 0[-] 1[-] 2[Z] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command: 2 - V
+ Value: V set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+ Vector ID B: Empty List.
+ Vector ID C: Empty List.
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+ Vector ID B: Empty List.
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 13
+ Vector capacity reset to: 13
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[-] 11[-] 12[-]
+ Vector ID B: Empty List.
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 10 - S
+ Value: S set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[-] 12[-]
+ Vector ID B: Empty List.
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 12 - F
+ Value: F set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[-] 12[F]
+ Vector ID B: Empty List.
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 11 - C
+ Value: C set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID B: Empty List.
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 4 - K
+ Value: K set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 12 - R
+ Value: R set.
+ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 1 - D
+ Value: D set.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 6
+ Value: Y acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 10
+ Value: S acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 9
+ Value: - acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 2
+ Value: V acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 5
+ Value: E acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 11
+ Value: C acquired.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[R]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command: 7
+ Vector capacity reset to: 7
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
+            : 10[S] 11[C] 12[F]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command:  Test list 'B' has been assigned to test list 'A'.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
+            : 5[E] 6[Y] 7[B]
+
+Command:  Test list 'C' has been constructed with test list 'A'.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID C: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+
+Command:  End program requested.
+ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+ Vector ID C: 0[-] 1[D] 2[V] 3[A] 4[K] 
+            : 5[E] 6[Y]
+
+Difference
+ 
+ Commands:
+ 
+   a     : Assign 'A' test list to 'B' test list
+   c     : Construct 'C' test list with test list 'A'
+   E     : End the test program
+   g x   : Get value from vector at index x
+   s x y : Set value in vector at index x to value y
+   r x   : Reset vector capacity to x
+   S     : Show this list of commands
+   t     : Conduct Vector size & capacity tests
+ 
+ Command: 3 - M
+  Value: M set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[M] 4[-]
+ 
+ Command: 1 - O
+  Value: O set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[-]
+ 
+ Command: 4 - P
+  Value: P set.
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P]
+ 
+ Command: 20
+  Vector capacity reset to: 20
++ Vector ID A: 0[-] 1[O] 2[-] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 2 - X
+  Value: X set.
++ Vector ID A: 0[-] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 0 - T
+  Value: T set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[-]
+ 
+ Command: 19 - Q
+  Value: Q set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+ 
+ Command: 10 - I
+  Value: I set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[-] 18[-] 19[Q]
+ 
+ Command: 17 - N
+  Value: N set.
++ Vector ID A: 0[T] 1[O] 2[X] 3[M] 4[P] 
++            : 5[-] 6[-] 7[-] 8[-] 9[-] 
++            : 10[I] 11[-] 12[-] 13[-] 14[-] 
++            : 15[-] 16[-] 17[N] 18[-] 19[Q]
+ 
+ Command: 0
+  Vector capacity reset to: 0
++ Vector ID A: Empty List.
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: Empty List.
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 8
+  Vector capacity reset to: 8
++ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
++            : 5[-] 6[-] 7[-]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 5 - B
+  Value: B set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
++            : 5[B] 6[-] 7[-]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 7 - U
+  Value: U set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
++            : 5[B] 6[-] 7[U]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 6 - Y
+  Value: Y set.
++ Vector ID A: 0[-] 1[-] 2[-] 3[-] 4[-] 
++            : 5[B] 6[Y] 7[U]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 2 - Z
+  Value: Z set.
++ Vector ID A: 0[-] 1[-] 2[Z] 3[-] 4[-] 
++            : 5[B] 6[Y] 7[U]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 7 - B
+  Value: B set.
++ Vector ID A: 0[-] 1[-] 2[Z] 3[-] 4[-] 
++            : 5[B] 6[Y] 7[B]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 3 - A
+  Value: A set.
++ Vector ID A: 0[-] 1[-] 2[Z] 3[A] 4[-] 
++            : 5[B] 6[Y] 7[B]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 5 - E
+  Value: E set.
++ Vector ID A: 0[-] 1[-] 2[Z] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command: 2 - V
+  Value: V set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
++ Vector ID B: Empty List.
++ Vector ID C: Empty List.
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
++ Vector ID B: Empty List.
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 13
+  Vector capacity reset to: 13
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[-] 11[-] 12[-]
++ Vector ID B: Empty List.
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 10 - S
+  Value: S set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[-] 12[-]
++ Vector ID B: Empty List.
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 12 - F
+  Value: F set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[-] 12[F]
++ Vector ID B: Empty List.
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 11 - C
+  Value: C set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID B: Empty List.
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 4 - K
+  Value: K set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 12 - R
+  Value: R set.
++ Vector ID A: 0[-] 1[-] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 1 - D
+  Value: D set.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 6
+- Value: � acquired.
++ Value: Y acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 10
+- Value: � acquired.
++ Value: S acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 9
+- Value: � acquired.
++ Value: - acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 2
+- Value: � acquired.
++ Value: V acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 5
+- Value: � acquired.
++ Value: E acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 11
+- Value: � acquired.
++ Value: C acquired.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[R]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command: 7
+  Vector capacity reset to: 7
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID B: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B] 8[-] 9[-] 
++            : 10[S] 11[C] 12[F]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command:  Test list 'B' has been assigned to test list 'A'.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID C: 0[-] 1[-] 2[V] 3[A] 4[-] 
++            : 5[E] 6[Y] 7[B]
+ 
+ Command:  Test list 'C' has been constructed with test list 'A'.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID C: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
+ 
+ Command:  End program requested.
++ Vector ID A: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID B: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]
++ Vector ID C: 0[-] 1[D] 2[V] 3[A] 4[K] 
++            : 5[E] 6[Y]

@@ -1,0 +1,64 @@
+Bryan Kline
+CS302 
+PA05 - SorterClass Journal
+02/24/2016
+
+1. What worked well for this assignment?
+
+2. What did not work well for this assignment?
+
+
+3. What did you need help with on this assignment?
+
+4. What did you learn from this assignment?
+
+Bubble:
+0.000049
+0.000049
+0.000061
+0.000049
+0.000064
+0.000061
+0.000061
+0.000061 
+0.000061
+0.000049
+
+(0.000565)/10
+0.0000565 * 10^6
+56.5 microseconds
+
+
+Merge:
+0.000056
+0.000058
+0.000072
+0.000058
+0.000076
+0.000073
+0.000074
+0.000072
+0.000118
+0.000058
+
+(0.000715)/10
+0.0000715 * 10^6
+71.5 microseconds
+
+
+Quick:
+0.000039
+0.000039
+0.000049
+0.000040
+0.000051 
+0.000049
+0.000116 
+0.000049
+0.000049
+0.000040
+
+(0.000521)/10
+0.0000521 * 10^6
+52.1 microseconds
+

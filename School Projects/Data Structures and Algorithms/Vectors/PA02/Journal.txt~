@@ -1,0 +1,28 @@
+Bryan Kline
+CS302 
+PA02 - SimpleVector Journal
+01/31/2016
+
+1. What worked well for this assignment?
+
+For this assignment the easiest thing was that values in the nodes were simply overwritten rather than dealt with otherwise, such as being shuffled around or managed.  If nodes were to be deleted then they were simply deleted.  That made the project and planning easier and it also made matching the output in Submit easier.
+
+It was also nice that so much of the code could be wrapped up into methods and reused in other places in the code; it makes for nice compact code when that is the case.
+
+2. What did not work well for this assignment?
+
+The resize method was the biggest problem in this assignment.  While it wasn't too bad to finally work out how to resize properly for all cases, even if it did take quite a bit of time to debug, the major problem with this was that it was hard to get it down to the proper number of significant statements.  What I have works, but seems like it's less than efficient in terms of the number of lines of code.
+
+Additionally, the fact that the class is templated made compilation a problematic and confounding process.  Being as I was quite unfamiliar with templates and their syntax, aside from one short lab activity in a previous course, I had a lot of mistakes initially and it took a long time to chase each one down, recompile, find more errors, and repeat, ad nauseum.   
+
+3. What did you need help with on this assignment?
+
+One major question I had prior to testing was about initializers and the order in which they are applied.  Even after looking it up in some of the more reliable C++ sources, I still wasn't sure about when the argument in an initializer is assigned to its data member, before or after the execution of the block of code that makes up the body of the method.  One would assume that the data members would first take on the values passed into the initializers and then carry on with the rest of the method, which turned out to be the case, but I didn't want to write a lot of code first and have it turn out the other way and then have to rewrite it.  However, I was unable to find the answer online, and so I just assumed the former.
+
+Another thing I would have liked some clarification on was about when to use initializers.  In a constructor it is clear that the data members just have all their values passed into the initializers, but what about other methods?  Should a method with one parameter which will at some point in the function be assigned to a data member get one initializer, or is it acceptable to simply make one assignment statement in the body of the method?  
+
+4. What did you learn from this assignment?
+
+The most significant things I learned from this assignment were about templates and a bit about exceptions, which was another thing about which I wasn't very familiar.  I feel more comfortable with the syntax of templates now and am gaining some feeling for when the compiler wants to see some indication of what type will be used to fill out the class architecture.  Exceptions I learned less about them given that only two methods used them, and those only used "throw" and not "try" or "catch" nor was it necessary to define new exceptions, but I understand that in subsequent projects we will go more into this topic.
+
+

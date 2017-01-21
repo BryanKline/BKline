@@ -1,0 +1,25 @@
+Bryan Kline
+CS302 
+PA06 - BSTClass Journal
+03/10/2016
+
+1. What worked well for this assignment?
+
+Most of the methods were fairly short in their implementation, several called helper functions and so the code in those methods was especially minimal, and so while there were several methods to implement, about twenty, it wasn't that bad in terms of the number of lines of code.  Additionally, even though binary search trees are accessed and traversed with recursion, the recursion somehow was easier to implement.  
+
+One reason why the recursion for trees was more intuitive is probably that it's easier to visualize with a tree.  Because the tree has different levels of hierarchy, drawing it out makes it quite simple to see how when a recursive call ends it pops back up to the next higher level, which corresponds to the next level up in the tree.  For this reason it was a bit more clear how the recursion was working and so easier to implement the functions.
+
+2. What did not work well for this assignment?
+
+Removing values from the tree was a problem for this assignment.  The find method not operating in such a way as to allow it to be called in other functions, like remove and insert, means that the code for the part of remove that finds the item in the tree was very similar to that of find, and so that was one thing about remove that was problematic.  Next, I couldn't figure out how, once the item to be removed has been located in the tree, to remove for all possible cases.  The first cases, that the node to be removed has no children or that it only has one child, were fine, but the case where it had two children was a problem.
+
+As discussed in class, the highest value in the left subtree or the lowest value in the right subtree is to be inserted into the node that is having its value removed, the conventional or most common strategy is to go left once and then bottom-out right-wise, which seems straightforward enough, but it didn't go very well in practice.  Also, remove ends up being quite a lengthy method and so it seems like there must be a better way to do it, instead of the layers of if statements that I eneded up with.
+
+3. What did you need help with on this assignment?
+
+One thing in particular I needed help with, aside from the discussion in class about how remove should work which confirmed that I was on the right track with it, was what the traversal methods were doing.  The project description for this project were minimal and so initially I wasn't sure at all what in-order, pre-order, and post-order should do other than simply moving through the tree.  It was only after looking the main driver, the Submit output and talking with people on the forum that it clicked into place in my mind and suddenly I realized that it wasn't just visiting each node but printing the values to the screen, which then seems very obvious.  But for some reason this wasn't something I saw immediately and it wasn't explained or explicitly stated.
+
+4. What did you learn from this assignment?
+
+Above all I learned about binary search trees, and trees in general, from this assignment as while I had heard of them and had seen diagrams of them, I've never implemented them and so this was new to me.  I found, as mentioned before, that the recursion was a bit easier to see here and as far as sorting and searching go, trees seem very powerful as the big-O should be linear and probably some log base 2 complexity for the better cases.
+

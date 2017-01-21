@@ -1,0 +1,27 @@
+Bryan Kline
+CS302 
+PA03 - PriorityQueue Journal
+02/08/2016
+
+1. What worked well for this assignment?
+
+The layers of abstraction were both what worked well and what didn't work well for this assignment.  The multiple layers of abstraction, i.e. UtilityVector inheriting from SimpleVector which in turn was a data member of PriorityQueue, made many of the methods trivial to implement as they were already implemented in another layer down.  In particular, the fact that the copy constructors and overloaded assignment operators were just calls to constructors and assignment operators of the layer below made it a lot easier.
+
+This to me was a good illustration of the power of abstraction, once that lower layer is built, it's convenient and efficient to use the methods of the lower layer instead of building each piece anew.
+
+
+2. What did not work well for this assignment?
+
+Despite the fact that the abstraction made much of the assignment easier to implement, in other ways it made it a bit more difficult.  One must understand what each layer's black boxes do so as to be able to use them effectively and if they're not understood, or if as in this case one is building multiple layers at the same time then it can be tricky to see how they interact with each other.  It also means that the lower layer has to be right before it can be used in higher layers.  For instance, the UtilityVector methods insertAtIndex and removedAtIndex had to be well planned and understood in terms of their behavior under various circumstances before the PriorityQueue methods enqueue and dequeue could use them.
+
+Testing was also a problem.  I had to make a separate, simplified main driver and makefile just to test UtilityVector after I realized that I couldn't really get an idea of what was happening with that PriorityQueue layer on top of it when trying to test it with PA03.cpp.  
+
+3. What did you need help with on this assignment?
+
+I saw on the discussion forum that there was a mistake in the PriorityQueue implementation in Submit so that the wrong parameter was entered into the default constructor so instead of ten as a default it was getting five and so that was something which I would have had a hard time figuring out had I not been helped by the forum.  I probably would have thought that it was getting resized, even though the downward resize is to take place only upon dequeuing, rather than that it was merely a mistake and would have spent hours down the wrong track likely.  For reasons like this the discussion forum is invaluble.
+
+4. What did you learn from this assignment?
+
+Abstraction was the major take away from this assignment.  The is-a/has-a distinction was made most clear here as well by the fact that UtilityVector is-a SimpleVector and PriorityQueue has-a UtilityVector.  This has caused me to realize that very complicated constructions of classes/data structures are possible where layers upon layers of different classes with is-a and has-a relationships can all be grouped together.  
+
+

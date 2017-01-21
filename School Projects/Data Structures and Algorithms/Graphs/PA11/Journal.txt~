@@ -1,0 +1,20 @@
+Bryan Kline
+CS302 
+PA11 - Graphs Journal
+04/27/2016
+
+1. What worked well for this assignment?
+
+The things that worked best for this project were that the majority of the code were things that were essentially strictly review, the stacks and queues and the inheritence.  What was particularly nice about that was that the parent class had overloaded offset operators which made it very easy to access the items in the SimpleList.  It was so easy in fact that I wish we would have learned about those earlier as it would have been nice to use them for other things.  The other part of this assignment that worked well was that, again the algorithm was given to the class during lecture.  It was so detailed that if one took good notes in class, it was almost a direct transliteration from the notes to code with simple modifications from English into C++ syntax and it worked.  My breadth first traversal for example worked perfectly the first time, which is rare for me.
+
+2. What did not work well for this assignment?
+
+The one thing that didn't work for me was that I was attempting to print out during the depth first traversal at the wrong time and so I was getting the wrong output and I couldn't figure out why.  This was likely because the part of the pseudo-code discussed in class that covered the part where it should be printed out was something I got wrong; instead of printing out upon pushing I was printing out on popping, and so the order was all wrong.
+
+3. What did you need help with on this assignment?
+
+The above problem I had was something I needed help with because I sort of latched onto the what I thought the alogrithm was that was discussed in class and so I didn't really think about it past what we did in lecture and so I wasn't able to see my mistake.  Only upon consulting other sources did I see that I was wrong and that I was simply printing out at the wrong place.  Once fixed, the depth first traversal worked.  Another problem I was having had to do with the stack and queue classes and the use of the overloaded offset operators from the parent class.  I was not separating the local object dereference from the rest of the expression when using the brackets and so it was as though I was trying to dereference the entire thing.  I then used the operator as a function and it worked, but I then saw on the forum that parentheses would be needed, which is something I do know but it just slipped past me, and so once I did that it worked perfectly and I switched back to using brackets.
+
+4. What did you learn from this assignment?
+
+The big take away from this project for me was how complicated graphs can become; the more vertices the more the possible ways to traverse it grow incredibly and it seems like graphs are the most unweildly and hairy data structures we've seen yet.  I suppose this project will serve as a brief intro and that I will see more of them in future courses and it seems like a good idea to try to get as familiar with them as possible before seeing them again as they seem like they can dwarf trees in complexity. 

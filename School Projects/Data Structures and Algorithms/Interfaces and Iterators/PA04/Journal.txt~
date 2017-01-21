@@ -1,0 +1,29 @@
+Bryan Kline
+CS302 
+PA04 - InterfaceClass Journal
+02/15/2016
+
+1. What worked well for this assignment?
+
+The thing that worked best for this assignment was, as in previous projects, the fact that a data structure was used with which I've had previous experience.  The LinkedList, with exception to the requirement that the clearList function be recursive, was nearly exactly as I've had to implement linked lists in the past.  Given that this was the largest part of the project in terms of the number of methods and lines of code, the bulk of PA04 was easy in that it was review and a good refresher for linked lists.
+
+2. What did not work well for this assignment?
+
+Aside from a few problems understanding just what the interface was doing and how it worked with the linked list to begin with, the biggest problem with this assignment was the requirement that the clearList method be recursive.  Even though it was talked about in class, I couldn't figure out why there was another method, clearListHelper, and what it should do as I forgot what was discussed in class about this method.  
+
+After assuming that clearListHelper should simply take in a pointer to a node, delete it, and then link up adjacent nodes, I finally got clearList to function properly in a recursive way.  Still, something doesn't seem "recursive enough" about it.  I'm basically making my base case be that there is only one node, and the recursive case that there are more than one node, and if there's more than one node I call clearListHelper and then clearList.  This deletes the last node and calls clearList again recursively until it gets down to one last node, listHead, in which case the base case simply deletes listHead and then all the previous calls are "popped" out of, to use Douglas Hofstadter's terminology (Godel, Escher, Bach).  All this relies on the fact that clearListHelper is right and that I'm correct in my assumption about what it does.
+
+
+3. What did you need help with on this assignment?
+
+One thing that I needed help with was some confusion I was having on interfaces and virtual methods.  While the general idea of an interface is pretty straightforward, and the analogy used in class of a car and the steering wheel, accelerator and brake pedal, etc. being its interfaces was helpful, I still wasn't sure what that meant for an interface in terms of its implementation.  I also found the description of virtual methods being those which had no implementation and so needed it witten confusing as that's always the case so far in my experience; the methods I'm given have no implementation and I need to to write it, I didn't quite see the distinction.
+
+To further complicate things the text booksays that an abstract class is one with at least one virtual method and that abstract classes must be base classes and can't be instantiated (page ?).  This was confusing as we're treating InterfaceClass as a derived class, one which has an is-a relationship with LinkedList and is instantiated in the main driver.  Furthermore, having already forgotten what I learned in the previous assignment, accessing base class methods by dereferencing and using dot notion (arrow) on the local object, I was initially just trying to call the methods and it was of course not working.  I interpreted this to mean that there was something special about virtual methods that I didn't understand.  Finally, on realizing I wasn't doing things the same way as before I tried to dereference the local object and it worked.
+
+4. What did you learn from this assignment?
+
+The new things I learned were, as was surely the paedogological goal for this project, interfaces and iterators.  I've seen virtual methods only once previously, didn't have to implement them, and so this was also something fairly new for me, though they turned out to be basically just methods that must be implemented.
+
+This assignment served to demystify iterators for me as I'd heard of them but didn't know what they were and they also turned out to be pretty straightforward, just overloaded operators which move through a data structure and either access or modify the data therein by simply calling the methods of that data structure.
+
+One thing I'm not totally sure about though is the utility of using interfaces and iterators; why not simply use the LinkedList and call its methods rather than adding the interface layer?  Perhaps for this assignment it's not much different but it's a layer of abstraction that's useful when things become more complicated.

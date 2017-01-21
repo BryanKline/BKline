@@ -1,0 +1,2783 @@
+TestRun_1 Back To Top (Expected output comes second)
+Initial base testing of program
+Input Data
+i Padua, Tyler; 686976; Junior
+i Engles, Hannah; 178635; Sophomore
+i Arreygue, Michio; 436517; Junior
+i DiazJuarez, Tyler; 460126; Junior
+f
+f
+v
+i GonzalezGascon, Jeaniel; 309226; Senior
+i MedranoPacheco, Rafael; 285416; Graduate
+i Dartt, Rahul; 410206; Junior
+v
+i Macneil, Katherine; 193833; Senior
+i Casolari, Lyle; 554535; Senior
+i Serate, Alexander; 183761; Freshman
+b
+v
+i Goldberg, Zachary; 557631; Senior
+b
+b
+v
+i Niday, Brian; 898497; Senior
+v
+i Huh, Phuong; 457225; Sophomore
+i Munoz, Alexander; 194690; Junior
+i Tariq, Daniel; 590908; Sophomore
+f
+v
+i Stutzman, Helen; 202152; Freshman
+i Mckissick, Jacob; 279076; Graduate
+f
+v
+i Chestnut, Maxwell; 987943; Freshman
+b
+v
+i Schnetter, Christoper; 411859; Senior
+b
+v
+i Witty, Toni; 875116; Sophomore
+b
+v
+i Van Winkle; 762463; Senior
+A
+i Nevins, Joshua; 264360; Graduate
+f
+v
+i Perry, Ricardo; 736604; Senior
+f
+v
+i Echeveria, Christopher; 489779; Junior
+r
+r
+r
+i Drew Parks; 108281; Sophomore
+q
+Your Output 	Expected Output
+
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+List ID A
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+List ID B
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 4: Van Winkle, 762463
+-Data: 2: Engles, Hannah, 178635
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+	
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+ List ID A
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+Difference
+ 
+ Linked List program manages student data
+ Commands:
+   A       : Tests assignment operation
+   b       : Move backward in the list
+   B       : Move to beginning of the list
+   c       : Clear Linked List
+   C       : Tests copy constructor
+   E       : Move to end of the list
+   f       : Move forward in the list
+   h       : Show this list of commands
+   i x y z : Insert name x, student ID y, & class level z
+   q       : Quit the test program
+   r       : Remove item
+   v       : View data at current node
+ 
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: A
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: q
+ 
+ Final Data Set
+-List ID A
+--Data: 3: DiazJuarez, Tyler, 460126
+--Data: 4: Goldberg, Zachary, 557631
+--Data: 3: Arreygue, Michio, 436517
+--Data: 1: Serate, Alexander, 183761
+--Data: 4: Casolari, Lyle, 554535
+--Data: 4: Macneil, Katherine, 193833
+--Data: 3: Dartt, Rahul, 410206
+--Data: 5: MedranoPacheco, Rafael, 285416
+--Data: 4: GonzalezGascon, Jeaniel, 309226
++ List ID A
+ -Data: 5: Nevins, Joshua, 264360
+ -Data: 4: Perry, Ricardo, 736604
+ -Data: 2: Drew Parks, 108281
+--Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
+--Data: 3: Padua, Tyler, 686976
+-
+-List ID B
+ -Data: 3: DiazJuarez, Tyler, 460126
+ -Data: 4: Goldberg, Zachary, 557631
+ -Data: 3: Arreygue, Michio, 436517
+ -Data: 1: Serate, Alexander, 183761
+ -Data: 4: Casolari, Lyle, 554535
+ -Data: 4: Macneil, Katherine, 193833
+ -Data: 3: Dartt, Rahul, 410206
+ -Data: 5: MedranoPacheco, Rafael, 285416
+ -Data: 4: GonzalezGascon, Jeaniel, 309226
+--Data: 4: Van Winkle, 762463
+ -Data: 2: Engles, Hannah, 178635
++-Data: 3: Padua, Tyler, 686976
++
++ List ID B
++-Data: 4: Van Winkle, 762463
+ -Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
++-Data: 3: DiazJuarez, Tyler, 460126
++-Data: 4: Goldberg, Zachary, 557631
++-Data: 3: Arreygue, Michio, 436517
++-Data: 1: Serate, Alexander, 183761
++-Data: 4: Casolari, Lyle, 554535
++-Data: 4: Macneil, Katherine, 193833
++-Data: 3: Dartt, Rahul, 410206
++-Data: 5: MedranoPacheco, Rafael, 285416
++-Data: 4: GonzalezGascon, Jeaniel, 309226
++-Data: 2: Engles, Hannah, 178635
+ -Data: 3: Padua, Tyler, 686976
+ 
+  List ID C : Empty List.
+ 
+TestRun_2 Back To Top
+Advanced base testing of class
+Input Data
+i Padua, Tyler; 686976; Junior
+i Engles, Hannah; 178635; Sophomore
+i Arreygue, Michio; 436517; Junior
+i DiazJuarez, Tyler; 460126; Junior
+f
+f
+v
+i GonzalezGascon, Jeaniel; 309226; Senior
+i MedranoPacheco, Rafael; 285416; Graduate
+i Dartt, Rahul; 410206; Junior
+v
+i Macneil, Katherine; 193833; Senior
+i Casolari, Lyle; 554535; Senior
+i Serate, Alexander; 183761; Freshman
+b
+v
+i Goldberg, Zachary; 557631; Senior
+b
+b
+v
+i Niday, Brian; 898497; Senior
+v
+i Huh, Phuong; 457225; Sophomore
+i Munoz, Alexander; 194690; Junior
+i Tariq, Daniel; 590908; Sophomore
+f
+v
+i Stutzman, Helen; 202152; Freshman
+i Mckissick, Jacob; 279076; Graduate
+f
+v
+i Chestnut, Maxwell; 987943; Freshman
+b
+v
+i Schnetter, Christoper; 411859; Senior
+b
+v
+i Witty, Toni; 875116; Sophomore
+b
+v
+i Van Winkle; 762463; Senior
+A
+i Nevins, Joshua; 264360; Graduate
+f
+v
+i Perry, Ricardo; 736604; Senior
+f
+v
+i Echeveria, Christopher; 489779; Junior
+r
+r
+r
+i Drew Parks; 108281; Sophomore
+q
+Your Output 	Expected Output
+
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+List ID A
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+List ID B
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 4: Van Winkle, 762463
+-Data: 2: Engles, Hannah, 178635
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+	
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+ List ID A
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+Difference
+ 
+ Linked List program manages student data
+ Commands:
+   A       : Tests assignment operation
+   b       : Move backward in the list
+   B       : Move to beginning of the list
+   c       : Clear Linked List
+   C       : Tests copy constructor
+   E       : Move to end of the list
+   f       : Move forward in the list
+   h       : Show this list of commands
+   i x y z : Insert name x, student ID y, & class level z
+   q       : Quit the test program
+   r       : Remove item
+   v       : View data at current node
+ 
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: A
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: q
+ 
+ Final Data Set
+-List ID A
+--Data: 3: DiazJuarez, Tyler, 460126
+--Data: 4: Goldberg, Zachary, 557631
+--Data: 3: Arreygue, Michio, 436517
+--Data: 1: Serate, Alexander, 183761
+--Data: 4: Casolari, Lyle, 554535
+--Data: 4: Macneil, Katherine, 193833
+--Data: 3: Dartt, Rahul, 410206
+--Data: 5: MedranoPacheco, Rafael, 285416
+--Data: 4: GonzalezGascon, Jeaniel, 309226
++ List ID A
+ -Data: 5: Nevins, Joshua, 264360
+ -Data: 4: Perry, Ricardo, 736604
+ -Data: 2: Drew Parks, 108281
+--Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
+--Data: 3: Padua, Tyler, 686976
+-
+-List ID B
+ -Data: 3: DiazJuarez, Tyler, 460126
+ -Data: 4: Goldberg, Zachary, 557631
+ -Data: 3: Arreygue, Michio, 436517
+ -Data: 1: Serate, Alexander, 183761
+ -Data: 4: Casolari, Lyle, 554535
+ -Data: 4: Macneil, Katherine, 193833
+ -Data: 3: Dartt, Rahul, 410206
+ -Data: 5: MedranoPacheco, Rafael, 285416
+ -Data: 4: GonzalezGascon, Jeaniel, 309226
+--Data: 4: Van Winkle, 762463
+ -Data: 2: Engles, Hannah, 178635
++-Data: 3: Padua, Tyler, 686976
++
++ List ID B
++-Data: 4: Van Winkle, 762463
+ -Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
++-Data: 3: DiazJuarez, Tyler, 460126
++-Data: 4: Goldberg, Zachary, 557631
++-Data: 3: Arreygue, Michio, 436517
++-Data: 1: Serate, Alexander, 183761
++-Data: 4: Casolari, Lyle, 554535
++-Data: 4: Macneil, Katherine, 193833
++-Data: 3: Dartt, Rahul, 410206
++-Data: 5: MedranoPacheco, Rafael, 285416
++-Data: 4: GonzalezGascon, Jeaniel, 309226
++-Data: 2: Engles, Hannah, 178635
+ -Data: 3: Padua, Tyler, 686976
+ 
+  List ID C : Empty List.
+ 
+TestRun_3 Back To Top
+Advanced base testing with class assignment
+Input Data
+i Padua, Tyler; 686976; Junior
+i Engles, Hannah; 178635; Sophomore
+i Arreygue, Michio; 436517; Junior
+i DiazJuarez, Tyler; 460126; Junior
+f
+f
+v
+i GonzalezGascon, Jeaniel; 309226; Senior
+i MedranoPacheco, Rafael; 285416; Graduate
+i Dartt, Rahul; 410206; Junior
+v
+i Macneil, Katherine; 193833; Senior
+i Casolari, Lyle; 554535; Senior
+i Serate, Alexander; 183761; Freshman
+b
+v
+i Goldberg, Zachary; 557631; Senior
+b
+b
+v
+i Niday, Brian; 898497; Senior
+v
+i Huh, Phuong; 457225; Sophomore
+i Munoz, Alexander; 194690; Junior
+i Tariq, Daniel; 590908; Sophomore
+f
+v
+i Stutzman, Helen; 202152; Freshman
+i Mckissick, Jacob; 279076; Graduate
+f
+v
+i Chestnut, Maxwell; 987943; Freshman
+b
+v
+i Schnetter, Christoper; 411859; Senior
+b
+v
+i Witty, Toni; 875116; Sophomore
+b
+v
+i Van Winkle; 762463; Senior
+A
+i Nevins, Joshua; 264360; Graduate
+f
+v
+i Perry, Ricardo; 736604; Senior
+f
+v
+i Echeveria, Christopher; 489779; Junior
+r
+r
+r
+i Drew Parks; 108281; Sophomore
+q
+Your Output 	Expected Output
+
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+List ID A
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+List ID B
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 4: Van Winkle, 762463
+-Data: 2: Engles, Hannah, 178635
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+	
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+ List ID A
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+Difference
+ 
+ Linked List program manages student data
+ Commands:
+   A       : Tests assignment operation
+   b       : Move backward in the list
+   B       : Move to beginning of the list
+   c       : Clear Linked List
+   C       : Tests copy constructor
+   E       : Move to end of the list
+   f       : Move forward in the list
+   h       : Show this list of commands
+   i x y z : Insert name x, student ID y, & class level z
+   q       : Quit the test program
+   r       : Remove item
+   v       : View data at current node
+ 
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: A
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: q
+ 
+ Final Data Set
+-List ID A
+--Data: 3: DiazJuarez, Tyler, 460126
+--Data: 4: Goldberg, Zachary, 557631
+--Data: 3: Arreygue, Michio, 436517
+--Data: 1: Serate, Alexander, 183761
+--Data: 4: Casolari, Lyle, 554535
+--Data: 4: Macneil, Katherine, 193833
+--Data: 3: Dartt, Rahul, 410206
+--Data: 5: MedranoPacheco, Rafael, 285416
+--Data: 4: GonzalezGascon, Jeaniel, 309226
++ List ID A
+ -Data: 5: Nevins, Joshua, 264360
+ -Data: 4: Perry, Ricardo, 736604
+ -Data: 2: Drew Parks, 108281
+--Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
+--Data: 3: Padua, Tyler, 686976
+-
+-List ID B
+ -Data: 3: DiazJuarez, Tyler, 460126
+ -Data: 4: Goldberg, Zachary, 557631
+ -Data: 3: Arreygue, Michio, 436517
+ -Data: 1: Serate, Alexander, 183761
+ -Data: 4: Casolari, Lyle, 554535
+ -Data: 4: Macneil, Katherine, 193833
+ -Data: 3: Dartt, Rahul, 410206
+ -Data: 5: MedranoPacheco, Rafael, 285416
+ -Data: 4: GonzalezGascon, Jeaniel, 309226
+--Data: 4: Van Winkle, 762463
+ -Data: 2: Engles, Hannah, 178635
++-Data: 3: Padua, Tyler, 686976
++
++ List ID B
++-Data: 4: Van Winkle, 762463
+ -Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
++-Data: 3: DiazJuarez, Tyler, 460126
++-Data: 4: Goldberg, Zachary, 557631
++-Data: 3: Arreygue, Michio, 436517
++-Data: 1: Serate, Alexander, 183761
++-Data: 4: Casolari, Lyle, 554535
++-Data: 4: Macneil, Katherine, 193833
++-Data: 3: Dartt, Rahul, 410206
++-Data: 5: MedranoPacheco, Rafael, 285416
++-Data: 4: GonzalezGascon, Jeaniel, 309226
++-Data: 2: Engles, Hannah, 178635
+ -Data: 3: Padua, Tyler, 686976
+ 
+  List ID C : Empty List.
+ 
+TestRun_4 Back To Top
+Advanced testing with clear and copy constructor operations
+Input Data
+i Padua, Tyler; 686976; Junior
+i Engles, Hannah; 178635; Sophomore
+i Arreygue, Michio; 436517; Junior
+i DiazJuarez, Tyler; 460126; Junior
+i GonzalezGascon, Jeaniel; 309226; Senior
+i MedranoPacheco, Rafael; 285416; Graduate
+i Dartt, Rahul; 410206; Junior
+i Macneil, Katherine; 193833; Senior
+i Casolari, Lyle; 554535; Senior
+i Serate, Alexander; 183761; Freshman
+i Goldberg, Zachary; 557631; Senior
+i Niday, Brian; 898497; Senior
+c
+i Huh, Phuong; 457225; Sophomore
+i Munoz, Alexander; 194690; Junior
+i Tariq, Daniel; 590908; Sophomore
+r
+C
+i Stutzman, Helen; 202152; Freshman
+i Mckissick, Jacob; 279076; Graduate
+i Chestnut, Maxwell; 987943; Freshman
+r
+i Schnetter, Christoper; 411859; Senior
+i Witty, Toni; 875116; Sophomore
+i Van Winkle; 762463; Senior
+A
+i Nevins, Joshua; 264360; Graduate
+i Perry, Ricardo; 736604; Senior
+i Echeveria, Christopher; 489779; Junior
+r
+r
+r
+r
+r
+r
+r
+i Drew Parks; 108281; Sophomore
+q
+Your Output 	Expected Output
+
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: c
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: C
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+List ID A
+-Data: 2: Drew Parks, 108281
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+List ID C
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+
+	
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: c
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: C
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+ List ID A
+-Data: 2: Drew Parks, 108281
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+ List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+ List ID C
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+
+
+Difference
+ 
+ Linked List program manages student data
+ Commands:
+   A       : Tests assignment operation
+   b       : Move backward in the list
+   B       : Move to beginning of the list
+   c       : Clear Linked List
+   C       : Tests copy constructor
+   E       : Move to end of the list
+   f       : Move forward in the list
+   h       : Show this list of commands
+   i x y z : Insert name x, student ID y, & class level z
+   q       : Quit the test program
+   r       : Remove item
+   v       : View data at current node
+ 
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: c
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: C
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: A
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: q
+ 
+ Final Data Set
+-List ID A
++ List ID A
+ -Data: 2: Drew Parks, 108281
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ 
+-List ID B
++ List ID B
+ -Data: 4: Van Winkle, 762463
+ -Data: 2: Witty, Toni, 875116
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ 
+-List ID C
++ List ID C
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ 
+ 
+TestRun_5 Back To Top
+Advanced testing with frequent location moves and data views
+Input Data
+i Padua, Tyler; 686976; Junior
+i Engles, Hannah; 178635; Sophomore
+i Arreygue, Michio; 436517; Junior
+i DiazJuarez, Tyler; 460126; Junior
+f
+f
+v
+i GonzalezGascon, Jeaniel; 309226; Senior
+i MedranoPacheco, Rafael; 285416; Graduate
+i Dartt, Rahul; 410206; Junior
+v
+i Macneil, Katherine; 193833; Senior
+i Casolari, Lyle; 554535; Senior
+i Serate, Alexander; 183761; Freshman
+b
+v
+i Goldberg, Zachary; 557631; Senior
+b
+b
+v
+i Niday, Brian; 898497; Senior
+v
+i Huh, Phuong; 457225; Sophomore
+i Munoz, Alexander; 194690; Junior
+i Tariq, Daniel; 590908; Sophomore
+f
+v
+i Stutzman, Helen; 202152; Freshman
+i Mckissick, Jacob; 279076; Graduate
+f
+v
+i Chestnut, Maxwell; 987943; Freshman
+b
+v
+i Schnetter, Christoper; 411859; Senior
+b
+v
+i Witty, Toni; 875116; Sophomore
+b
+v
+i Van Winkle; 762463; Senior
+A
+i Nevins, Joshua; 264360; Graduate
+f
+v
+i Perry, Ricardo; 736604; Senior
+f
+v
+i Echeveria, Christopher; 489779; Junior
+r
+r
+r
+i Drew Parks; 108281; Sophomore
+q
+Your Output 	Expected Output
+
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+List ID A
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+List ID B
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 4: Van Winkle, 762463
+-Data: 2: Engles, Hannah, 178635
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+	
+Linked List program manages student data
+Commands:
+  A       : Tests assignment operation
+  b       : Move backward in the list
+  B       : Move to beginning of the list
+  c       : Clear Linked List
+  C       : Tests copy constructor
+  E       : Move to end of the list
+  f       : Move forward in the list
+  h       : Show this list of commands
+  i x y z : Insert name x, student ID y, & class level z
+  q       : Quit the test program
+  r       : Remove item
+  v       : View data at current node
+
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: b
+
+Command: v
+
+Command: i
+
+Command: A
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: f
+
+Command: v
+
+Command: i
+
+Command: r
+
+Command: r
+
+Command: r
+
+Command: i
+
+Command: q
+
+Final Data Set
+ List ID A
+-Data: 5: Nevins, Joshua, 264360
+-Data: 4: Perry, Ricardo, 736604
+-Data: 2: Drew Parks, 108281
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID B
+-Data: 4: Van Winkle, 762463
+-Data: 2: Witty, Toni, 875116
+-Data: 2: Tariq, Daniel, 590908
+-Data: 4: Schnetter, Christoper, 411859
+-Data: 5: Mckissick, Jacob, 279076
+-Data: 1: Chestnut, Maxwell, 987943
+-Data: 1: Stutzman, Helen, 202152
+-Data: 3: Munoz, Alexander, 194690
+-Data: 2: Huh, Phuong, 457225
+-Data: 4: Niday, Brian, 898497
+-Data: 3: DiazJuarez, Tyler, 460126
+-Data: 4: Goldberg, Zachary, 557631
+-Data: 3: Arreygue, Michio, 436517
+-Data: 1: Serate, Alexander, 183761
+-Data: 4: Casolari, Lyle, 554535
+-Data: 4: Macneil, Katherine, 193833
+-Data: 3: Dartt, Rahul, 410206
+-Data: 5: MedranoPacheco, Rafael, 285416
+-Data: 4: GonzalezGascon, Jeaniel, 309226
+-Data: 2: Engles, Hannah, 178635
+-Data: 3: Padua, Tyler, 686976
+
+ List ID C : Empty List.
+
+Difference
+ 
+ Linked List program manages student data
+ Commands:
+   A       : Tests assignment operation
+   b       : Move backward in the list
+   B       : Move to beginning of the list
+   c       : Clear Linked List
+   C       : Tests copy constructor
+   E       : Move to end of the list
+   f       : Move forward in the list
+   h       : Show this list of commands
+   i x y z : Insert name x, student ID y, & class level z
+   q       : Quit the test program
+   r       : Remove item
+   v       : View data at current node
+ 
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: b
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: A
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: f
+ 
+ Command: v
+ 
+ Command: i
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: r
+ 
+ Command: i
+ 
+ Command: q
+ 
+ Final Data Set
+-List ID A
+--Data: 3: DiazJuarez, Tyler, 460126
+--Data: 4: Goldberg, Zachary, 557631
+--Data: 3: Arreygue, Michio, 436517
+--Data: 1: Serate, Alexander, 183761
+--Data: 4: Casolari, Lyle, 554535
+--Data: 4: Macneil, Katherine, 193833
+--Data: 3: Dartt, Rahul, 410206
+--Data: 5: MedranoPacheco, Rafael, 285416
+--Data: 4: GonzalezGascon, Jeaniel, 309226
++ List ID A
+ -Data: 5: Nevins, Joshua, 264360
+ -Data: 4: Perry, Ricardo, 736604
+ -Data: 2: Drew Parks, 108281
+--Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
+--Data: 3: Padua, Tyler, 686976
+-
+-List ID B
+ -Data: 3: DiazJuarez, Tyler, 460126
+ -Data: 4: Goldberg, Zachary, 557631
+ -Data: 3: Arreygue, Michio, 436517
+ -Data: 1: Serate, Alexander, 183761
+ -Data: 4: Casolari, Lyle, 554535
+ -Data: 4: Macneil, Katherine, 193833
+ -Data: 3: Dartt, Rahul, 410206
+ -Data: 5: MedranoPacheco, Rafael, 285416
+ -Data: 4: GonzalezGascon, Jeaniel, 309226
+--Data: 4: Van Winkle, 762463
+ -Data: 2: Engles, Hannah, 178635
++-Data: 3: Padua, Tyler, 686976
++
++ List ID B
++-Data: 4: Van Winkle, 762463
+ -Data: 2: Witty, Toni, 875116
+ -Data: 2: Tariq, Daniel, 590908
+ -Data: 4: Schnetter, Christoper, 411859
+ -Data: 5: Mckissick, Jacob, 279076
+ -Data: 1: Chestnut, Maxwell, 987943
+ -Data: 1: Stutzman, Helen, 202152
+ -Data: 3: Munoz, Alexander, 194690
+ -Data: 2: Huh, Phuong, 457225
+ -Data: 4: Niday, Brian, 898497
++-Data: 3: DiazJuarez, Tyler, 460126
++-Data: 4: Goldberg, Zachary, 557631
++-Data: 3: Arreygue, Michio, 436517
++-Data: 1: Serate, Alexander, 183761
++-Data: 4: Casolari, Lyle, 554535
++-Data: 4: Macneil, Katherine, 193833
++-Data: 3: Dartt, Rahul, 410206
++-Data: 5: MedranoPacheco, Rafael, 285416
++-Data: 4: GonzalezGascon, Jeaniel, 309226
++-Data: 2: Engles, Hannah, 178635
+ -Data: 3: Padua, Tyler, 686976
+ 
+  List ID C : Empty List.

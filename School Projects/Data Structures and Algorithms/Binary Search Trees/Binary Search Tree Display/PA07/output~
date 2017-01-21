@@ -1,0 +1,510 @@
+TestRun_1 Back To Top
+Basic data set
+Input Data
+9
+Holmes, Andrea;414872;M
+Cheeseman, Dylan;669655;F
+Caceres, Jamie;457799;M
+Ghera, Kwabena;933237;F
+Stine, Charles;239444;F
+Hollick, Javier;793101;F
+Kondo, Colin;831743;F
+Mulhall, Chase;983866;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+               H-A
+       C-D             S-C
+   C-J     G-K     K-C     ---
+ --- --- --- H-J --- M-C --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++               H-A
++       C-D             S-C
++   C-J     G-K     K-C     ---
++ --- --- --- H-J --- M-C --- ---
++
+TestRun_2 Back To Top
+Larger data set, different organization
+Input Data
+9
+Muller, Carlise;733689;F
+Wiegant, Brian;654986;F
+Woo, Eric;356775;F
+Yarmey, Chad;535427;M
+Beeman, Jaylen;978174;F
+Cepeda, Alexander;681806;F
+Shaikh, Philip;979220;M
+Parr, Aaron;134062;F
+Villanueva, Pattaphol;318944;M
+Sandoval, Andrew;454662;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                               M-C
+               B-J                             W-B
+       ---             C-A             S-P             W-E
+   ---     ---     ---     ---     P-A     V-P     ---     Y-C
+ --- --- --- --- --- --- --- --- --- S-A --- --- --- --- --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                               M-C
++               B-J                             W-B
++       ---             C-A             S-P             W-E
++   ---     ---     ---     ---     P-A     V-P     ---     Y-C
++ --- --- --- --- --- --- --- --- --- S-A --- --- --- --- --- ---
++
+TestRun_3 Back To Top
+Larger data set, different organization
+Input Data
+9
+Nethercott, Michael;812517;F
+Higbie, Hunter;462902;M
+Sims, Houston;391402;F
+Moreno, Mitchell;573711;F
+Serrano, Owen;119410;M
+Diaz-Juarez, Tyler;460126;M
+Gonzalez-Gascon, Jeaniel;309226;F
+Medrano-Pacheco, Rafael;285416;M
+Dartt, Rahul;410206;M
+Macneil, Katherine;193833;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                               N-M
+               H-H                             S-H
+       D-T             M-M             S-O             ---
+   D-R     G-J     M-R     ---     ---     ---     ---     ---
+ --- --- --- --- M-K --- --- --- --- --- --- --- --- --- --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                               N-M
++               H-H                             S-H
++       D-T             M-M             S-O             ---
++   D-R     G-J     M-R     ---     ---     ---     ---     ---
++ --- --- --- --- M-K --- --- --- --- --- --- --- --- --- --- ---
++
+TestRun_4 Back To Top
+Larger data set, different organization
+Input Data
+9
+Gamboa, Wanisha;362001;M
+Evangelista, Nicholas;982317;M
+Bolling, Mohammad;419808;F
+Amundson, David;323273;M
+Sibley, Ryan;827402;M
+Nishimura, Eric;729129;F
+Johnson, Brandon;576650;M
+Benavidez, Bradley;783372;M
+Hagans, Stefan;103521;M
+Poston, Matthew;653875;F
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                               G-W
+               E-N                             S-R
+       B-M             ---             N-E             ---
+   A-D     ---     ---     ---     J-B     P-M     ---     ---
+ --- B-B --- --- --- --- --- --- H-S --- --- --- --- --- --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                               G-W
++               E-N                             S-R
++       B-M             ---             N-E             ---
++   A-D     ---     ---     ---     J-B     P-M     ---     ---
++ --- B-B --- --- --- --- --- --- H-S --- --- --- --- --- --- ---
++
+TestRun_5 Back To Top
+Scattered data across tree
+Input Data
+9
+Manning, Michael;151683;M
+Ruiz, Crista;973640;F
+Banuelos, Robert;161311;M
+Ault, Kevin;542432;M
+Cardoza, Christian;613413;M
+Marquis, Camden;678621;F
+Kim, Joseph;801715;M
+McCrone, Travis;634821;M
+Ravenna, Michael;196018;M
+Knight, Richard;922457;M
+Baublys, Paolo;260672;M
+Johnson, Robert;603667;M
+Elliott, Cayler;135658;M
+Reyes, Connor;191261;F
+Penn, Frederick;819367;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                                                               M-M
+                               B-R                                                             R-C
+               A-K                             C-C                             M-C                             ---
+       ---             ---             B-P             K-J             ---             M-T             ---             ---
+   ---     ---     ---     ---     ---     ---     J-R     K-R     ---     ---     ---     R-M     ---     ---     ---     ---
+ --- --- --- --- --- --- --- --- --- --- --- --- E-C --- --- --- --- --- --- --- --- --- P-F R-C --- --- --- --- --- --- --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                                                               M-M
++                               B-R                                                             R-C
++               A-K                             C-C                             M-C                             ---
++       ---             ---             B-P             K-J             ---             M-T             ---             ---
++   ---     ---     ---     ---     ---     ---     J-R     K-R     ---     ---     ---     R-M     ---     ---     ---     ---
++ --- --- --- --- --- --- --- --- --- --- --- --- E-C --- --- --- --- --- --- --- --- --- P-F R-C --- --- --- --- --- --- --- ---
++
+TestRun_6 Back To Top
+Data sorted forward
+Input Data
+9
+Andrieu, Andrew;295673;M
+Buck, Phoebe;729716;M
+Casolari, Lyle;554535;M
+Goldberg, Zachary;557631;F
+Hunt, Stephen;597706;M
+Niday, Brian;898497;F
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                                                               A-A
+                               ---                                                             B-P
+               ---                             ---                             ---                             C-L
+       ---             ---             ---             ---             ---             ---             ---             G-Z
+   ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     H-S
+ --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- N-B
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                                                               A-A
++                               ---                                                             B-P
++               ---                             ---                             ---                             C-L
++       ---             ---             ---             ---             ---             ---             ---             G-Z
++   ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     H-S
++ --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- N-B
++
+TestRun_7 Back To Top
+Data sorted backwards
+Input Data
+9
+Werner, Riley;444253;M
+Thomas, Spencer;302398;M
+Shafer, Tristan ;693686;F
+Ruan, Francisco;587182;F
+Ortega, James;645168;F
+Hack, Jackson;641605;M
+QUIT
+Your Output 	Expected Output
+Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+	Here is the list of codes for the various tests:
+Show in order traversal           : 1
+Show object assignment operation  : 2
+Show post order traversal         : 3
+Show pre order traversal          : 4
+Show remove item action           : 5
+Show retrieved data               : 6
+Show tree cleared action          : 7
+Show tree copied action           : 8
+Show tree structure               : 9
+
+Enter code number: 9
+
+Test of show tree operation
+BST ID A:
+                                                               W-R
+                               T-S                                                             ---
+               S-T                             ---                             ---                             ---
+       R-F             ---             ---             ---             ---             ---             ---             ---
+   O-J     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---
+ H-J --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+Difference
+ Here is the list of codes for the various tests:
+ Show in order traversal           : 1
+ Show object assignment operation  : 2
+ Show post order traversal         : 3
+ Show pre order traversal          : 4
+ Show remove item action           : 5
+ Show retrieved data               : 6
+ Show tree cleared action          : 7
+ Show tree copied action           : 8
+ Show tree structure               : 9
+ 
+ Enter code number: 9
+ 
+ Test of show tree operation
++BST ID A:
++                                                               W-R
++                               T-S                                                             ---
++               S-T                             ---                             ---                             ---
++       R-F             ---             ---             ---             ---             ---             ---             ---
++   O-J     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---     ---
++ H-J --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+

@@ -1,0 +1,186 @@
+#include <iosteam>
+#include <cstdlib>
+#include "listA.h"
+
+using namespace std;
+
+List:: List(int arraySize)
+{
+	if(arraySize > 0)
+	{
+		data = new char[arraySize];
+	
+		size = arraySize;
+		cursor = -1;
+		actual = -1;
+	}
+}
+
+List:: List(const List &list)
+{
+	data = new char[list.size];
+
+	for(i = 0; i <= list.actual; i++)
+	{
+		data[i] = list.data[i];
+	}
+
+	size = list.size;
+	actual = list.actual;
+	cursor = list.cursor;
+}
+
+List:: ~List()
+{
+	if(data != NULL)
+	{
+		delete data;
+		data = NULL;
+	}
+	
+	size = 0;
+	cursor = -1;
+	actual = -1;
+}
+
+bool List:: gotoBeginning()
+{
+	if(empty() == false)
+	{
+		cursor = 0;	
+		return true;
+	}
+		
+	return false;
+}
+
+bool List:: gotoEnd()
+{
+	if(empty() == false)
+	{
+		cursor = actual;	
+		return true;
+	}
+		
+	return false;
+}
+
+bool List:: gotoNext()
+{
+	if(empty() == false)
+	{
+		cursor++;	
+		return true;
+	}
+		
+	return false;
+}
+
+bool List:: gotoPrior()
+{
+	if(empty() == false)
+	{
+		cursor--;	
+		return true;
+	}
+		
+	return false;
+}
+
+bool List:: insert(char letter)
+{
+
+}
+
+bool List:: remove(char &letter)
+{
+
+}
+
+bool List:: empty() const
+{
+	if((actual == -1)||(size < 1))
+	{
+		return true;
+	}
+
+	return false;
+}
+
+bool List:: full() const
+{
+	if(actual == (size - 1))
+	{
+		return true;
+	}
+	
+	return false;
+}
+
+bool List:: clear()
+{
+	if(empty() == true)
+	{
+		return false;
+	}
+	
+	cursor = -1;
+	actual = -1;
+
+	return true;
+}
+
+
+List& List:: operator = (const List &list)
+{
+	int i;
+	
+	if(list != *this)
+	{
+		if(data != NULL)
+		{
+			delete data;
+			data = NULL;
+		}
+
+		data = new char[list.size];
+	
+		for(i = 0; i <= list.actual; i++)
+		{
+			data[i] = list.data[i];
+		}
+	
+		size = list.size;
+		actual = list.actual;
+		cursor = list.cursor;
+	}
+
+	return *this;
+}
+
+friend ostream& operator << (ostream &out, const List &list)
+{
+	int i;
+
+	if(list.empty() == false)
+	{
+		for(i = 0; i <= list.actual; i++)
+		{
+			if(i == 0)
+			{
+				cout << "[" << list.data[i] << "] ";
+			}
+			if(i == list.cursor)
+			{
+				cout << "(" << list.data[i] << ") ";
+			}
+			else
+			{
+				cout << list.data[i] << " ";
+			}
+		}
+		cout << endl;
+	}
+
+	return out;
+}

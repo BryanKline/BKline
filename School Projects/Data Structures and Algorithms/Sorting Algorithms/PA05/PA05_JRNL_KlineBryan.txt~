@@ -1,0 +1,84 @@
+Bryan Kline
+CS302 
+PA05 - SorterClass Journal
+02/24/2016
+
+Sorting algorithm times:
+
+
+Bubble Sort (in_1):
+0.000049
+0.000049
+0.000061
+0.000049
+0.000064
+0.000061
+0.000061
+0.000061 
+0.000061
+0.000049
+
+(0.000565)/10
+0.0000565 * 10^6
+56.5 microseconds
+
+
+
+Merge Sort (in_1):
+0.000056
+0.000058
+0.000072
+0.000058
+0.000076
+0.000073
+0.000074
+0.000072
+0.000118
+0.000058
+
+(0.000715)/10
+0.0000715 * 10^6
+71.5 microseconds
+
+
+Quick Sort (in_1):
+0.000039
+0.000039
+0.000049
+0.000040
+0.000051 
+0.000049
+0.000116 
+0.000049
+0.000049
+0.000040
+
+(0.000521)/10
+0.0000521 * 10^6
+52.1 microseconds
+
+
+1. What worked well for this assignment?
+
+There wasn't a whole lot that worked well for this assignment.  The fact that the SorterClass was pretty straightforward and inherited from the SimpleVector class which meant that it had access to to those base class methods and the implementation of SorterClass wasn't too involved made SorterClass the part of the project that worked the best.  
+
+The other part of this project that went fairly well was the submit system and the output.  Because SorterClass didn't have a showStructure method as have previous projects there weren't any output idiosyncracies to deal with and passing all tests, once the sorting algorithms were working, wasn't a problem.
+
+2. What did not work well for this assignment?
+
+The recursion was the hardest part of this assignment, as was working with sorting algorithms that used recursion which were new to me.  Bubble sort hung me up for quite a while, within the first hour or two I had something which ended up being really close to its final form, but a small error not related to the recursive part of it kept it from working and I thought my problem was the recursion so I strayed off into the woods many times.
+
+Recursion in general seems to be a great challenge for me to get my head around and the task of tracing everything out on paper seems herculean such that I feel discouraged to try and so instead of proper design I just kind of hack and try and test.  This approach doesn't work at all.  While I had a sense of how bubble would recurse and it was a small bug holding me up, the other two seemed at first totally unapproachable.
+
+3. What did you need help with on this assignment?
+
+I found that merely having the general idea of what merege and quick do wasn't enough for me to be able to implement them.  As before, the helper methods made it difficult at first to decide what was doing what and knowing where the recursion would take place made it difficult for me to begin in addition to the mental blocks mentioned above.  It was so daunting that, as we were given permission to do so in lecture, I consulted the textbook for its merge sort to see how it worked because prior to that I felt like I was being asked to build some massively complext thing from the ground up without knowing much about it and couldn't start.
+
+After looking at how merge was done in the textbook and following the recursion through on paper with a small array and then repurposing it for this project, which turned out to not be too much of a problem, it kind of opened up the posibility in my mind of doing these on my own and gave me some confidene once I felt like I knew what it was doing and how the recursion was working.  For quick sort things went a lot better, I decided to just get an animation going from some online sorce and loop that while I wrote it to see what it was doing, how it was moving pivot and the element around and so on.  Additionaly, the demostration of quick in class helped in terms of how the recursive calls and the call to partition were structured.
+
+It seems to me a good description of recursion should have as a main component some discussion of memory; I found that a major hole in my understanding was how it was that things were persisting in memory in between the various calls.  One thing that seems like it would helpful would some kind of animation of a recursive function and what's going on in the stack, how things are still there, as we talked about in class how they still have lifetime but not scope, but then come back into scope as control resumes; very difficult to imagine and it seems like visual representation would greatly help here.
+
+
+4. What did you learn from this assignment?
+
+The main thing I learned from this assignment were basically merge sort and quick sort, which upto now I've heard of but never implemented and didn't even know how they worked.  The basic idea of both of them, how they function, is something that's not too difficult to grasp but the details need to be kept fresh lest I forget.  I will probably try to drill the code for each of them so that it becomes like second nature as they're likely sorting algorithms I will have to know very well going forward.  Finally, while I'm nowhere near comfortable with recursion, working with it again does get a step closer to being able to trace it all out and understand what a give recursive algorithm is doing.  

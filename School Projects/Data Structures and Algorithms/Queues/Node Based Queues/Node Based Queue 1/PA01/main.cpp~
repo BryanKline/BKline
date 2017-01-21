@@ -1,0 +1,30 @@
+#include <iostream>
+#include "ListNode.h"
+#include "QueueList.h"
+
+using namespace std;
+
+int main()
+
+{
+    QueueList testListA, testListB, testListC;
+
+    int x;
+
+    cout << "enter integer:" << endl;
+    cin >> x;
+
+    testListA.enqueue(x);
+
+    testListA.showStructure();
+
+    testListB = testListA;
+
+    testListB.showStructure();
+
+    //testListC(testListA);
+
+    testListC.showStructure();
+
+
+}

@@ -1,0 +1,118 @@
+;Bryan Kline
+;CS326 HW #2
+;Scheme
+
+;number1
+
+( define ( member? x L )
+    ( cond
+        ( ( null? L ) #f )
+        ( ( equal? x ( car L ) ) #t )
+        ( else ( member? x ( cdr L ) ) ) ) )
+
+( define ( is-set? L )
+    ( cond
+        ( ( null? L ) #t )
+        ( ( member? ( car L ) ( cdr L ) ) #f )
+        ( else ( is-set? ( cdr L ) ) ) ) )
+
+( define ( make-set L )
+    ( cond
+        ( ( is-set? L ) L )
+        ( else
+            ( if ( member? ( car L ) ( cdr L ) )
+                ( make-set ( cdr L ) )
+                ( append ( list ( car L ) ) ( make-set ( cdr L ) ) ) ) ) ) )
+
+( define ( subset? A S )
+    ( cond
+        ( ( null? A ) #t )
+        ( ( member? ( car A ) S ) ( subset? ( cdr A ) S ) )
+        ( else #f ) ) )
+
+( define ( union A B )
+    ( cond
+        ( ( null? A ) B )
+        ( ( member? ( car A ) B ) ( union ( cdr A ) B ) )
+        ( else ( union ( cdr A ) ( cons ( car A ) B ) ) ) ) )
+
+( define ( intersection A B )
+    ( cond
+        ( ( null? A ) A )
+        ( ( member? ( car A ) B ) ( intersection ( cdr A ) B ) )
+        ( ( cons ( car A ) ( intersection ( cdr A ) B ) ) )
+        ( else ( intersection ( cdr A ) B ) ) ) )
+
+;number2
+
+( define ( val T )
+    ( car T ) )
+
+( define ( left T )
+    ( car ( cdr T ) ) )
+
+( define ( right T )
+    ( car ( cdr ( cdr T ) ) ) )
+
+;a
+( define ( tree-member? V T )
+    ( cond
+        ( ( null? T ) #f )
+        ( ( equal? ( val T ) V ) #t )
+        ( ( < V ( val T ) ) ( tree-member? V ( left T ) ) )
+        ( else ( tree-member? V ( right T ) ) ) ) )
+
+;b
+( define ( preorder T )
+    ( cond
+        ( ( null? T ) T )
+        ( else ( cons ( val T ) ( append ( preorder ( left T ) ) ( preorder ( right T ) ) ) ) ) ) )
+
+;c
+( define ( inorder T )
+    ( cond
+        ( ( null? T ) T )
+        ( else ( append ( inorder( left T ) ) ( cons ( val T ) ( inorder ( right T ) ) ) ) ) ) )
+
+;number3
+( define ( deep-delete V L )
+    ( cond 
+        ( ( null? L ) L )
+        ( ( equal? ( car L ) V ) ( deep-delete V ( cdr L ) ) ) 
+        ( ( list? ( car L ) ) ( cons  ( deep-delete V ( car L ) ) ( deep-delete V ( cdr L ) ) ) )
+        ( else ( cons ( car L ) ( deep-delete V ( cdr L ) ) ) ) ) )
+
+;number4
+( define ( insert-bst V T )
+    ( cond
+        ( ( null? T ) ( append T ( list V '() '() ) ) )
+        ( ( equal? ( val T ) V ) T )
+        ( ( < V ( val T ) ) ( append T ( insert-bst V ( left T ) ) ) )
+        ( else ( append T ( insert-bst V ( right T ) ) ) ) ) )	
+
+( define ( val T )
+    ( car T ) )
+
+( define ( left T )
+    ( car ( cdr T ) ) )
+
+( define ( right T )
+    ( car ( cdr ( cdr T ) ) ) )
+
+( define ( insert-bst V T )
+    ( cond
+        ( ( null? T ) ( append T ( list V '() '() ) ) )
+        ( ( equal? ( val T ) V ) T )
+        ( ( < V ( val T ) ) ( cons (car T) ( cons ( insert-bst V ( left T ) ) (right T) ) ) )
+        ( else ( cons (car T)  ( cons (left T) ( insert-bst V ( right T ) ) ) ) ) ) )		
+  
+
+	
+	
+
+
+
+
+
+
+

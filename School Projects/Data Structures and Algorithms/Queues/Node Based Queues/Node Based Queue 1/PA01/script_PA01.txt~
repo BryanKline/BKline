@@ -1,0 +1,272 @@
+Commands:
+
+  a    : Assign 'A' test list to 'B' test list
+  c    : Construct 'C' test list with test list 'A'
+  C    : Clear test list
+  d    : Dequeue value
+
+  e x  : Enqueue value x
+  E    : End the test program
+  p    : Peek at queue head value
+  r x  : Reset queue capacity to x, if possible
+  s    : Show this list of commands
+
+  t    : Conduct list/queue empty/full tests
+
+
+
+Command: e 1
+  Value: 1 enqueued.
+ List A (1/1/10): H/T: [1] 
+ Empty list
+
+Command: e 2
+  Value: 2 enqueued.
+ List A (2/2/10): H: [1] T: [2] 
+ Empty list
+
+Command: e 3
+  Value: 3 enqueued.
+ List A (3/3/10): H: [1] Q: [2] T: [3] 
+ Empty list
+
+Command: e 4
+  Value: 4 enqueued.
+ List A (4/4/10): H: [1] Q: [2] Q: [3] T: [4] 
+ Empty list
+
+Command: e 5
+  Value: 5 enqueued.
+ List A (5/5/10): H: [1] Q: [2] Q: [3] Q: [4] T: [5] 
+ Empty list
+
+Command: e 6
+  Value: 6 enqueued.
+ List A (6/6/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                  T: [6] 
+ Empty list
+
+Command: e 7
+  Value: 7 enqueued.
+ List A (7/7/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                  Q: [6] T: [7] 
+ Empty list
+
+Command: e 8
+  Value: 8 enqueued.
+ List A (8/8/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                  Q: [6] Q: [7] T: [8] 
+ Empty list
+
+Command: e 9
+  Value: 9 enqueued.
+ List A (9/9/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                  Q: [6] Q: [7] Q: [8] T: [9] 
+ Empty list
+
+Command: e 0
+  Value: 0 enqueued.
+ List A (10/10/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                    Q: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: e 10
+  Enqueue process failed.
+ List A (10/10/10): H: [1] Q: [2] Q: [3] Q: [4] Q: [5] 
+                    Q: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: d
+  Value: 1 dequeued.
+ List A (9/10/10): H: [2] Q: [3] Q: [4] Q: [5] Q: [6] 
+                   Q: [7] Q: [8] Q: [9] T: [0] U: [1] 
+ Empty list
+
+Command: d
+  Value: 2 dequeued.
+ List A (8/10/10): H: [3] Q: [4] Q: [5] Q: [6] Q: [7] 
+                   Q: [8] Q: [9] T: [0] U: [1] U: [2] 
+ Empty list
+
+Command: d
+  Value: 3 dequeued.
+ List A (7/10/10): H: [4] Q: [5] Q: [6] Q: [7] Q: [8] 
+                   Q: [9] T: [0] U: [1] U: [2] U: [3] 
+ Empty list
+
+Command: d
+  Value: 4 dequeued.
+ List A (6/10/10): H: [5] Q: [6] Q: [7] Q: [8] Q: [9] 
+                   T: [0] U: [1] U: [2] U: [3] U: [4] 
+ Empty list
+
+Command: d
+  Value: 5 dequeued.
+ List A (5/10/10): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+                   U: [1] U: [2] U: [3] U: [4] U: [5] 
+ Empty list
+
+Command: r 9
+  Queue capacity reset to: 9.
+ List A (5/9/9): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+                 U: [2] U: [3] U: [4] U: [5] 
+ Empty list
+
+Command: r 8
+  Queue capacity reset to: 8.
+ List A (5/8/8): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+                 U: [3] U: [4] U: [5] 
+ Empty list
+
+Command: r 7
+  Queue capacity reset to: 7.
+ List A (5/7/7): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+                 U: [4] U: [5] 
+ Empty list
+
+Command: r 6
+  Queue capacity reset to: 6.
+ List A (5/6/6): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+                 U: [5] 
+ Empty list
+
+Command: r 5
+  Queue capacity reset to: 5.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: r 4
+  Queue capacity reset process failed.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: s
+
+Commands:
+
+  a    : Assign 'A' test list to 'B' test list
+  c    : Construct 'C' test list with test list 'A'
+  C    : Clear test list
+  d    : Dequeue value
+
+  e x  : Enqueue value x
+  E    : End the test program
+  p    : Peek at queue head value
+  r x  : Reset queue capacity to x, if possible
+  s    : Show this list of commands
+
+  t    : Conduct list/queue empty/full tests
+
+
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: t
+  Boolean test requested.
+  Queue is not empty.
+  Queue is full.
+  List is not empty.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: p
+  Value: 6 found at queue head.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: r 2
+  Queue capacity reset process failed.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: r 5
+  Queue capacity reset to: 5.
+ List A (5/5/5): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: r 6
+  Queue capacity reset to: 6.
+ List A (5/5/6): H: [6] Q: [7] Q: [8] Q: [9] T: [0] 
+ Empty list
+
+Command: e 5
+  Value: 5 enqueued.
+ List A (6/6/6): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 T: [5] 
+ Empty list
+
+Command: e 4
+  Enqueue process failed.
+ List A (6/6/6): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 T: [5] 
+ Empty list
+
+Command: r 7
+  Queue capacity reset to: 7.
+ List A (6/6/7): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 T: [5] 
+ Empty list
+
+Command: e 4
+  Value: 4 enqueued.
+ List A (7/7/7): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 Q: [5] T: [4] 
+ Empty list
+
+Command: d r 8
+  Queue capacity reset to: 8.
+ List A (7/7/8): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 Q: [5] T: [4] 
+ Empty list
+
+Command:  e  e 3
+  Value: 3 enqueued.
+ List A (8/8/8): H: [6] Q: [7] Q: [8] Q: [9] Q: [0] 
+                 Q: [5] Q: [4] T: [3] 
+ Empty list
+
+Command: d
+  Value: 6 dequeued.
+ List A (7/8/8): H: [7] Q: [8] Q: [9] Q: [0] Q: [5] 
+                 Q: [4] T: [3] U: [6] 
+ Empty list
+
+Command: d
+  Value: 7 dequeued.
+ List A (6/8/8): H: [8] Q: [9] Q: [0] Q: [5] Q: [4] 
+                 T: [3] U: [6] U: [7] 
+ Empty list
+
+Command: d
+  Value: 8 dequeued.
+ List A (5/8/8): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+                 U: [6] U: [7] U: [8] 
+ Empty list
+
+Command: r 7
+  Queue capacity reset to: 7.
+ List A (5/7/7): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+                 U: [7] U: [8] 
+ Empty list
+
+Command: r 6
+  Queue capacity reset to: 6.
+ List A (5/6/6): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+                 U: [8] 
+ Empty list
+
+Command: r 8
+  Queue capacity reset to: 8.
+ List A (5/6/8): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+                 U: [8] 
+ Empty list
+
+Command: r 5
+  Queue capacity reset to: 5.
+ List A (5/5/5): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+ Empty list
+
+
+
+ List A (5/5/5): H: [9] Q: [0] Q: [5] Q: [4] T: [3] 
+ Empty list
