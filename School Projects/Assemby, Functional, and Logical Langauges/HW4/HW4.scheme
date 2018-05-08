@@ -1,0 +1,12 @@
+(define L
+  		'(1 2 3 4 5))
+
+(define (sum L)
+  		(cond
+        ((null? (cdr L)) (car L))
+        (else (+ (car L) (sum (cdr L)))))) 	
+
+;(display L)
+
+(sum L)
+

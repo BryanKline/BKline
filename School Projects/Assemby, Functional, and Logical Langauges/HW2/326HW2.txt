@@ -1,0 +1,111 @@
+(define (member? x L)
+		(cond
+			((null? L) #f)
+			((equal? x (car L) ) #t)
+			(else (member? x (cdr L)))))
+
+(define (is-set? L)
+		(cond
+			((null? L) #t)
+			((member? (car L) (cdr L)) #f)
+			(else (is-set? (cdr L)))))
+
+(define (make-set L)
+  		(cond
+         	((is-set? L) L)
+         	(else
+             	(if (member? (car L) (cdr L))
+             		(make-set (cdr L))
+             		(append (list (car L)) (make-set (cdr L)))))))
+
+(define (subset? A S)
+        (cond
+        ((null? A) #t)
+        ((member? (car A) S) (subset? (cdr A) S))
+        (else #f)))
+
+(define (union A B)
+        (cond
+            ((null? A) B)
+            ((member? (car A) B) (union (cdr A) B))
+            (else (union (cdr A) (append (list (car A)) B)))))
+
+(define (intersection A B)
+      	(cond
+        ((null? A) A)
+        ((member? (car A) B) (cons (car A) (intersection (cdr A) B)))
+        (else (intersection (cdr A) B))))  
+
+(define (deep-delete v L)
+  		(cond
+        ((null? L) L)
+        ((equal? v (car L)) (deep-delete v (cdr L)))
+        ((list? (car L)) (cons (deep-delete v (car L)) (deep-delete v (cdr L))))
+        (else (cons (car L) (deep-delete v (cdr L))))))
+
+(define (val T)
+        (car T))
+
+(define (left T)
+        (car (cdr T)))
+
+(define (right T)
+        (car (cdr (cdr T))))
+
+(define (tree-member? v T)
+        (cond
+        ((and (not (null? T)) (equal? v (val T))) #t)
+        ((and (not (null? T)) (< v (val T))) (tree-member? v (left T)))
+        ((and (not (null? T)) (> v (val T))) (tree-member? v (right T)))
+        (else (null? T) #f)))
+
+(define (preorder T)
+  		(cond
+        ((null? T) T) 
+        (else (cons (val T) (cons (preorder (left T)) (preorder (right T)))))))
+
+(define (inorder T)
+  		(cond
+        ((null? T) T) 
+        (else (append (inorder (left T)) (cons	(val T) (inorder (right T)))))))	
+
+(define (insert-bst v T)
+        (cond
+        ((and (not (null? T)) (equal? v (val T))) T)
+        ((and (not (null? T)) (< v (val T))) (append T (insert-bst v (left T))))
+        ((and (not (null? T)) (> v (val T))) (append T (insert-bst v (right T))))
+        (else (null? T) (cons v T ))))
+
+
+
+ (define T
+    '(13
+        (5
+            (1 () ())
+            (8 ()
+                (9 () ())))
+        (22
+            (17 () ())
+            (25 () ()))))
+
+
+
+
+
+
+
+(define (factorial n)
+        (cond
+        ((equal? n 1) 1)
+        (else (* n (factorial (- n 1))))))
+
+(factorial 5)
+
+
+
+
+
+
+
+
+

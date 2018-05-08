@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 4\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+10/18/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1. The if statement in Pascal has the syntax:\\
+[2mm]
+
+\qquad{\fontfamily{qcr}\selectfont
+\textbf{if} boolean\_expression \textbf{then} statement \textbf{else} statement
+}\\
+[2mm]
+
+In Ada, the syntax for the if statement is:\\
+[2mm]
+
+\qquad{\fontfamily{qcr}\selectfont
+	\textbf{if} boolean\_expression \textbf{then} statement \textbf{else} statement \textbf{end if}
+}\\
+[2mm]
+
+What are the advantages of introducing an explicit terminator, such as the 'end if' in Ada?\\
+[2mm]
+
+\qquad The advantages of an explicit terminator are that with a terminator it's very clear what the\\ 
+\qquad syntax and semantics will be so that someone reading it will understand it and the person\\ 
+\qquad writing it will write it in the way they intend.  If there is no terminator then it's possible that the\\
+\qquad end of last statement or expression and the beginning of the next are ambiguous.  This may\\
+\qquad simply cause a syntactic error, in which case it would be easy to find and correct, or it may cause\\
+\qquad a semantic or logical error which could be hard to find.\\
+[6mm]
+
+2. Write a grammar that describes arithmetic expressions in prefix notation, where
+possible operators are + and *, and possible operands are numbers or identifiers. You do not
+need to specify the internal structure of numbers and identifiers – assume that they are
+returned by the scanner as terminal symbols nr and id. Also assume that each operator
+takes exactly two operands. Is your grammar ambiguous? Why?\\
+[2mm]
+
+\qquad $Expr \rightarrow operator$ $(Expr|operand)$ $(Expr|operand)$\\
+\qquad $operator \rightarrow +|*$\\
+\qquad $operand \rightarrow nr|id$\\
+[2mm]
+
+\qquad The grammar is not ambiguous because there are only two operators in the grammar that both\\
+\qquad only take two operands and because prefix notation is not ambiguous.  Each operator takes two\\
+\qquad operands and so whatever follows an operator will be two operands, even if they are expressions\\
+\qquad themselves, they will be evaluated and operated on in the correct order.\\
+[6mm]
+
+3. Suppose that we try to write a short-circuit version of and (with two operands) in C
+as:\\
+[2mm]
+\qquad{\fontfamily{qcr}\selectfont
+int sc\_and (int a, int b)
+}\\
+\qquad \{\\
+\qquad{\fontfamily{qcr}\selectfont
+\qquad return a ? b : 0;
+}\\
+\qquad \}\\
+[2mm]
+
+Explain why this does not produce a short-circuit behavior. Would it work if normal-order
+evaluation were used? Why?\\
+[2mm]
+
+\qquad This does not produce a short-circuit AND because it's a function and so while the behavior is\\
+\qquad much like short-circuiting, the arguments are passed by value and so copies are made of them and\\
+\qquad so in a sense they are evaluated and have to have a place made for them on the stack.  The\\
+\qquad advantage of short-circuiting would be that, in the case where operands are large, expensive\\
+\qquad structures for example, if the latter operand weren't evaluated then there would a savings in\\
+\qquad terms of time and memory, but here they are still passed into the function and so take up\\
+\qquad computational resources.  If it were normal-order it still wouldn't be short-circuiting and\\
+\qquad woulnd't even seem to be, as the above function does.\\ 
+[20mm]
+
+4. In the C programming language:\\
+[2mm]
+\qquad a) Show how to simulate a do statement (shown below) with a while statement.\\
+[2mm]
+
+\qquad{\fontfamily{qcr}\selectfont
+do	
+}\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+\qquad{\fontfamily{qcr}\selectfont
+	while(c);	
+}\\
+[2mm]
+
+\qquad To simulate a {\fontfamily{qcr}\selectfont do while} with a {\fontfamily{qcr}\selectfont while} there only needs to be the block preceding the loop:\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	while(c)	
+}\\
+\qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+[2mm]
+
+\qquad b) Show how to simulate a while statement (shown below) with a do statement.\\
+[2mm]
+
+\qquad{\fontfamily{qcr}\selectfont
+	while(c)	
+}\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+[2mm]
+
+\qquad To simulate a {\fontfamily{qcr}\selectfont while} with a {\fontfamily{qcr}\selectfont do while} there only needs to be a conditional statement in the\\
+\qquad loop:\\
+
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	do	
+}\\
+\qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	if(c)	
+}\\
+\qquad \qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+\qquad \qquad {\fontfamily{qcr}\selectfont
+	while(c);	
+}\\
+[2mm]
+
+\qquad c) Show how to simulate a for statement (shown below) with a do statement.\\
+[2mm]
+
+\qquad{\fontfamily{qcr}\selectfont
+	for(s1;c;s2)	
+}\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+[2mm]
+
+\qquad To simulate a {\fontfamily{qcr}\selectfont for} with a {\fontfamily{qcr}\selectfont do while} the counter needs to be initialize outside the loop and then\\
+\qquad a conditional inside the loop and the counter also needs to be incremented in the loop.\\
+[2mm]
+
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	s1;	
+}\\
+\qquad \qquad{\fontfamily{qcr}\selectfont
+	do	
+}\\
+\qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	if(c)	
+}\\
+\qquad \qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	s;	
+}\\
+\qquad \qquad \qquad \qquad{\fontfamily{qcr}\selectfont
+	s2;	
+}\\
+\qquad \qquad {\fontfamily{qcr}\selectfont
+	while(c);	
+}\\
+[6mm]
+
+5. Using the Scheme programming language, write a tail-recursive function that returns
+the sum of all elements in a list of numbers. You will probably want to also define a “helper”
+function, as shown in Section 6.6.1 of the textbook.\\
+[2mm]
+
+\qquad NOTE: No helper function was needed to implement the tail-recursive function for calculating\\
+\qquad the sum of a list.  The following is tail-recursive and sums the elements of a list.\\
+[2mm]
+
+\qquad (define (sum L)\\
+\qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad ((null? (cdr L)) (car L))\\
+\qquad \qquad \qquad (else (+ (car L) (sum (cdr L))))))\\
+[20mm] 
+
+6. (Extra Credit) Show (in low-level pseudo-code, as illustrated in the textbook) what
+would be the target code generated for the tail-recursive function from problem 5.\\
+[2mm]
+
+\qquad NOTE: I'm not sure exactly what the syntax for the target code should be or exactly what\\
+\qquad low-level pseudo-code from the textbook this question is referring to, but I will use the target\\
+\qquad code from the lecture slides on tail-recursion.\\
+[2mm]
+
+\qquad sum(L)\\
+\qquad \qquad r1 = (car L)\\
+\qquad \qquad r2 = (cdr L)\\
+\qquad \qquad start:\\
+\qquad \qquad \qquad if(r2 == null)\\
+\qquad \qquad \qquad \qquad return r1\\
+\qquad \qquad \qquad else\\
+\qquad \qquad \qquad \qquad r1 = r1 + (car r2)\\
+\qquad \qquad \qquad \qquad r2 = (cdr r2)\\
+\qquad \qquad \qquad \qquad goto start\\
+
+\end{flushleft}
+
+\end{document}

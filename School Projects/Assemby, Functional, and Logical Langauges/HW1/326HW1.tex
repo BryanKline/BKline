@@ -1,0 +1,213 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = 16mm]{geometry}
+\usepackage{tabto}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 1\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+09/15/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+1. Why  are  the  front  end  and  the  back end  of  a  compiler  usually  implemented  as separate passes?\\
+[2mm]
+
+\qquad \qquad 
+Dividing the process of generating a program, from high level language to machine code, into\\ 
+\qquad \qquad 
+two separate passes allows for portability on the front end and speed on the back end.\\
+\qquad \qquad 
+Separating the back end makes it machine independent, so that there can be high level\\ 
+\qquad \qquad 
+languages that can be used to write code for many different machines, and then\\
+\qquad \qquad 
+the back end implements it for a specific machine.\\ 
+[2mm]
+
+2. For  each  of  the  following  languages, write  a  regular  expression  that  describes the language.\\
+[2mm]
+
+\qquad \qquad (a) The set of strings of length three or more, over alphabet \{a, b\}.\\    	
+[2mm]
+
+\qquad \qquad \qquad
+$(a\big|b)(a\big|b)(a\big|b)(a\big|b)^*$\\
+[4mm]
+
+\qquad \qquad (b) The set of natural numbers divisible by 25.\\   	
+[2mm]
+
+\qquad \qquad \qquad
+$digit = {1\big|2\big|3\big|4\big|5\big|6\big|7\big|8\big|9\big|0}$\\ 
+\qquad \qquad \qquad
+$(digit)^*$ $00\big|25\big|50\big|75$\\
+[4mm]
+
+\qquad \qquad (c) The set of strings that consist of an odd number of a’s, over alphabet \{a, b\}.\\ 	
+[2mm]
+
+\qquad \qquad \qquad
+$(a(aa)^*)\big|\epsilon$\\
+[4mm]
+
+\qquad \qquad (d) The set of strings over alphabet \{a, b\} that begin with at least two a’s, and end with at\\
+\qquad \qquad \quad \quad 
+least two b’s.\\   	
+[2mm]
+
+\qquad \qquad \qquad
+$aa(a\big|b)^*bb$\\
+[8mm]
+
+3. For each of the following languages, write a grammar that describes the language.\\ 
+[2mm]
+
+\qquad \qquad 
+(a) The set of strings over alphabet \{a, b\} that begin with at least two a’s, and end with\\
+\qquad \qquad \quad \quad  
+at least two b’s (same language as above).\\
+[2mm] 
+\qquad \qquad \quad \quad 
+$Expr \rightarrow$ $aaSbb \big| \epsilon$\\
+\qquad \qquad \quad \quad 
+$S \rightarrow idS \big| \epsilon$\\
+\qquad \qquad \quad \quad 
+$id \rightarrow  a \big| b$\\
+[2mm]
+
+\qquad \qquad (b) The set of strings that consist of an even number of 
+a's, over alphabet \{a\}.\\
+[2mm]
+\qquad \qquad \quad \quad 
+$Expr \rightarrow$ $aaS \big| \epsilon$\\
+\qquad \qquad \quad \quad 
+$S \rightarrow aaS \big| \epsilon$\\
+[2mm]
+
+\qquad \qquad (c) The set of strings of  parentheses ( ), brackets [ ], and  braces { } that are properly nested.\\
+\qquad \qquad \quad \quad For instance, ( ) [{ } ( ) ] is properly nested, while ( [ ) ] is not.\\
+[2mm]
+\qquad \qquad \quad \quad 
+$S \rightarrow  (SS)\big| [SS]\big| \{SS\}\big| SS\big| \epsilon$\\
+[8mm]
+
+4.Consider the following grammar for Scheme:\\
+[6mm] 
+\qquad \qquad 
+$expr \rightarrow$ $ATOM \big| list$\\	
+\qquad \qquad 
+$list \rightarrow$ $(exprs)$\\
+\qquad \qquad 	
+$exprs \rightarrow$ $expr$ $exprs \big| \epsilon$\\	
+[4mm]
+
+Using this grammar, show a parse tree for the expression $(lambda (a) (* a a))$.  Does the language described by this grammar contain a finite number of strings? If so, why? If not, why not?\\
+[400mm]
+ 
+ 
+ Blank\\
+ [900mm]
+ 
+ 5. Consider the following grammar for a declaration list:\\ 
+ [2mm]
+ 
+ \qquad \qquad 	
+ $decl\_list \rightarrow$ $decl$ ; $decl\_list \big| \epsilon$\\	
+ \qquad \qquad 	
+ $decl \rightarrow$ $specifier$ $type$ $name\_list$\\
+ \qquad \qquad 	
+ $specifier \rightarrow$ $const \big| static\big| \epsilon$\\
+ \qquad \qquad 	
+ $type \rightarrow$ $double\big| int$\\
+ \qquad \qquad 	
+ $name\_list \rightarrow$ $name \big| name$ , $name\_list$\\
+ \qquad \qquad 	
+ $name \rightarrow$ $id$ $args$\\
+ \qquad \qquad 	
+ $args \rightarrow$ $(decl\_list)\big| \epsilon$\\  
+ [6mm]
+ 
+ \qquad \qquad 
+ (a) Indicate whether each of the following strings belongs to the language described by\\
+ \qquad \qquad \quad \quad the grammar.\\
+ [2mm]
+ \qquad \qquad \qquad \qquad 
+ $i$ \hspace{6.5mm} \texttt{int a (int b);} \hspace{40mm} Cannot be described.\\
+ \qquad \qquad \qquad \qquad 
+ $ii$ \hspace{5.5mm} \texttt{int c (int d (int e;););} \hspace{18mm} Can be described.\\
+ \qquad \qquad \qquad \qquad 
+ $iii$ \hspace{4mm} \texttt{double f, g (static int h;);} \hspace{10mm} Can be described.\\
+ \qquad \qquad \qquad \qquad 
+ $iv$ \hspace{5mm} \texttt{static int i; const double j;} \hspace{8mm} Can be described.\\
+ [2mm]
+ 
+ 
+ \qquad \qquad \quad \quad
+ A tree is provided to show whether each string belongs to the language.\\
+ \qquad \qquad \quad \quad
+ See following page.\\
+ [2mm] 
+ 
+ \qquad \qquad 
+ (b) Show a leftmost derivation of the string \texttt{static int f();} under this grammar.\\
+ [2mm]
+ \qquad \qquad \quad \quad
+ A tree is provided to show whether the string belongs to the language.\\
+ \qquad \qquad \quad \quad
+ See following page.\\
+ [2mm]
+  
+ \qquad \qquad 
+ (c) Indicate whether each of the following strings belongs to the language described by\\
+ \qquad \qquad \quad \quad 
+ the grammar.\\
+ [2mm]
+ 
+ NOTE: I'm assuming that the grammar for part (c) is independent of the previous parts of the question and so won't necessarily have to produce valid strings for those parts.\\
+ [2mm] 
+ 
+ \qquad \qquad \quad \quad
+ $decl\_list \rightarrow$ $decl$ ; $decl\_list \big| decl$ , $decl\_list \big| \epsilon$\\	
+ \qquad \qquad \quad \quad
+ $decl \rightarrow$ $specifier$ $type$ $name\_list$\\
+ \qquad \qquad \quad \quad
+ $specifier \rightarrow$ $const \big| static\big| \epsilon$\\
+ \qquad \qquad \quad \quad
+ $type \rightarrow$ $double\big| int$\\
+ \qquad \qquad \quad \quad
+ $name\_list \rightarrow$ $name \big| name$ , $name\_list$\\
+ \qquad \qquad \quad \quad
+ $name \rightarrow$ $id$ $args$\\
+ \qquad \qquad \quad \quad
+ $args \rightarrow$ $(decl \big| decl$ , $decl\_list)\big| \epsilon$\\  
+ [6mm]
+ 
+\end{flushleft}
+
+
+
+
+
+	
+
+	
+	
+	
+
+
+\end{document}

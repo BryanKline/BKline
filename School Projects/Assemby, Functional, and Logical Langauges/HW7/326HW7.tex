@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 7\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+12/01/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1.\\
+Write the rules for a predicate {\fontfamily{qcr}\selectfont reverse(L,L1)}, which succeeds if list {\fontfamily{qcr}\selectfont L1} is the list {\fontfamily{qcr}\selectfont L} reversed. The following query shows an example of using this predicate:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+	
+\qquad ?- reverse([1,2,3], L1).\\
+\qquad L1 = [3,2,1]\\
+[6mm]
+
+\qquad \qquad \%reverse:\\
+\qquad \qquad reverse([], []).\\
+\qquad \qquad reverse([H|T], L1) :-  reverse(T, L2), append( L2, [H], L1).\\
+
+
+}
+
+2.\\
+Write the rules for a predicate {\fontfamily{qcr}\selectfont take(L,N,L1)}, which succeeds if list {\fontfamily{qcr}\selectfont L1} contains the first {\fontfamily{qcr}\selectfont N} elements of list {\fontfamily{qcr}\selectfont L}, in the same order. The following queries show examples of using this predicate:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+
+\qquad ?- take([5,1,2,7], 3, L1).\\
+\qquad L1 = [5,1,2]\\
+\qquad ?- take([5,1,2,7], 10, L1).\\
+\qquad L1 = [5,1,2,7]\\
+[6mm]
+
+}
+
+	
+\qquad NOTE: I made another function to return the number of elements in a list so that if the number\\
+\qquad given to {\fontfamily{qcr}\selectfont take} is larger than the size of the list it just returns the list.\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+	
+\qquad \qquad \%numElements:\\	
+\qquad \qquad numElements([], 0).\\
+\qquad \qquad numElements([\_|T], X) :- numElements(T, X1), X is X1 + 1.\\
+[2mm]
+\qquad \qquad \%take:\\
+\qquad \qquad take(\_, 0, []).\\
+\qquad \qquad take(L1, N, L1) :- numElements(L1, X), X =< N.\\
+\qquad \qquad take([H|T], N, L1) :- X is N - 1, take(T, X, L2),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad  \qquad \qquad \qquad \qquad append([H], L2, L1).\\
+}
+
+3.\\
+Consider the following definition of a binary tree in Prolog, where a tree is either the constant {\fontfamily{qcr}\selectfont nil}, or a structure {\fontfamily{qcr}\selectfont node} with 3 elements, the second and third elements also being trees:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+	
+\qquad tree(nil).\\
+\qquad tree(node(\_,Left,Right)) :- tree(Left), tree(Right).\\
+[4mm]
+
+}
+
+\qquad a)\\
+\qquad Write the rules for a predicate {\fontfamily{qcr}\selectfont nleaves(T,N)}, which succeeds if {\fontfamily{qcr}\selectfont N} is the number
+of leaves in\\
+\qquad the tree {\fontfamily{qcr}\selectfont T}. The following query shows an example of using this predicate:\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+	
+\qquad \qquad ?- nleaves(node(1, node(2, node(3,nil,nil), node(4,nil,nil)),\\
+\qquad \qquad node(5,nil,nil)), N).\\
+\qquad \qquad N = 3\\
+[6mm]
+
+\qquad \qquad \qquad \%nleaves:\\
+\qquad \qquad \qquad nleaves(node(\_, nil, nil), N) :- N is 1.\\
+\qquad \qquad \qquad nleaves(node(\_, Left, Right), N) :- nleaves(Left, N2),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad nleaves(Right, N3), N is N2 + N3.\\
+[6mm]
+}
+
+\qquad b)\\
+\qquad Write the rules for a predicate {\fontfamily{qcr}\selectfont treeMember(E,T)}, which succeeds if {\fontfamily{qcr}\selectfont E} appears as an element in\\
+\qquad the tree {\fontfamily{qcr}\selectfont T}. The following query shows an example of using this predicate:\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+\qquad \qquad ?- treeMember(3, node(1, node(2, node(3,nil,nil),\\
+\qquad \qquad node(4,nil,nil)), node(5,nil,nil))).\\
+\qquad \qquad Yes\\
+[6mm]
+
+\qquad \qquad \qquad \%treeMember:\\
+\qquad \qquad \qquad treeMember(E, node(E, \_, \_)).\\
+\qquad \qquad \qquad treeMember(E, node(\_, Left, \_)) :- treeMember(E, Left).\\
+\qquad \qquad \qquad treeMember(E, node(\_, \_, Right)) :- treeMember(E, Right).\\
+[2mm]
+}
+
+
+\qquad c)\\
+\qquad Write the rules for a predicate {\fontfamily{qcr}\selectfont preOrder(T,L)}, which succeeds if {\fontfamily{qcr}\selectfont L} is a list containing all\\
+\qquad elements in the tree {\fontfamily{qcr}\selectfont T} corresponding to a pre-order traversal of the tree. The following query\\
+\qquad shows an example of using this predicate:\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+\qquad \qquad ?- preOrder(node(1, node(2, node(3,nil,nil), node(4,nil,nil)),\\
+\qquad \qquad node(5,nil,nil)), L).\\
+\qquad \qquad L = [1, 2, 3, 4, 5]\\
+[6mm]	
+	
+\qquad \qquad \qquad \%preOrder:\\	
+\qquad \qquad \qquad preOrder(node(N, nil, nil), [N]).\\
+\qquad \qquad \qquad preOrder(node(H, Left, nil), [H|L]) :-\\
+\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad preOrder(Left, L1),
+ append(L1, [], L).\\
+\qquad \qquad \qquad preOrder(node(H, nil, Right), [H|L]) :-\\ 
+\qquad \qquad \qquad\qquad \qquad \qquad\qquad \qquad preOrder(Right, L1), append([], L1, L).\\
+\qquad \qquad \qquad preOrder(node(H, Left, Right), [H|L]) :-\\
+\qquad \qquad \qquad \qquad \qquad \qquad preOrder(Left, L1), preOrder(Right, L2),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad append(L1, L2, L).\\
+[2mm]
+}
+
+\qquad d)\\
+\qquad The \textit{height} of a tree is defined as the maximum number of nodes on a path from the root to a\\
+\qquad leaf. Write the rules for a predicate {\fontfamily{qcr}\selectfont height(T,N)}, which succeeds if {\fontfamily{qcr}\selectfont N} is the height of the tree\\
+\qquad {\fontfamily{qcr}\selectfont T}.  The following query shows an example of using this predicate:\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+\qquad \qquad ?- height(node(1, node(2, node(3,nil,nil), node(4,nil,nil)),\\
+\qquad \qquad node(5,nil,nil)), N).\\
+\qquad \qquad N = 3\\
+[6mm]	
+
+
+\qquad \qquad \qquad \%height:\\	
+\qquad \qquad \qquad height(node(\_, nil, nil), N) :- N is 1.\\
+\qquad \qquad \qquad height(node(\_, Left, nil), N) :-\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad height(Left, N1), N is N1 + 1.\\
+\qquad \qquad \qquad height(node(\_, nil, Right), N) :-\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad height(Right, N1), N is N1 + 1.\\
+\qquad \qquad \qquad  preOrder(node(H, Left, Right), [H|L]) :-\\
+\qquad \qquad \qquad \qquad \qquad \qquad preOrder(Left, L1), preOrder(Right, L2),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad append(L1, L2, L).
+}
+
+\qquad You may want to use the predefined arithmetic function {\fontfamily{qcr}\selectfont max(X,Y)}.\\
+[4mm]
+
+4.\\
+Write the rules for a predicate {\fontfamily{qcr}\selectfont insert(X,L,L1)}, which succeeds if list {\fontfamily{qcr}\selectfont L1} is
+identical to the sorted list {\fontfamily{qcr}\selectfont L} with {\fontfamily{qcr}\selectfont X} inserted at the correct place. Assume that {\fontfamily{qcr}\selectfont L} is already sorted. The following query shows an example of using this predicate:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+\qquad ?- insert(5, [1,3,4,7], L1).\\
+\qquad L1 = [1,3,4,5,7]\\
+[6mm]
+
+\qquad \qquad \%insert:\\
+\qquad \qquad insert(N, [], [N]).\\
+\qquad \qquad insert(N, [H|T], L) :- N < H,  append([N], [H|T] , L).\\
+\qquad \qquad insert(N, [H|T], L) :- N >= H, insert(N, T, L1),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad append([H], L1, L).\\
+[6mm]
+}
+
+
+5. Extra Credit\\
+Write the rules for a predicate {\fontfamily{qcr}\selectfont flatten(A,B)}, which succeeds if {\fontfamily{qcr}\selectfont A} is a
+list (possibly containing sublists), and {\fontfamily{qcr}\selectfont B} is a list containing all elements in {\fontfamily{qcr}\selectfont A} and its sublists, but all at the same level. The following query shows an example of using this predicate:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+	
+\qquad ?- flatten([1, [2, [3, 4]], 5], L).\\
+\qquad L = [1, 2, 3, 4, 5]\\
+[6mm]
+
+\qquad \qquad \%flatten:\\
+\qquad \qquad flatten([H|[]], [H]).\\
+\qquad \qquad flatten([[H|T1]|T2], L) :- flatten([H], L4),\\
+\qquad \qquad \qquad \qquad \qquad \qquad flatten(T1, L1), flatten(T2, L2),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad append(L1, L2, L3), append(L4, L3, L).\\
+\qquad \qquad flatten([H|T], L) :- flatten([H], L1),\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad flatten(T, L2), append(L1, L2, L).\\
+[6mm]
+
+}
+
+\qquad \qquad NOTE: This doesn't quite work, but it will flatten out most of a list.  It needs more work,\\
+\qquad \qquad but I don't have time to finish it.\\
+
+\end{flushleft}
+
+\end{document}

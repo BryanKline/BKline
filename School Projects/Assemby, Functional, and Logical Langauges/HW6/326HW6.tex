@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 6\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+11/22/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1. Can you write a macro in C that “returns” the factorial of an integer argument
+(without calling a subroutine)? Why or why not?\\
+[2mm]
+
+\qquad This cannot be done if the portion of code that calculates the factorial is recursive as each call\\
+\qquad cannot be expanded indefinitely, but it is possible to do it if it's iterative instead.  As macros are\\
+\qquad simple code substitution in C, an iterative implementation of a factorial calculation can be made\\
+\qquad a macro containing variables that will be known to hold the value to calculate.  The following\\
+\qquad demonstrates this:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+
+\qquad \qquad ...\\
+\qquad \qquad \#define x \textbf{while}(y > 1)\{ result *= y; y--; \}\\
+[2mm]
+\qquad \qquad ...\\
+\qquad \qquad int y = 5;\\
+\qquad \qquad x\\
+\qquad \qquad ...\\
+[2mm]
+
+}
+
+\qquad The while loop will be substituted into and the value of {\fontfamily{qcr}\selectfont y} will be calculated to be 120.\\ 
+[4mm]
+
+2. Consider the following (erroneous) program in C:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+
+\qquad \textbf{void} p()\\
+\qquad \{\\
+\qquad \qquad \textbf{int} y;\\
+\qquad \qquad 	printf("\%d ", y);\\
+\qquad \qquad 	y = 2;\\
+\qquad \}\\
+[2mm]
+\qquad \textbf{void} main()\\
+\qquad \{\\
+\qquad \qquad 	p();\\
+\qquad \qquad 	p();\\
+\qquad \}\\
+[2mm]
+}
+
+Although the local variable {\fontfamily{qcr}\selectfont y} is not initialized before being used, the program prints two values – the first value typically is garbage (or possibly 0, if you are executing inside a debugger or other controlled environment), but the second value might be 2 (try this on
+Unix!).\\
+[2mm]
+
+\qquad (a) Explain this behavior. Why does the local variable {\fontfamily{qcr}\selectfont y} appear to retain its value\\
+\qquad from one call to the next?\\
+[2mm]
+
+\qquad \qquad The reason for the fact that {\fontfamily{qcr}\selectfont y} will retain its value is that the runtime stack, when the\\
+\qquad \qquad function {\fontfamily{qcr}\selectfont p} is entered for the first time, has a new frame pushed onto it, space for {\fontfamily{qcr}\selectfont y} is made,\\
+\qquad \qquad it's printed, and then set to 2, and the frame is popped off the stack.  This then happens a\\
+\qquad \qquad second time and because it's the same function it will create the same space for {\fontfamily{qcr}\selectfont y} which will\\
+\qquad \qquad be the same memory location so that when it's printed it will retain the previous value, 2.\\
+[2mm]
+
+\qquad (b) Explain in what circumstances (without modifying function p) the local variable\\
+\qquad {\fontfamily{qcr}\selectfont y} will not retain its value between calls, and show an example.\\
+[2mm]
+
+\qquad \qquad A way to prevent {\fontfamily{qcr}\selectfont y} from retaining it's value without modifying {\fontfamily{qcr}\selectfont p} is by simply adding\\
+\qquad \qquad another function and calling it in between the two calls to {\fontfamily{qcr}\selectfont p} so that a different frame is\\
+\qquad \qquad pushed onto the stack and so a different value is written into the memory location that {\fontfamily{qcr}\selectfont p}\\
+\qquad \qquad will use for {\fontfamily{qcr}\selectfont y}:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont 
+	
+\qquad \qquad \qquad \textbf{void} p()\\
+\qquad \qquad \qquad \{\\
+\qquad \qquad \qquad \qquad	\textbf{int} y;\\
+\qquad \qquad \qquad \qquad		printf("\%d", y);\\
+\qquad \qquad \qquad \qquad		y = 2;\\
+\qquad \qquad \qquad \}\\
+[2mm]
+\qquad \qquad \qquad \textbf{void} q()\\
+\qquad \qquad \qquad \{\\
+\qquad \qquad \qquad \qquad		\textbf{int} y;\\
+\qquad \qquad \qquad \qquad		y = 9;\\
+\qquad \qquad \qquad \}\\
+[2mm]
+\qquad \qquad \qquad \textbf{void} main()\\
+\qquad \qquad \qquad \{\\
+\qquad \qquad \qquad \qquad		p();\\
+\qquad \qquad \qquad \qquad		q();\\
+\qquad \qquad \qquad \qquad		p();\\
+\qquad \qquad \qquad \}\\
+[4mm]
+}
+
+3. Consider a subroutine swap that takes two parameters and simply swaps their
+values. For example, after calling swap(X,Y), X should have the original value of Y and Y the original value of X. Assume that variables to be swapped can be simple or subscripted (elements of an array), and they have the same type (integer). Show that it is impossible to write such a general-purpose swap subroutine in a language with:\\
+[2mm]
+\qquad (a) parameter passing by value.\\
+[2mm]
+\qquad \qquad Passing by value is obviously a case wherein the values of X and Y will not change with the\\
+\qquad \qquad swap subroutine because pass by value is where a copy of the variable that's local to the\\
+\qquad \qquad  subroutine is created and then swapped and so while inside the subroutine the values are\\
+\qquad \qquad  swapped, after that scope is exited the copies and destroyed and the actual values are not\\
+\qquad \qquad  swapped.\\
+[2mm]
+
+\qquad (b) parameter passing by name.\\
+[2mm]
+
+\qquad \qquad Passing by name won't always swap the values of X and Y because it's basically textual\\
+\qquad \qquad substitution, whatever is passed into the subroutine is evaluated exactly as it passed in and\\
+\qquad \qquad so in the case of mutually dependent parameters, i.e. an array  which is indexed with a\\
+\qquad \qquad variable that is itself also passed in, for example:\\ 
+[2mm]
+{\fontfamily{qcr}\selectfont
+	
+\qquad \qquad \qquad ...\\
+\qquad \qquad \qquad swap(index, array[index]);\\
+\qquad \qquad \qquad ...\\
+[2mm]
+}
+
+\qquad \qquad Here, instead of first evaluating {\fontfamily{qcr}\selectfont array[index]} and then passing that element into the\\
+\qquad \qquad subroutine, the actual text itself is passed in and then evaluated inside the subroutine.  This\\
+\qquad \qquad prevents the swap subroutine from working because as {\fontfamily{qcr}\selectfont index} itself is also passed in it will\\
+\qquad \qquad change, and then {\fontfamily{qcr}\selectfont array[index]} will be evaluated with the changed value {\fontfamily{qcr}\selectfont index}, which\\
+\qquad \qquad will not be the element in the array that was originally passed in.\\
+[4mm]
+
+4. Consider the following program, written in no particular language. Show what the program prints in the case of parameter passing by (a) value, (b) reference, (c) value-result, and (d) name. Justify your answer. When analyzing the case of passing by value-result, you may have noticed that there are two potentially ambiguous issues – what are they?\\
+[2mm]
+{\fontfamily{qcr}\selectfont
+
+\qquad \textbf{int} i;\\
+\qquad \textbf{int} a[2];\\
+[2mm]
+\qquad p(\textbf{int} x, \textbf{int} y)\\
+\qquad \{\\
+\qquad \qquad 	x++;\\
+\qquad \qquad 	i++;\\
+\qquad \qquad 	y++;\\
+\qquad \}\\
+[2mm]
+\qquad main()\\
+\qquad \{\\
+\qquad \qquad 	a[0] = 1;\\
+\qquad \qquad 	a[1] = 1;\\
+\qquad \qquad 	i = 0;\\
+\qquad \qquad 	p(a[i],a[i]);\\
+\qquad \qquad 	print(a[0]);\\
+\qquad \qquad 	print(a[1]);\\
+\qquad \}\\
+[2mm]
+}
+
+\qquad \qquad \qquad (a)\\
+
+\qquad \qquad \qquad \qquad The program outputs: {\fontfamily{qcr}\selectfont 1 1 }\\
+[2mm] 
+\qquad \qquad \qquad \qquad This is because it's passed by value and so the value of the actual variable,  {\fontfamily{qcr}\selectfont a[0]},\\
+\qquad \qquad \qquad \qquad  is not changed in the function and it keeps its original value.\\
+[2mm]
+
+\qquad \qquad \qquad (b)\\
+
+\qquad \qquad \qquad \qquad The program outputs: {\fontfamily{qcr}\selectfont 3 1 }\\
+[2mm] 
+\qquad \qquad \qquad \qquad This is because it's passed by reference and so the value of the actual variable,\\
+\qquad \qquad \qquad \qquad {\fontfamily{qcr}\selectfont a[0]}, is the thing that's passed in and it is changed in the function and is\\
+\qquad \qquad \qquad \qquad incremented twice.\\
+[2mm]
+
+\qquad \qquad \qquad (c)\\
+
+\qquad \qquad \qquad \qquad The may output: {\fontfamily{qcr}\selectfont 1 2}\\
+\qquad \qquad \qquad \qquad Or the program may output: {\fontfamily{qcr}\selectfont 2 1}\\
+[2mm] 
+\qquad \qquad \qquad \qquad This is because {\fontfamily{qcr}\selectfont a[0]} is passed in, two copies are made of it, one copy is\\
+\qquad \qquad \qquad \qquad incremented, then {\fontfamily{qcr}\selectfont i} is incremented, the other copy is incremented, then upon\\
+\qquad \qquad \qquad \qquad exiting the function one of those copies is saved into the actual value of {\fontfamily{qcr}\selectfont a[i]},\\
+\qquad \qquad \qquad \qquad  but {\fontfamily{qcr}\selectfont i} has been incremented so it's {\fontfamily{qcr}\selectfont a[1]} that gets the result, in the first case.\\
+\qquad \qquad \qquad \qquad However, there is some ambiguity based on whether the language uses shallow or\\
+\qquad \qquad \qquad \qquad deep binding, the first case being shallow, the referencing environment, the value of\\
+\qquad \qquad \qquad \qquad {\fontfamily{qcr}\selectfont i}, taking the most recent binding.  The second case is if the language has deep\\
+\qquad \qquad \qquad \qquad binding, in which case {\fontfamily{qcr}\selectfont i} in {\fontfamily{qcr}\selectfont a[i]} upon exiting the function will keep the original\\
+\qquad \qquad \qquad \qquad value, and so {\fontfamily{qcr}\selectfont a[0]} gets the result.  There is also ambiguity because as both\\
+\qquad \qquad \qquad \qquad  arguments to the function are the same element of {\fontfamily{qcr}\selectfont a} and there are two copies made\\
+\qquad \qquad \qquad \qquad  of it inside the function, it's not clear which copy will get stored in {\fontfamily{qcr}\selectfont a[i]} upon\\
+\qquad \qquad \qquad \qquad exiting.\\
+[2mm]
+
+\qquad \qquad \qquad (d)\\
+
+\qquad \qquad \qquad \qquad The program outputs: {\fontfamily{qcr}\selectfont 2 2 }\\
+[2mm] 
+\qquad \qquad \qquad \qquad This is because it's passed by name and so {\fontfamily{qcr}\selectfont a[0]} is passed in, it's incremented,\\
+\qquad \qquad \qquad \qquad then {\fontfamily{qcr}\selectfont i} is incremented so it's now {\fontfamily{qcr}\selectfont a[1]} that's incremented, so both get\\
+\qquad \qquad \qquad \qquad incremented.  They are the actual elements of the array because {\fontfamily{qcr}\selectfont a[i]} is passed\\
+\qquad \qquad \qquad \qquad in, like an expression, that is evaluated once it enters the function, so they retain\\
+\qquad \qquad \qquad \qquad the change.\\
+
+
+\end{flushleft}
+
+\end{document}

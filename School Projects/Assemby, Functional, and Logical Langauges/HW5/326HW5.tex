@@ -1,0 +1,225 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 5\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+11/10/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1. The Boolean type is typically represented on a byte in memory, although it can have only two possible values. Why not represent the Boolean type on a single bit?\\
+[2mm]
+
+\qquad Addresses refer to whole bytes in memory and so eight bits is in a sense the smallest addressable\\
+\qquad length of memory in most computer architectures, and while it would in principle be possible\\
+\qquad to address individual bits, doing so would take up more space in terms of the number of\\
+\qquad addresses necessary to keep, eight times as many.  It's more efficient to simply give Boolean type\\
+\qquad variables an entire byte to save from having to address to the bit level.  There is also the question\\
+\qquad of type compatibility; in languages like C where non-Boolean types can be treated like Booleans\\
+\qquad and where Booleans can have some arithmetic operations carried out on them, it's important\\
+\qquad that they be a byte to facilitate this.\\
+[4mm]
+
+
+2. Write a small fragment of code that shows how unions can be used in C to interpret the bits of a value of one type as if they represented a value of some other type (non-converting type cast).\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+\qquad \qquad \textbf{union}\\
+\qquad \qquad \{\\
+\qquad \qquad \qquad \textbf{int} x;\\
+\qquad \qquad \qquad \textbf{float} y;\\
+\qquad \qquad \} example;\\
+[2mm]    
+\qquad \qquad //the number 23 in IEEE 754 floating point representation\\
+\qquad \qquad example.x = 0b01000001101110000000000000000000;\\
+[2mm]   
+
+\qquad \qquad printf("\%f\textbackslash n", example.y);\\
+\qquad \qquad printf("\%d\textbackslash n", example.x);\\
+[2mm]   
+
+\qquad \qquad example.x = example.x / 2;\\
+\qquad \qquad example.y = example.y + 0.2;\\
+[2mm]   
+\qquad \qquad printf("\textbackslash n");\\
+\qquad \qquad printf("\%f\textbackslash n", example.y);\\
+\qquad \qquad printf("\%d\textbackslash n", example.x);\\[2mm]
+}
+
+\qquad \qquad The above outputs the following:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+\qquad \qquad \qquad 23.000000\\
+\qquad \qquad \qquad 1102577664\\
+[2mm]
+
+\qquad \qquad \qquad 0.200000\\
+\qquad \qquad \qquad 1045220557\\
+[2mm]
+}
+
+\qquad \qquad The union creates space for the largest element in the union, in this case they are the same\\
+\qquad \qquad size, but space for only is allocated and in the first line where {\fontfamily{qcr}\selectfont example.x} is set to the bit\\
+\qquad \qquad string corresponding to the IEEE 754 floating point representation of the number 23, the\\
+\qquad \qquad value of {\fontfamily{qcr}\selectfont example.x} is $1102577664$ and the value of {\fontfamily{qcr}\selectfont example.y} is 23.000000.  When the int\\
+\qquad \qquad is divided by two, and the float has 0.2 added to it their values both change in ways that\\
+\qquad \qquad correspond to adding 0.2 to the IEEE representation.  This demonstrates that the union\\
+\qquad \qquad creates space for only one variable and then any changes to either name in the union hold\\
+\qquad \qquad for the other.\\
+[30mm] 
+
+
+
+
+3. Consider the following:\\
+
+\qquad {\fontfamily{qcr}\selectfont
+
+\qquad \textbf{typedef struct}\\
+\qquad \{\\
+\qquad \qquad \textbf{int} x;\\
+\qquad \qquad \textbf{char} y;\\
+\qquad \} Rec1;\\
+[2mm]
+\qquad \textbf{typedef} Rec1 Rec2;\\
+[2mm]
+\qquad \textbf{typedef struct}\\
+\qquad\{\\
+\qquad \qquad \textbf{int} x;\\
+\qquad \qquad \textbf{char} y;\\
+\qquad \} Rec3;\\
+[2mm]
+\qquad Rec1 a, b;\\
+\qquad Rec2 c;\\
+\qquad Rec3 d;\\
+[4mm]
+}
+
+Specify which of the variables {\fontfamily{qcr}\selectfont a,b,c,d } are type equivalent under (a) structural equivalence, (b) strict name equivalence, and (c) loose name equivalence.\\
+[2mm]
+
+\qquad a)\\
+\qquad \qquad The variables {\fontfamily{qcr}\selectfont a,b} and {\fontfamily{qcr}\selectfont d} are structurally equivalent because {\fontfamily{qcr}\selectfont a} and {\fontfamily{qcr}\selectfont b} are both of type {\fontfamily{qcr}\selectfont Rec1}\\
+\qquad \qquad and {\fontfamily{qcr}\selectfont d} is of type {\fontfamily{qcr}\selectfont Rec3} and {\fontfamily{qcr}\selectfont Rec1} and {\fontfamily{qcr}\selectfont Rec3} are structurally the same, i.e. have the same\\
+\qquad \qquad  fields in the same order.\\
+[2mm]
+
+\qquad b)\\
+\qquad \qquad The variables {\fontfamily{qcr}\selectfont a} and {\fontfamily{qcr}\selectfont b} are strictly name equivalent because they are both of type {\fontfamily{qcr}\selectfont Rec1}, and\\
+\qquad \qquad not name equivalent with {\fontfamily{qcr}\selectfont c} because {\fontfamily{qcr}\selectfont \textbf{typedef} Rec1 Rec2;} is a declaration and a\\
+\qquad \qquad definition where {\fontfamily{qcr}\selectfont c} is a different type.\\
+[2mm]
+
+\qquad c)\\
+\qquad \qquad The variables {\fontfamily{qcr}\selectfont a,b} and {\fontfamily{qcr}\selectfont c} are loosely name equivalent because they are both of type {\fontfamily{qcr}\selectfont Rec1},\\
+\qquad \qquad the line {\fontfamily{qcr}\selectfont \textbf{typedef} Rec1 Rec2;} makes {\fontfamily{qcr}\selectfont Rec2} and alias of {\fontfamily{qcr}\selectfont Rec1}, just a different name for\\
+\qquad \qquad the same type.\\
+[4mm]
+
+4. Consider the following program, written in C:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont
+\qquad \textbf{typedef struct}\\
+\qquad \{\\
+\qquad \qquad \textbf{int} x;\\
+\qquad \qquad \textbf{int} y;\\
+\qquad \} Foo;\\
+[2mm]
+\qquad \textbf{void} allocate\_node (Foo * f)\\
+\qquad \{\\
+\qquad \qquad f = (Foo *) malloc ( sizeof(Foo) );\\
+\qquad \}\\
+[2mm]
+\qquad \textbf{void} main()\\
+\qquad \{\\
+\qquad \qquad Foo * p;\\
+\qquad \qquad allocate\_node (p);\\
+\qquad \qquad p->x = 2;\\
+\qquad \qquad p->y = 3;\\
+\qquad \qquad free(p);\\
+\qquad \}\\
+[2mm]
+}
+
+Although the program compiles, it produces a run-time error. Why?  Rewrite the two functions allocate\_node and main so that the program runs correctly.\\
+[2mm]
+
+\qquad \qquad The reason that it produces a run-time error is that when {\fontfamily{qcr}\selectfont p} is dereferenced and dotted to\\
+\qquad \qquad assign the fields {\fontfamily{qcr}\selectfont x} and {\fontfamily{qcr}\selectfont y} the pointer {\fontfamily{qcr}\selectfont p} doesn't point to anything and that causes a\\
+\qquad \qquad segmentation fault.  The reason that {\fontfamily{qcr}\selectfont p} doesn't point to anything is that it's not changed in\\
+\qquad \qquad the function.  In order to change {\fontfamily{qcr}\selectfont p} a pointer to it must be passed in, or a pointer to a {\fontfamily{qcr}\selectfont Foo}\\
+\qquad \qquad pointer.  The code below, which has a print statement added to verify that the struct fields\\
+\qquad \qquad were changed, demonstrates this:\\
+[2mm]
+
+{\fontfamily{qcr}\selectfont 
+
+\qquad \qquad \textbf{typedef struct}\\ 
+\qquad \qquad \{\\
+\qquad \qquad \qquad \textbf{int} x;\\
+\qquad \qquad \qquad \textbf{int} y;\\
+\qquad \qquad \} Foo;\\
+[2mm]
+\qquad \qquad \textbf{void} allocateNode(Foo** f)\\
+\qquad \qquad \{\\
+\qquad \qquad \qquad *f = (Foo*) malloc(\textbf{sizeof}(Foo));\\
+\qquad \qquad \}\\
+[2mm]
+\qquad \qquad \textbf{int} main()\\
+\qquad \qquad \{\\
+\qquad \qquad \qquad Foo **p;\\
+\qquad \qquad \qquad Foo* z;\\
+[2mm]	
+\qquad \qquad \qquad allocateNode(p);\\
+[2mm]
+\qquad \qquad \qquad z = *p;\\
+\qquad \qquad \qquad z->x = 2;\\
+\qquad \qquad \qquad z->y = 3;\\
+[2mm]	
+\qquad \qquad \qquad printf("x is \%d and y is \%d\textbackslash n", z->x, z->y);\\
+[2mm]	
+\qquad \qquad \qquad free(*p);\\
+\qquad \qquad \qquad p = NULL;\\	
+\qquad \qquad \qquad z = NULL;\\
+[2mm]
+\qquad \qquad \qquad \textbf{return} 0;\\
+\qquad \qquad \}\\[4mm]
+	
+}
+
+\qquad \qquad The above code outputs:\\
+[2mm]
+\qquad \qquad \qquad {\fontfamily{qcr}\selectfont x is 2 and y is 3}\\
+[2mm]
+\qquad \qquad So the struct fields were successfully changed because a pointer to a {\fontfamily{qcr}\selectfont Foo} pointer was passed\\
+\qquad \qquad into the function wherein memory was allocated for a {\fontfamily{qcr}\selectfont Foo} struct so that when it's\\
+\qquad \qquad dereferenced it doesn't seg fault.\\
+[10mm]
+
+5. (\textbf{Extra Credit}) A compiler for a language with static scoping typically uses a LeBlanc-Cook symbol table to track the bindings of various names encountered in a program. Describe the mechanism that should be used by a compiler to ensure that the names of record fields used inside a with statement are bound to the correct objects. Specify what should be placed in (a) the symbol table, (b) the scope stack, and (c) the run-time program stack.\\
+[2mm]
+
+
+
+
+\end{flushleft}
+
+\end{document}

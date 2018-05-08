@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 3\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+10/11/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1. Using the C++ programming language, indicate the binding time (language design, language implementation, compilation, link, run, etc.) for each of the following attributes.  Justify your answer.\\
+[2mm]
+
+\qquad a) The variable declaration that corresponds to a certain variable reference (use)\\ 
+\qquad \qquad This takes place during compile time, as C and C++ are statically scoped.\\
+\qquad b) The range of possible values for integer numbers\\ 
+\qquad \qquad This is determined at during the language implementation.\\
+\qquad c) The meaning of char\\
+\qquad \qquad This is determined when the language is initially designed.\\
+\qquad d) The address of a local variable\\ 
+\qquad \qquad This depends on which address is meant, if it's the physical address then it's during\\
+\qquad \qquad load time, and if it's the virtual address then it's during compile time.\\
+\qquad e) The address of a library function\\ 
+\qquad \qquad This occurs at link time.\\
+\qquad f) The referencing environment of a function passed as a parameter\\
+\qquad \qquad This is done at compile time, as C and C++ don't have nested functions.\\ 
+\qquad g) The total amount of memory needed by the data in a program\\
+\qquad \qquad This is determined at runtime.\\
+[4mm]
+
+2.  Can a language that uses dynamic scoping do type checking at compile time? Why?  Can a language that uses static scoping do type checking at run time? Why?\\
+[2mm]
+
+\qquad No, a language that uses dynamic scoping cannot do type checking at compile time.  This is\\
+\qquad because if the scope is determined dynamically, and if the flow of control of a program isn't\\
+\qquad something that can be predicted ahead of time, i.e. what functions might be called in what\\
+\qquad order, then types cannot be checked because it won't know what to expect.  Also, a language that\\
+\qquad uses static scoping cannot do type checking at runtime because that is all done at compile time.\\
+[2mm]
+ 
+
+3.  Does Scheme use static or dynamic scoping? Write a short Scheme program that
+proves your answer.\\
+[2mm]
+\qquad Scheme uses static scoping, as the textbook for this class points out (p. 140) as a footnote to\\
+\qquad listings dynamically scoped languages.  The following Scheme code snippet will show this:\\
+[2mm]
+
+\qquad (define x 0)\\
+
+\qquad (define (function)\\
+\qquad \qquad \qquad (set! x 1))\\
+[2mm]
+\qquad (set! x 2)\\
+\qquad (function)\\
+\qquad (display x)\\
+[2mm]
+
+\qquad The output is 1, not 2, which demonstrates that the scoping is static because the global x is set\\
+\qquad to 1 by the call to function, meaning that the next scope out from function, the global scope, was\\
+\qquad changed.\\
+[2mm]
+
+4.  Consider the following pseudo-code:\\
+[2mm]
+
+\qquad x : integer; \qquad - - global\\
+\qquad procedure set\_x (n : integer)\\
+\qquad x := n;\\
+\qquad procedure print\_x\\
+\qquad \qquad write\_integer (x);\\
+\qquad procedure foo (S, P : procedure; n : integer)\\
+\qquad \qquad x : integer;\\
+\qquad \qquad if n in {1,3}\\
+\qquad \qquad \qquad set\_x(n);\\
+\qquad \qquad else\\
+\qquad \qquad \qquad S(n);\\
+\qquad \qquad if n in {1,2}\\
+\qquad \qquad \qquad print\_x;\\
+\qquad \qquad else\\
+\qquad \qquad \qquad P;\\
+\qquad - - main program\\
+\qquad set\_x(0); foo (set\_x, print\_x, 1); print\_x;\\
+\qquad set\_x(0); foo (set\_x, print\_x, 2); print\_x;\\
+\qquad set\_x(0); foo (set\_x, print\_x, 3); print\_x;\\
+\qquad set\_x(0); foo (set\_x, print\_x, 4); print\_x;\\
+[2mm]
+
+Assume that the language uses dynamic scoping. What does this program print if the
+language uses shallow binding? Why? What does it print with deep binding? Why?
+Note: At exactly one point during execution in the deep binding case, the program will
+attempt to print an uninitialized variable. Simply write a “?” for the value printed at that
+point.\\
+[2mm]
+
+\qquad NOTE: Newline characters, while never printed in the code, are added for each line for clarity.\\
+[2mm]
+
+\qquad Shallow binding:\\
+[2mm]
+
+\qquad \qquad 1 0\\
+\qquad \qquad 2 0\\
+\qquad \qquad 3 0\\
+\qquad \qquad 4 0\\
+
+\qquad The above is printed out if the binding is shallow because the reference environment comes from\\
+\qquad whenever the function is called, in this case when set\_x and print\_x are called in foo, not from\\
+\qquad when they were passed into foo, so they print the x from inside foo.\\
+[2mm]
+
+\qquad Deep binding:\\
+[2mm]
+
+\qquad \qquad 1 0\\
+\qquad \qquad ? 2\\
+\qquad \qquad 0 0\\
+\qquad \qquad 4 4\\
+
+\qquad The above is printed out if the binding is deep because the reference environment comes from\\
+\qquad when the functions are passed into foo, and so if in foo the local set\_x and print\_x functions are\\
+\qquad called then the local x is printed, otherwise it's the global one, and when it leaves foo it's also the\\
+\qquad global x that's printed.\\
+
+\end{flushleft}
+
+\end{document}

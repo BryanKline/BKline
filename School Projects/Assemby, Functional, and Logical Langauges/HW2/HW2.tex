@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 2\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+09/29/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+1. Consider an implementation of sets with Scheme lists.  A set is an unordered collection of elements, without duplicates. \\
+[2mm]
+
+\qquad a)\\
+\qquad \qquad Write a recursive function (is-set? L), which determines whether the list L is a set.\\
+[2mm]
+
+\qquad \qquad \qquad
+(define (is-set? L)\\
+\qquad \qquad \qquad \qquad
+(cond\\
+\qquad \qquad \qquad \qquad \qquad
+((null? L) \#t)\\
+\qquad \qquad \qquad \qquad \qquad
+((member? (car L) (cdr L)) \#f)\\
+\qquad \qquad \qquad \qquad \qquad
+(else (is-set? (cdr L)))))\\
+[2mm]
+\qquad \qquad \qquad NOTE: This function and following functions assume the member? function:\\
+[2mm]
+\qquad \qquad \qquad (define (member? x L)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? L) \#f)\\
+\qquad \qquad \qquad \qquad \qquad ((equal? x (car L) ) \#t)\\
+\qquad \qquad \qquad \qquad \qquad (else (member? x (cdr L)))))\\
+
+\qquad b)\\
+\qquad \qquad Write a recursive function (make-set L), which returns a set built from list L by removing\\
+\qquad \qquad duplicates, if any. Remember that the order of set elements does not matter.\\
+[2mm]
+
+\qquad \qquad \qquad (define (make-set L)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((is-set? L) L)\\
+\qquad \qquad \qquad \qquad \qquad (else\\
+\qquad \qquad \qquad \qquad \qquad (if (member? (car L) (cdr L))\\
+\qquad \qquad \qquad \qquad \qquad (make-set (cdr L))\\
+\qquad \qquad \qquad \qquad \qquad (append (list (car L)) (make-set (cdr L)))))))\\
+
+\qquad c)\\
+\qquad \qquad Write a recursive function (subset? A S), which determines whether the set A is a subset\\
+\qquad \qquad of the set S. \\
+[2mm] 
+
+\qquad \qquad \qquad (define (subset? A S)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? A) \#t)\\
+\qquad \qquad \qquad \qquad \qquad ((member? (car A) S) (subset? (cdr A) S))\\
+\qquad \qquad \qquad \qquad \qquad (else \#f)))\\
+
+\qquad d)\\
+\qquad \qquad Write a recursive function (union A B), which returns the union of sets A and B.\\
+[2mm]  
+
+\qquad \qquad \qquad (define (union A B)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? A) B)\\
+\qquad \qquad \qquad \qquad \qquad ((member? (car A) B) (union (cdr A) B))\\
+\qquad \qquad \qquad \qquad \qquad (else (union (cdr A) (append (list (car A)) B)))))\\
+[30mm]
+
+\qquad e)\\
+\qquad \qquad Write a recursive function (intersection  A  B), which returns the intersection of sets A and B.\\
+[2mm]
+
+\qquad \qquad \qquad (define (intersection A B)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? A) A)\\
+\qquad \qquad \qquad \qquad \qquad ((member? (car A) B) (cons (car A) (intersection (cdr A) B)))\\
+\qquad \qquad \qquad \qquad \qquad (else (intersection (cdr A) B))))\\  
+[2mm]
+
+2.  Consider an implementation of binary trees, it may be useful to define three auxiliary functions (val  T), (left T) and (right T), which return the value in the root of tree T, its left subtree and its right subtree, respectively:\\  
+[2mm]
+
+\qquad \qquad \qquad (define (val T)\\
+\qquad \qquad \qquad \qquad (car T))\\
+[2mm]
+
+\qquad \qquad \qquad (define (left T)\\
+\qquad \qquad \qquad \qquad (car (cdr T)))\\
+[2mm]
+
+\qquad \qquad \qquad (define (right T)\\
+\qquad \qquad \qquad \qquad (car (cdr (cdr T))))\\
+[2mm]
+
+\qquad a)\\
+\qquad \qquad 
+Write a recursive function (tree-member? V T), which determines whether V appears  as an\\ 
+\qquad \qquad  element in the tree T.  The following example illustrates the use of this function:\\ 
+[2mm]
+
+\qquad \qquad \qquad (define (tree-member? v T)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((and (not (null? T)) (equal? v (val T))) \#t)\\
+\qquad \qquad \qquad \qquad \qquad ((and (not (null? T)) ($<$ v (val T))) (tree-member? v (left T)))\\
+\qquad \qquad \qquad \qquad \qquad ((and (not (null? T)) ($>$ v (val T))) (tree-member? v (right T)))\\
+\qquad \qquad \qquad \qquad \qquad (else (null? T) \#f)))\\
+[2mm]
+
+\qquad b)\\
+ 
+\qquad \qquad Write a recursive function (preorder T), which returns the list of all elements in the tree T\\
+\qquad \qquad corresponding to a preorder traversal of the tree.\\
+[2mm]
+
+\qquad \qquad \qquad  (define (preorder T)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? T) T)\\ 
+\qquad \qquad \qquad \qquad \qquad (else (cons (val T) (cons (preorder (left T)) (preorder (right T))))))))\\
+
+\qquad c)\\
+
+\qquad \qquad Write a recursive function (inorder T), which returns the list of all elements in the tree T\\
+\qquad \qquad corresponding to an inorder traversal of the tree.\\
+[2mm]
+
+\qquad \qquad \qquad (define (inorder T)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? T) T)\\
+\qquad \qquad \qquad \qquad \qquad (else (append (inorder (left T)) (cons	(val T) (inorder (right T)))))))\\	
+[30mm]
+
+3. Write a recursive function (deep-delete V L), which takes as arguments a value 
+V and a list L, and returns a list identical to L except that all occurrences of V
+in L or in any sublist of L have been deleted.\\
+
+\qquad \qquad \qquad (define (deep-delete v L)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((null? L) L)\\
+\qquad \qquad \qquad \qquad \qquad ((equal? v (car L)) (deep-delete v (cdr L)))\\
+\qquad \qquad \qquad \qquad \qquad ((list? (car L)) (cons (deep-delete v (car L)) (deep-delete v (cdr L))))\\
+\qquad \qquad \qquad \qquad \qquad (else (cons (car L) (deep-delete v (cdr L))))))\\
+[6mm]
+
+\textbf{Extra Credit}
+A binary search tree is a binary tree for which the value in each node is greater  than or equal to all values in its left subtree, and less than all values in its right subtree. The binary tree given as example in problem 2 also qualifies as a binary search tree.  Using the same list representation, write a recursive function (insert-bst V T), which returns the binary search tree that results by inserting value V into binary search tree T.\\
+[2mm]
+
+\qquad \qquad \qquad (define (insert-bst v T)\\
+\qquad \qquad \qquad \qquad (cond\\
+\qquad \qquad \qquad \qquad \qquad ((and (not (null? T)) (equal? v (val T))) L)\\
+\qquad \qquad \qquad \qquad \qquad ((and (not (null? T)) ($<$ v (val T))) (append T (insert-bst v (left T)))\\
+\qquad \qquad \qquad \qquad \qquad((and (not (null? T)) ($>$ v (val T))) (append T (insert-bst v (right T)))\\
+\qquad \qquad \qquad \qquad \qquad(else (null? T) ( cons v T ))))\\
+[2mm]
+
+\qquad \qquad  NOTE: This doesn't quite work yet, the logic is that, as in C++, inserting into a BST\\
+\qquad \qquad  is the same as searching for where it should be and then just putting it there.  In\\
+\qquad \qquad  functional programming however there must be some way to join the parts of the tree\\ 
+\qquad \qquad  that are coming back from deep recursive calls onto the current level of recursion so\\
+\qquad \qquad  that at the top level the whole tree with the item added is returned, but I don't have\\
+\qquad \qquad  time to finish it.\\ 
+\end{flushleft}
+
+\end{document}

@@ -1,0 +1,631 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin = 16mm]{geometry}
+
+\begin{document}
+
+\begin{center}
+
+\Huge
+Bryan Kline\\
+[10mm]
+CS326\\ 
+[10mm]
+Homework 8\\
+\small LaTex (TeXstudio)\\
+[10mm]
+\Huge
+12/08/2016\\
+[200mm]
+
+\end{center}
+
+\begin{flushleft}
+
+1.\\
+Write a Java application that implements a color sampler, each color is described by its name and its red, green and blue components.  Colors are read from a file, displayed in the sampler, with a list for each color, and the sampler can change the colors with increment and decrement buttons.  It should also be able to save the color values back to the file and reset the color values to a previously saved state.\\
+[4mm]
+{\fontfamily{qcr}\selectfont
+
+	
+	\textbf{import} java.io.*;\\
+	\textbf{import} java.awt.*;\\
+	\textbf{import} javax.swing.*;\\
+	\textbf{import} java.awt.event.*;\\
+	\textbf{import} javax.swing.event.*;\\
+	[2mm]
+	
+	//ColorSampler class\\
+	\textbf{public class} ColorSampler \textbf{extends} JFrame\\ 
+	\{\\
+\qquad		//variable declarations\\  
+\qquad		\textbf{int} colorRow = -1;\\
+\qquad		\textbf{int} redCounter = 0;\\
+\qquad		\textbf{int} greenCounter = 0;\\
+\qquad		\textbf{int} blueCounter = 0;\\
+\qquad		\textbf{static int}[][] colors = \textbf{new int}[11][3];\\
+\qquad		\textbf{static int}[][] fileColors = \textbf{new int}[11][3];\\
+\qquad		\textbf{static protected} String fileName;\\
+\qquad		String colorListData[] = {"Red", "Green", "Blue",\\
+\qquad \qquad \qquad \qquad \qquad \qquad  \qquad Yellow", "Cyan", "Magenta", "Orange",\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad "Pink", "Grey", "Black", "White"};\\ 
+		[2mm]
+		
+\qquad		//button declarations\\
+\qquad		\textbf{protected} JButton save;\\
+\qquad		\textbf{protected} JButton reset;\\
+\qquad		\textbf{protected} JButton redMinus;\\
+\qquad		\textbf{protected} JButton greenMinus;\\
+\qquad		\textbf{protected} JButton blueMinus;\\
+\qquad		\textbf{protected} JButton redPlus;\\
+\qquad		\textbf{protected} JButton greenPlus;\\
+\qquad		\textbf{protected} JButton bluePlus;\\
+			[2mm]
+\qquad		//panel declarations\\   
+\qquad		\textbf{protected} JPanel blank1, blank2;\\
+\qquad		\textbf{protected} JPanel mainPanel;\\
+\qquad		\textbf{protected} JPanel listPanel;\\
+\qquad		\textbf{protected} JPanel button;\\
+\qquad		\textbf{protected} JPanel colorPanel;\\
+\qquad		\textbf{protected} JPanel colorButtonPanel;\\
+\qquad		\textbf{protected} JPanel controlButtonPanel;\\
+			[2mm]
+\qquad		//text field declarations\\
+\qquad		\textbf{protected} JTextField red;\\
+\qquad		\textbf{protected} JTextField green;\\
+\qquad		\textbf{protected} JTextField blue;\\
+\qquad		\textbf{protected} JTextField myTitle;\\
+			[2mm]
+\qquad		//label declarations\\
+\qquad		\textbf{protected} JLabel redLabel;\\
+\qquad		\textbf{protected} JLabel greenLabel;\\
+\qquad		\textbf{protected} JLabel blueLabel;\\
+			[2mm]
+\qquad		//list declaration\\
+\qquad		\textbf{protected} JList<String> colorList;\\
+			[2mm]
+\qquad		//graphic declaration\\
+\qquad		\textbf{protected} Drawing drawBox;\\
+			[2mm]
+\qquad		//main, throws IO exception, takes in command line argument\\
+\qquad		\textbf{public static void} main (String argv[]) \textbf{throws} IOException\\
+\qquad		\{\\
+\qquad \qquad			\textbf{int} row, column;\\
+\qquad \qquad				fileName = argv[0];\\
+							[2mm]
+\qquad \qquad				//class constructor call\\
+\qquad \qquad				\textbf{new} ColorSampler("Color Sampler");\\
+							[2mm]
+\qquad \qquad				//input stream opened\\
+\qquad \qquad				FileInputStream inStream = \textbf{new} FileInputStream(fileName);\\
+\qquad \qquad				InputStreamReader streamReader = \textbf{new}\\ \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad InputStreamReader(inStream);\\
+\qquad \qquad				StreamTokenizer streamToken = \textbf{new} StreamTokenizer(streamReader);\\
+						[2mm]
+\qquad \qquad			//reading in from the file into arrays\\
+\qquad \qquad			streamToken.nextToken();\\
+\qquad \qquad			\textbf{for}(row = 0; row < 11; row++)\\
+\qquad \qquad			\{\\
+\qquad \qquad \qquad				streamToken.nextToken();\\
+\qquad \qquad \qquad				\textbf{for}(column = 0; column < 3; column++)\\
+\qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad					fileColors[row][column] = (\textbf{int}) streamToken.nval;\\
+\qquad \qquad \qquad \qquad					colors[row][column] = fileColors[row][column];\\
+\qquad \qquad \qquad \qquad						streamToken.nextToken();\\
+\qquad \qquad \qquad				\}\\
+\qquad \qquad			\}\\ 
+			[2mm]
+\qquad \qquad			//input stream closed\\
+\qquad \qquad			inStream.close();\\
+\qquad \qquad		\}\\
+					[2mm]
+\qquad \qquad		//class constructor\\
+\qquad \qquad		\textbf{public} ColorSampler(String title)\\ 
+\qquad \qquad		\{\\
+\qquad \qquad \qquad			//title set, bounds set, destructor created\\
+\qquad \qquad \qquad			super(title);\\		
+\qquad \qquad \qquad			setBounds(100, 100, 500, 350);\\
+\qquad \qquad \qquad			addWindowListener(new WindowDestroyer());\\  
+			[2mm]
+\qquad \qquad \qquad			//layouts created\\
+\qquad \qquad \qquad			getContentPane().setLayout(\textbf{new} GridLayout(1, 2, 10, 10));\\
+\qquad \qquad \qquad			mainPanel = \textbf{new} JPanel(\textbf{new} GridLayout(2, 1, 10, 10));\\
+\qquad \qquad \qquad			button = \textbf{new} JPanel(\textbf{new} GridLayout(2, 1, 10, 10));\\
+\qquad \qquad \qquad			listPanel = \textbf{new} JPanel(\textbf{new} FlowLayout());\\
+\qquad \qquad \qquad			colorPanel = \textbf{new} JPanel(new GridLayout(1, 1, 10, 10));\\
+\qquad \qquad \qquad			colorButtonPanel = \textbf{new} JPanel(\textbf{new} GridLayout(3, 4, 10, 10));\\
+\qquad \qquad \qquad			controlButtonPanel = \textbf{new} JPanel(\textbf{new} FlowLayout());\\
+\qquad \qquad \qquad			blank1 = \textbf{new} JPanel(\textbf{new} GridLayout(1, 1, 10, 10));\\
+\qquad \qquad \qquad			blank2 = \textbf{new} JPanel(\textbf{new} GridLayout(1, 1, 10, 10));\\
+			[2mm]
+\qquad \qquad \qquad			//buttons, text fields, labels, list, and graphic created\\ 
+\qquad \qquad \qquad			save = \textbf{new} JButton("Save");\\
+\qquad \qquad \qquad			reset = \textbf{new} JButton("Reset");\\
+\qquad \qquad \qquad			redMinus = \textbf{new} JButton("-");\\
+\qquad \qquad \qquad			greenMinus = \textbf{new} JButton("-");\\
+\qquad \qquad \qquad			blueMinus = \textbf{new} JButton("-");\\
+\qquad \qquad \qquad			redPlus = \textbf{new} JButton("+");\\
+\qquad \qquad \qquad			greenPlus = \textbf{new} JButton("+");\\
+\qquad \qquad \qquad			bluePlus = \textbf{new} JButton("+");\\
+\qquad \qquad \qquad			red = \textbf{new} JTextField("" + redCounter);\\ 
+\qquad \qquad \qquad			green = \textbf{new} JTextField("" + greenCounter);\\
+\qquad \qquad \qquad			blue = \textbf{new} JTextField("" + blueCounter);\\
+\qquad \qquad \qquad			redLabel = \textbf{new} JLabel(" Red:");\\
+\qquad \qquad \qquad			greenLabel = \textbf{new} JLabel(" Green:");\\
+\qquad \qquad \qquad			blueLabel = \textbf{new} JLabel(" Blue:");\\
+\qquad \qquad \qquad			colorList = \textbf{new} JList<String>();\\ 
+\qquad \qquad \qquad			drawBox = \textbf{new} Drawing();\\
+			[2mm]
+\qquad \qquad \qquad			//panels, buttons, and graphic added to pane\\
+\qquad \qquad \qquad			getContentPane().add(mainPanel);\\
+\qquad \qquad \qquad			getContentPane().add(listPanel);\\
+\qquad \qquad \qquad			mainPanel.add(colorPanel);\\
+\qquad \qquad \qquad			mainPanel.add(button);\\
+\qquad \qquad \qquad			button.add(colorButtonPanel);\\
+\qquad \qquad \qquad			button.add(controlButtonPanel);\\
+\qquad \qquad \qquad			colorPanel.add(drawBox);\\
+\qquad \qquad \qquad			colorButtonPanel.add(redLabel);\\
+\qquad \qquad \qquad			colorButtonPanel.add(red);\\
+\qquad \qquad \qquad			colorButtonPanel.add(redMinus);\\
+\qquad \qquad \qquad			colorButtonPanel.add(redPlus);\\
+\qquad \qquad \qquad			colorButtonPanel.add(greenLabel);\\
+\qquad \qquad \qquad			colorButtonPanel.add(green);\\
+\qquad \qquad \qquad			colorButtonPanel.add(greenMinus);\\
+\qquad \qquad \qquad			colorButtonPanel.add(greenPlus);\\
+\qquad \qquad \qquad			colorButtonPanel.add(blueLabel);\\
+\qquad \qquad \qquad			colorButtonPanel.add(blue);\\        
+\qquad \qquad \qquad			colorButtonPanel.add(blueMinus);\\  
+\qquad \qquad \qquad			colorButtonPanel.add(bluePlus);\\
+\qquad \qquad \qquad			controlButtonPanel.add(blank1);\\
+\qquad \qquad \qquad			controlButtonPanel.add(save);\\ 
+\qquad \qquad \qquad			controlButtonPanel.add(reset);\\
+\qquad \qquad \qquad			controlButtonPanel.add(blank2);\\
+			[6mm]
+\qquad \qquad \qquad			//list added to pane, list size set, list populated with\\
+\qquad \qquad \qquad //data\\
+\qquad \qquad \qquad			colorList.setFixedCellWidth(200);\\
+\qquad \qquad \qquad			colorList.setFixedCellHeight(20);\\        
+\qquad \qquad \qquad			listPanel.add(colorList);\\
+\qquad \qquad \qquad			colorList.setListData(colorListData);\\
+			[2mm]
+\qquad \qquad \qquad			//action handler listeners set for buttons and the list\\
+\qquad \qquad \qquad			redMinus.addActionListener(\textbf{new} ActionHandler());\\ 
+\qquad \qquad \qquad			redPlus.addActionListener(\textbf{new} ActionHandler());\\
+\qquad \qquad \qquad			red.addKeyListener(new KeyPress());\\
+\qquad \qquad \qquad			greenMinus.addActionListener(\textbf{new} ActionHandler());\\ 
+\qquad \qquad \qquad			greenPlus.addActionListener(\textbf{new} ActionHandler());\\
+\qquad \qquad \qquad			green.addKeyListener(\textbf{new} KeyPress());\\
+\qquad \qquad \qquad			blueMinus.addActionListener(\textbf{new} ActionHandler());\\ 
+\qquad \qquad \qquad			bluePlus.addActionListener(\textbf{new} ActionHandler());\\
+\qquad \qquad \qquad			blue.addKeyListener(\textbf{new} KeyPress());\\
+\qquad \qquad \qquad			save.addActionListener(\textbf{new} ActionHandler());\\
+\qquad \qquad \qquad			reset.addActionListener(\textbf{new} ActionHandler());\\
+\qquad \qquad \qquad			colorList.addListSelectionListener(\textbf{new} ListHandler());\\
+			[2mm]
+\qquad \qquad \qquad			//pane set to visible\\
+\qquad \qquad \qquad			setVisible(\textbf{true});\\
+\qquad \qquad 		\}\\
+		[2mm]
+\qquad \qquad		//action handler class\\
+\qquad \qquad		\textbf{private class} ActionHandler implements ActionListener\\ 
+\qquad \qquad		\{\\     
+			[2mm]
+\qquad \qquad \qquad			\textbf{boolean} cleared = \textbf{false};\\
+\qquad \qquad \qquad			\textbf{boolean} saved = \textbf{false};\\
+			[2mm]
+\qquad \qquad \qquad			//function to determine which action occured\\
+\qquad \qquad \qquad			\textbf{public void} actionPerformed(ActionEvent button)\\
+\qquad \qquad \qquad			\{\\
+\qquad \qquad \qquad \qquad				//if source is a plus or minus button for a color,\\
+\qquad \qquad \qquad \qquad //increment the corresponding color\\
+\qquad \qquad \qquad \qquad				\textbf{if}(button.getSource() == redMinus)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad						\textbf{if}(redCounter > 0)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+	\qquad \qquad \qquad \qquad	\qquad \qquad					redCounter = redCounter - 5;\\
+\qquad \qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == greenMinus)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad					\textbf{if}(greenCounter > 0)\\
+\qquad \qquad \qquad \qquad	\qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad	\qquad					greenCounter = greenCounter - 5;\\
+\qquad \qquad \qquad \qquad	\qquad					\}\\
+\qquad \qquad \qquad	\qquad				\}\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == blueMinus)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad				\textbf{if}(blueCounter > 0)\\
+\qquad \qquad \qquad \qquad	\qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad \qquad							blueCounter = blueCounter - 5;\\
+\qquad \qquad \qquad \qquad	\qquad					\}\\
+\qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == redPlus)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad	\qquad				\textbf{if}(redCounter < 255)\\
+\qquad \qquad \qquad \qquad	\qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad \qquad						redCounter = redCounter + 5;\\
+\qquad \qquad \qquad \qquad	\qquad					\}\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == greenPlus)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad	\qquad				\textbf{if}(greenCounter < 255)\\
+\qquad \qquad \qquad \qquad	\qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad \qquad						greenCounter = greenCounter + 5;\\
+\qquad \qquad \qquad \qquad	\qquad						\}\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == bluePlus)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad					\textbf{if}(blueCounter < 255)\\
+\qquad \qquad \qquad \qquad	 \qquad				\{\\
+\qquad \qquad \qquad \qquad	 \qquad	 \qquad						blueCounter = blueCounter + 5;\\
+\qquad \qquad \qquad \qquad	 \qquad						\}\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					//if the source is the save button, call arraySave()\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == save)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad					arraySave();\\
+\qquad \qquad \qquad \qquad	\qquad						setTitle("Color Sampler");\\
+\qquad \qquad \qquad \qquad	\qquad						saved = true;\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad					//if the source is the reset button, call arrayReset()\\
+\qquad \qquad \qquad \qquad					\textbf{else if}(button.getSource() == reset)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad	\qquad					arrayReset();\\	
+\qquad \qquad \qquad \qquad	\qquad						cleared = true;\\     
+					[2mm]
+\qquad \qquad \qquad \qquad	\qquad						redCounter = colors[colorRow][0];\\
+\qquad \qquad \qquad \qquad	\qquad						greenCounter = colors[colorRow][1];\\
+\qquad \qquad \qquad \qquad	\qquad						blueCounter = colors[colorRow][2];\\        
+\qquad \qquad \qquad \qquad						\}\\
+				[2mm]
+\qquad \qquad \qquad \qquad						\textbf{if}(!cleared)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad	\qquad					colors[colorRow][0] = redCounter;\\
+\qquad \qquad \qquad \qquad	\qquad					colors[colorRow][1] = greenCounter;\\
+\qquad \qquad \qquad \qquad	\qquad					colors[colorRow][2] = blueCounter;\\
+\qquad \qquad \qquad \qquad				\}\\
+				[2mm]
+\qquad \qquad \qquad \qquad					//update text fields\\
+\qquad \qquad \qquad \qquad					red.setText("" + redCounter);\\
+\qquad \qquad \qquad \qquad					green.setText("" + greenCounter);\\
+\qquad \qquad \qquad \qquad					blue.setText("" + blueCounter);\\
+				[2mm]
+\qquad \qquad \qquad \qquad					//if it hasn't been saved, change title\\
+\qquad \qquad \qquad \qquad					\textbf{if}(!saved)\\
+\qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad					setTitle("Color Sampler*");\\
+\qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad			\}\\
+			[2mm]
+\qquad \qquad \qquad			//function to reset the array holding color values back to\\
+\qquad \qquad \qquad //what was last saved\\
+\qquad \qquad \qquad			\textbf{public void} arrayReset()\\
+\qquad \qquad \qquad			\{\\
+\qquad \qquad \qquad \qquad				\textbf{int} row, column;\\
+				[2mm]
+\qquad \qquad \qquad \qquad				\textbf{for}(row = 0; row < 11; row++)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad					\textbf{for}(column = 0; column < 3; column++)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad					colors[row][column] = fileColors[row][column];\\
+\qquad \qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad 				\}\\
+\qquad \qquad \qquad			\}\\
+			[2mm]
+\qquad \qquad \qquad			//function to save the current colors in the array into the\\ 
+\qquad \qquad \qquad//array that hold saved values\\
+\qquad \qquad \qquad			\textbf{public void} arraySave()\\
+\qquad \qquad \qquad			\{\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{int} row, column;\\
+				[2mm]
+\qquad \qquad \qquad \qquad \qquad				\textbf{for}(row = 0; row < 11; row++)\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad					\textbf{for}(column = 0; column < 3; column++)\\
+\qquad \qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad						fileColors[row][column] =\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad colors[row][column];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad			\}\\		
+\qquad \qquad		\}\\
+					[2mm]
+\qquad \qquad		//list handler class\\
+\qquad \qquad		\textbf{private class} ListHandler \textbf{implements} ListSelectionListener\\
+\qquad \qquad		\{\\
+\qquad \qquad \qquad			String colorValue;\\
+			[2mm]
+\qquad \qquad \qquad			//function to change color values based on the list\\
+\qquad \qquad \qquad//selection\\
+\qquad \qquad \qquad		\textbf{public void} valueChanged(ListSelectionEvent event)\\
+\qquad \qquad \qquad			\{\\
+\qquad \qquad \qquad \qquad				\textbf{if}(event.getSource() == colorList)\\
+\qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad					//if the list isn't adjusting, get the string from\\
+\qquad \qquad \qquad \qquad \qquad //the list and then call colorProcess() on that\\
+\qquad \qquad \qquad \qquad \qquad					//string to select the color to display\\
+\qquad \qquad \qquad \qquad \qquad \textbf{if}(!event.getValueIsAdjusting())\\
+\qquad \qquad \qquad \qquad \qquad		\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	colorValue = (String)\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad colorList.getSelectedValue();\\   
+\qquad \qquad \qquad \qquad \qquad \qquad	colorProcess(colorValue);\\                                
+\qquad \qquad \qquad \qquad \qquad 		\}\\
+\qquad \qquad \qquad \qquad		\}\\    
+\qquad \qquad \qquad	\}\\
+			[2mm]
+\qquad \qquad \qquad	//function to display the color corresponding to the list\\
+\qquad \qquad \qquad //selection\\
+\qquad \qquad \qquad	\textbf{public void} colorProcess(String colorString)\\
+\qquad \qquad \qquad	\{\\
+				[2mm]
+\qquad \qquad \qquad \qquad		//check the string passed in, set the colors values to\\
+\qquad \qquad \qquad \qquad	 //those corresponding to that color\\ 
+\qquad \qquad \qquad \qquad	\textbf{if}(colorString == "Red")\\
+\qquad \qquad \qquad \qquad	\{\\
+\qquad \qquad \qquad \qquad \qquad		redCounter = colors[0][0];\\ 
+\qquad \qquad \qquad \qquad \qquad	greenCounter = colors[0][1];\\
+\qquad \qquad \qquad \qquad \qquad	blueCounter = colors[0][2];\\   
+\qquad \qquad \qquad \qquad \qquad		colorRow = 0;\\             
+\qquad \qquad \qquad \qquad \qquad	\}\\  
+\qquad \qquad \qquad \qquad \qquad	\textbf{else if}(colorString == "Green")\\
+\qquad \qquad \qquad \qquad \qquad	\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[1][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					greenCounter = colors[1][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					blueCounter = colors[1][2];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					colorRow = 1;\\    
+\qquad \qquad \qquad \qquad \qquad	\}\\
+\qquad \qquad \qquad \qquad \qquad	\textbf{else if}(colorString == "Blue")\\
+\qquad \qquad \qquad \qquad \qquad	\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[2][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad	greenCounter = colors[2][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = colors[2][2];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad		colorRow = 2;\\               
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Yellow")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad		redCounter = colors[3][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad	greenCounter = colors[3][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = colors[3][2];\\
+\qquad \qquad \qquad \qquad \qquad \qquad		colorRow = 3;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Cyan")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad		redCounter = colors[4][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad	greenCounter = colors[4][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = colors[4][2];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	colorRow = 4;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Magenta")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[5][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad		greenCounter = colors[5][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = colors[5][2];\\
+\qquad \qquad \qquad \qquad \qquad \qquad		colorRow = 5;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Orange")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[6][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad	greenCounter = colors[6][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = colors[6][2];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad		colorRow = 6;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Pink")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[7][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					greenCounter = colors[7][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					blueCounter = colors[7][2];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					colorRow = 7;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Grey")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = colors[8][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					greenCounter = colors[8][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					blueCounter = colors[8][2];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					colorRow = 8;\\
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "Black")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad					redCounter = colors[9][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad					greenCounter = colors[9][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					blueCounter = colors[9][2];\\
+\qquad \qquad \qquad \qquad \qquad \qquad					colorRow = 9;\\ 
+\qquad \qquad \qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad \qquad \qquad				\textbf{else if}(colorString == "White")\\
+\qquad \qquad \qquad \qquad \qquad				\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad		redCounter = colors[10][0];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad		greenCounter = colors[10][1];\\
+\qquad \qquad \qquad \qquad \qquad \qquad		blueCounter = colors[10][2];\\ 
+\qquad \qquad \qquad \qquad \qquad \qquad		colorRow = 10;\\
+\qquad \qquad \qquad \qquad \qquad	\}\\
+				[2mm]
+\qquad \qquad \qquad \qquad \qquad		//update text fields\\
+\qquad \qquad \qquad \qquad \qquad		red.setText("" + redCounter);\\
+\qquad \qquad \qquad \qquad \qquad		green.setText("" + greenCounter);\\   
+\qquad \qquad \qquad \qquad \qquad	blue.setText("" + blueCounter);\\
+				[2mm]
+\qquad \qquad \qquad \qquad \qquad	//change the title\\
+\qquad \qquad \qquad \qquad \qquad	setTitle("Color Sampler*");\\  
+\qquad \qquad \qquad \qquad	\}\\
+\qquad \qquad \qquad	\}\\
+ \qquad \qquad	\}\\
+		[2mm]
+\qquad \qquad	//class to draw the graphic\\
+\qquad \qquad	\textbf{private class} Drawing extends JComponent\\
+\qquad \qquad	\{\\
+\qquad \qquad \qquad	//function that draws the rectangle\\
+\qquad \qquad \qquad	\textbf{public void} paint(Graphics box)\\
+\qquad \qquad \qquad	\{\\
+\qquad \qquad \qquad \qquad	//creates a rectangle and fills it with the color\\
+\qquad \qquad \qquad \qquad //values and draws it\\
+\qquad \qquad \qquad \qquad	Dimension size = getSize();\\
+\qquad \qquad \qquad \qquad		box.setColor(new Color(redCounter,\\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad greenCounter, blueCounter));\\
+\qquad \qquad \qquad \qquad		box.fillRect(1, 1, size.width, size.height);\\
+\qquad \qquad \qquad \qquad		repaint();\\
+\qquad \qquad \qquad	\}\\
+\qquad \qquad	\}\\
+		[2mm]
+\qquad \qquad		//key press listener class\\
+\qquad \qquad		\textbf{private class} KeyPress \textbf{implements} KeyListener\\
+\qquad \qquad		\{\\
+\qquad \qquad \qquad	\textbf{int} r, g, b;\\
+			[2mm]
+\qquad \qquad \qquad	//function that listens for the enter key to be pressed\\
+\qquad \qquad \qquad	\textbf{public void} keyPressed(KeyEvent key)\\
+\qquad \qquad \qquad	\{\\
+\qquad \qquad \qquad \qquad		//if the key entered is the constant for enter, get\\
+\qquad \qquad \qquad \qquad	 //the values in the text fields and if the values in\\
+\qquad \qquad \qquad \qquad //the text fields are valid, then update the list\\
+\qquad \qquad \qquad \qquad		//array and color values\\
+\qquad \qquad \qquad \qquad		\textbf{if}(key.getKeyCode() == KeyEvent.VK\_ENTER)\\
+ \qquad \qquad \qquad \qquad		\{\\
+\qquad \qquad \qquad \qquad \qquad					r = Integer.valueOf(red.getText());\\
+\qquad \qquad \qquad \qquad \qquad					g = Integer.valueOf(green.getText());\\
+\qquad \qquad \qquad \qquad \qquad					b = Integer.valueOf(blue.getText());\\
+					[2mm]
+\qquad \qquad \qquad \qquad \qquad					\textbf{if}(r $>=$ 0 \&\& r $<=$ 255)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	redCounter = r;\\  
+\qquad \qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad \qquad					\textbf{if}(g $>=$ 0 \&\& g $<=$ 255)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	greenCounter = g;\\  
+\qquad \qquad \qquad \qquad \qquad					\}\\
+\qquad \qquad \qquad \qquad \qquad					\textbf{if}(b $>=$ 0 \&\& b $<=$ 255)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	blueCounter = b;\\  
+\qquad \qquad \qquad \qquad \qquad					\}\\
+					[2mm]
+\qquad \qquad \qquad \qquad \qquad					\textbf{if}(colorRow > -1)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad \qquad \qquad \qquad \qquad	colors[colorRow][0] = redCounter;\\
+\qquad \qquad \qquad \qquad \qquad \qquad	colors[colorRow][1] = greenCounter;\\
+\qquad \qquad \qquad \qquad \qquad \qquad	colors[colorRow][2] = blueCounter;\\
+\qquad \qquad \qquad \qquad \qquad	\}\\
+					[2mm]
+\qquad \qquad \qquad \qquad \qquad					//update title\\
+\qquad \qquad \qquad \qquad \qquad					setTitle("Color Sampler*");\\
+\qquad \qquad \qquad \qquad 				\}\\
+\qquad \qquad \qquad 			\}\\
+			[2mm]
+\qquad \qquad \qquad 			//empty interface methods\\    
+\qquad \qquad \qquad 			\textbf{public void} keyTyped(KeyEvent e){}\\
+\qquad \qquad \qquad 			\textbf{public void} keyReleased(KeyEvent e){}\\
+\qquad \qquad 		\}\\
+		[2mm]
+\qquad \qquad 	//class destructor\\                                
+\qquad \qquad 	\textbf{private class} WindowDestroyer extends WindowAdapter\\
+\qquad \qquad 	\{\\    
+\qquad \qquad  \qquad	//function that tries to write to the input file by\\ 
+\qquad \qquad  \qquad //calling fileWriter(), throws an exception if it\\
+\qquad \qquad  \qquad //it's not possible and ends the program upon\\
+\qquad \qquad  \qquad //closure of the window\\  
+\qquad \qquad  \qquad	\textbf{public void} windowClosing(WindowEvent event)\\
+\qquad \qquad  \qquad	\{\\    
+\qquad \qquad  \qquad \qquad	\textbf{try}\\
+\qquad \qquad  \qquad \qquad	\{\\
+\qquad \qquad  \qquad \qquad \qquad	fileWriter();\\
+\qquad \qquad  \qquad \qquad	\}\\
+\qquad \qquad  \qquad \qquad	\textbf{catch}(Exception e)\\
+\qquad \qquad  \qquad \qquad	\{\\
+\qquad \qquad  \qquad \qquad \qquad	System.out.println("Couldn't save\\
+\qquad \qquad  \qquad \qquad \qquad \qquad \qquad  \qquad \qquad \qquad \qquad \qquad the colors to a file.");\\
+\qquad \qquad  \qquad \qquad	\}\\       
+				[2mm]
+\qquad \qquad  \qquad \qquad	//ends program\\
+\qquad \qquad  \qquad \qquad		System.exit(0);\\
+\qquad \qquad  \qquad	\}\\           
+			[2mm]
+\qquad \qquad  \qquad	//function which writes the saved color array back\\
+\qquad \qquad  \qquad //out to the input file, throws io exception\\
+\qquad \qquad  \qquad	\textbf{public void} fileWriter() \textbf{throws} IOException\\
+\qquad \qquad  \qquad	\{\\   
+\qquad \qquad  \qquad \qquad	\textbf{int} row, column;\\
+\qquad \qquad  \qquad \qquad	String colorLabel = " ";\\
+				[2mm]
+\qquad \qquad  \qquad \qquad	//output stream opened\\
+\qquad \qquad  \qquad \qquad	FileOutputStream outStream = \textbf{new}\\
+\qquad \qquad  \qquad \qquad \qquad \qquad  \qquad \qquad \qquad \qquad  \qquad FileOutputStream(fileName);\\
+\qquad \qquad  \qquad \qquad	PrintWriter streamWriter = \textbf{new} PrintWriter(outStream);\\
+				[2mm]
+\qquad \qquad  \qquad \qquad	//writes the appropriate color labels out to the\\
+\qquad \qquad  \qquad \qquad //file then writes the current color values\\
+\qquad \qquad  \qquad \qquad //corresponding to that color in the array\\
+\qquad \qquad  \qquad \qquad	\textbf{for}(row = 0; row < 11; row++)\\
+\qquad \qquad  \qquad \qquad	\{\\
+\qquad \qquad  \qquad \qquad \qquad	\textbf{switch}(row)\\
+\qquad \qquad  \qquad \qquad \qquad	\{\\
+\qquad \qquad  \qquad \qquad \qquad \qquad		\textbf{case} 0:\\
+\qquad \qquad  \qquad \qquad \qquad \qquad	\qquad		colorLabel = "Red";\\
+\qquad \qquad  \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 1:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Green";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 2:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Blue";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 3:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Yellow";\\
+\qquad \qquad \qquad \qquad \qquad \qquad			\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 4:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Cyan";\\
+\qquad \qquad \qquad \qquad \qquad \qquad			\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 5:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Magenta";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 6:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Orange";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 7:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Pink";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 8:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Grey";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 9:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "Black";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+						[2mm]
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{case} 10:\\
+\qquad \qquad \qquad \qquad \qquad \qquad	\qquad	colorLabel = "White";\\
+\qquad \qquad \qquad \qquad \qquad \qquad		\textbf{break};\\
+\qquad \qquad \qquad \qquad \qquad	\}\\
+					[2mm]
+\qquad \qquad \qquad \qquad \qquad		streamWriter.print(colorLabel + "\t");\\
+					[2mm]
+\qquad \qquad \qquad \qquad \qquad	\textbf{for}(column = 0; column < 3; column++)\\
+\qquad \qquad \qquad \qquad \qquad					\{\\
+\qquad \qquad	\qquad \qquad \qquad \quad	 					streamWriter.print(fileColors[row][column] + " ");\\
+\qquad \qquad	\qquad \qquad \qquad				\}\\
+\qquad \qquad \qquad	\qquad	\qquad			streamWriter.println("");\\
+\qquad \qquad \qquad	\qquad 			\}\\  
+				[2mm]
+\qquad \qquad \qquad \qquad					//stream written and closed\\
+\qquad \qquad \qquad	\qquad			streamWriter.flush();\\
+\qquad \qquad \qquad	\qquad 			outStream.close();\\
+\qquad \qquad \qquad	 		\}\\                                                             
+ \qquad \qquad		\}\\                                                              
+\qquad	\}\\ 
+	
+\}\\
+
+
+
+ 
+
+
+
+
+}
+
+
+\end{flushleft}
+
+\end{document}
